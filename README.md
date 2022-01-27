@@ -9,8 +9,8 @@
         - Yolo, Object Detection
     - Reference:
       - 论文总结 | CVPR2021目标检测论文大盘点（65篇优秀论文）, https://mp.weixin.qq.com/s/0KdShy9whUQEyPMzEFpswg
-        - 目标检测算法-YOLOv4 详解, https://mp.weixin.qq.com/s/_tjUbwG2PahLO9JSt3Nl_w
-        - https://mp.weixin.qq.com/mp/homepage?__biz=MzI1MzUwMzMwOQ==&hid=6&sn=f7777da8d0800f2dcc2148b99c55ecd0&scene=1&devicetype=iOS15.2.1&version=1800112c&lang=en&nettype=WIFI&ascene=0&fontScale=100&wx_header=3
+      - 目标检测算法-YOLOv4 详解, https://mp.weixin.qq.com/s/_tjUbwG2PahLO9JSt3Nl_w
+      - 研习笔记—算法解读+知识分享, https://mp.weixin.qq.com/mp/homepage?__biz=MzI1MzUwMzMwOQ==&hid=6&sn=f7777da8d0800f2dcc2148b99c55ecd0&scene=1&devicetype=iOS15.2.1&version=1800112c&lang=en&nettype=WIFI&ascene=0&fontScale=100&wx_header=3
 
 - AI voice
     - Keyword
