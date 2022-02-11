@@ -109,59 +109,68 @@ pip freeze > requirements.txt
 ```
 
 - Running in Cloud Platform:
-  - **With BU SCC**
-    - Login Tutorial, http://rcs.bu.edu/classes/CS542/SC542.html
-    - With [X server](https://vlaams-supercomputing-centrum-vscdocumentation.readthedocs-hosted.com/en/latest/access/using_the_xming_x_server_to_display_graphical_programs.html#:~:text=Running%20Xming%3A,programs%20(such%20as%20PuTTY).)
-    - Installing package with Conda, https://www.bu.edu/tech/support/research/software-and-programming/common-languages/python/anaconda/#exp2
-    - [SCC Quick Start Guide](https://www.bu.edu/tech/support/research/system-usage/scc-quickstart/)
+- **With BU SCC**
+    - Some useful resources:
+        - Login Tutorial, http://rcs.bu.edu/classes/CS542/SC542.html
+        - With [X server](https://vlaams-supercomputing-centrum-vscdocumentation.readthedocs-hosted.com/en/latest/access/using_the_xming_x_server_to_display_graphical_programs.html#:~:text=Running%20Xming%3A,programs%20(such%20as%20PuTTY).)
+        - Installing package with Conda, https://www.bu.edu/tech/support/research/software-and-programming/common-languages/python/anaconda/#exp2
+        - [SCC Quick Start Guide](https://www.bu.edu/tech/support/research/system-usage/scc-quickstart/)
+    - Routine setting up command:
+        ```bash
+        # Get a computing node
+        qrsh -P dl523 -l gpus=1 -l gpu_c=3.5
 
-  Routine setting up:
+        # Setting up deep learning env (DON't CHANGE THE ORDER)
+        module load python3/3.8.10
+        module load tensorflow/2.5.0
+        module load pytorch/1.9.0
+        module load opencv/4.5.0	
+        module load cuda/11.1
+        module load pandoc/2.5
+        module load texlive/2018
+        # module load miniconda/4.9.2
 
-```bash
-# Get a computing node
-qrsh -P dl523 -l gpus=1 -l gpu_c=3.5
+        # If you don't have miniconda, run the following code
+        # curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+        # sh Miniconda3-latest-Linux-x86_64.sh
 
-# Setting up deep learning env (DON't CHANGE THE ORDER)
-module load python3/3.8.10
-module load tensorflow/2.5.0
-module load pytorch/1.9.0
-module load opencv/4.5.0	
-module load cuda/11.1
-module load pandoc/2.5
-module load texlive/2018
-# module load miniconda/4.9.2
+        source ~/miniconda3/bin/activate
+        export PYTHONNOUSERSITE=true
+        conda activate dl_env
+        which python
+        # conda activate tf_latest
+        # module list
+        # If you haven't setting up a conda env yet:
+        # conda create -n py3 python==3.8.10 numpy scipy matplotlib ipykernel
 
-# If you don't have miniconda, run the following code
-# curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-# sh Miniconda3-latest-Linux-x86_64.sh
+        # Verify Pytorch and Tensorflow has CUDA support:
+        $ python
+        [[APython 3.8.10 (default, Jun  4 2021, 15:09:15) 
+        [GCC 7.5.0] :: Anaconda, Inc. on linux
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>> import torch
+        >>> import tensorflow as tf
+        >>> torch.cuda.is_available()
+        True
+        >>> tf.test.gpu_device_name()
+        '/device:GPU:0'
+        >>> exit()
+        ```
+    - Submitting Python Jupyter Notebook as a job on the SCC (optional)
+        ```bash
+        module load python3/3.7.7
+        module load pandoc/2.5git
+        module load texlive/2018
+        jupyter nbconvert --to notebook --execute hw5.ipynb
+        jupyter nbconvert hw5.nbconvert.ipynb --to pdf
 
-source ~/miniconda3/bin/activate
-export PYTHONNOUSERSITE=true
-conda activate dl_env
-which python
-# conda activate tf_latest
-# module list
-# If you haven't setting up a conda env yet:
-# conda create -n py3 python==3.8.10 numpy scipy matplotlib ipykernel
-
-# Verify Pytorch and Tensorflow has CUDA support:
-$ python
-[[APython 3.8.10 (default, Jun  4 2021, 15:09:15) 
-[GCC 7.5.0] :: Anaconda, Inc. on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> import torch
->>> import tensorflow as tf
->>> torch.cuda.is_available()
-True
->>> tf.test.gpu_device_name()
-'/device:GPU:0'
->>> exit()
-```
+        # Or if you want to save it into HTML format then:
+        module load python3/3.7.7
+        jupyter nbconvert --execute hw5.ipynb
+        ```
 
   - Google Colab
-  
   - AWS Tutorial, https://cs231n.github.io/aws-tutorial/
-  
     - Basicallly, EC2 --> AMI (with  AMI ID: `ami-125b2c72`, `g2.2xlarge` instance) --> `chmod 600 PEM_FILENAME`  --> `ssh -L localhost:8888:localhost:8888 -i your_name.pem ubuntu@your_instance_DNS`
       - TIP: If you see a “bad permissions” or “permission denied” error message regarding your .pem file, try executing `chmod 400 path/to/YourKeyName.pem` and then running the ssh command again.
     - Run Jupyter Notebook on the EC2 server:
@@ -183,22 +192,6 @@ True
 
 
 
-## Submitting Python Jupyter Notebook as a job on the SCC (optional)
-
-For the extra credit you can execute a Jupyter Notebook on the SCC instead of Python script. In this case you need to include the following lines into your job.qsub file:
-
-```bash
-module load python3/3.7.7
-module load pandoc/2.5git
-module load texlive/2018
-jupyter nbconvert --to notebook --execute hw5.ipynb
-jupyter nbconvert hw5.nbconvert.ipynb --to pdf
-
-
-# Or if you want to save it into HTML format then:
-module load python3/3.7.7
-jupyter nbconvert --execute hw5.ipynb
-```
 
 
 
