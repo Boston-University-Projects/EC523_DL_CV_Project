@@ -15,7 +15,6 @@
     - Possible Dataset
         - ZeroWaste Detection [[Code](https://github.com/dbash/zerowaste/)] [[Paper](https://arxiv.org/abs/2106.02740)] [[Dataset](http://ai.bu.edu/zerowaste/#overview)]
         - datasets [38, 48, 54, 60]
-        - 
     - Approaches/Methodologies Description:
         - Lecture Collection | Convolutional Neural Networks for Visual Recognition (Spring 2017)， Understanind CNN, [Lecture Collection | Convolutional Neural Networks](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
         - Deep Learning for Computer Vision, https://www.youtube.com/playlist?list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r
@@ -43,7 +42,6 @@
         - Synthetic Voices
     - Importance:
     - Possible Dataset
-        - 
     - Approaches/Methodologies
     - Implementation:
     - Paper: (Format for paper [paper_links] [code])
@@ -53,11 +51,8 @@
     - Keyword:
         - Reinforcement Learning, Stock prediction
     - Importance:
-        - 
     - Possible Dataset:
-        - 
     - Approaches/Methodologies Description:
-        - 
     - Implementation:
         - Berkeley CS AI class
         - reinforcement-learning-an-introduction, https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
@@ -69,11 +64,8 @@
     - Keyword:
         - Reinforcement Learning, Stock prediction
     - Importance:
-        - 
     - Possible Dataset:
-        - 
     - Approaches/Methodologies Description:
-        - 
     - Implementation:
     - Reference/Paper:
         - [paper_links] [code]
@@ -125,50 +117,47 @@ pip freeze > requirements.txt
 
   Routine setting up:
 
-  ```bash
-  # Get a computing node
-  qrsh -P dl523 -l gpus=1 -l gpu_c=3.5
+```bash
+# Get a computing node
+qrsh -P dl523 -l gpus=1 -l gpu_c=3.5
 
-  # Setting up deep learning env (DON't CHANGE THE ORDER)
-  module load python3/3.8.10
-  module load tensorflow/2.5.0
-  module load pytorch/1.9.0
-module load opencv/4.5.0
-  module load cuda/11.1
+# Setting up deep learning env (DON't CHANGE THE ORDER)
+module load python3/3.8.10
+module load tensorflow/2.5.0
+module load pytorch/1.9.0
+module load opencv/4.5.0	
+module load cuda/11.1
 module load pandoc/2.5
-  module load texlive/2018
+module load texlive/2018
 # module load miniconda/4.9.2
-  
+
 # If you don't have miniconda, run the following code
-  # curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-  # sh Miniconda3-latest-Linux-x86_64.sh
-  
-  source ~/miniconda3/bin/activate
-  export PYTHONNOUSERSITE=true
-  conda activate dl_env
-  which python
-  # conda activate tf_latest
-  # module list
-  # If you haven't setting up a conda env yet:
-  # conda create -n py3 python==3.8.10 numpy scipy matplotlib ipykernel
-  
-  
-  # Verify Pytorch and Tensorflow has CUDA support:
-  $ python
-  [[APython 3.8.10 (default, Jun  4 2021, 15:09:15) 
-  [GCC 7.5.0] :: Anaconda, Inc. on linux
-  Type "help", "copyright", "credits" or "license" for more information.
-  >>> import torch
-  >>> import tensorflow as tf
-  >>> torch.cuda.is_available()
-  True
-  >>> tf.test.gpu_device_name()
-  '/device:GPU:0'
-  >>> exit()
-  ```
-  
-  
-  
+# curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+# sh Miniconda3-latest-Linux-x86_64.sh
+
+source ~/miniconda3/bin/activate
+export PYTHONNOUSERSITE=true
+conda activate dl_env
+which python
+# conda activate tf_latest
+# module list
+# If you haven't setting up a conda env yet:
+# conda create -n py3 python==3.8.10 numpy scipy matplotlib ipykernel
+
+# Verify Pytorch and Tensorflow has CUDA support:
+$ python
+[[APython 3.8.10 (default, Jun  4 2021, 15:09:15) 
+[GCC 7.5.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> import tensorflow as tf
+>>> torch.cuda.is_available()
+True
+>>> tf.test.gpu_device_name()
+'/device:GPU:0'
+>>> exit()
+```
+
   - Google Colab
   
   - AWS Tutorial, https://cs231n.github.io/aws-tutorial/
@@ -176,18 +165,18 @@ module load pandoc/2.5
     - Basicallly, EC2 --> AMI (with  AMI ID: `ami-125b2c72`, `g2.2xlarge` instance) --> `chmod 600 PEM_FILENAME`  --> `ssh -L localhost:8888:localhost:8888 -i your_name.pem ubuntu@your_instance_DNS`
       - TIP: If you see a “bad permissions” or “permission denied” error message regarding your .pem file, try executing `chmod 400 path/to/YourKeyName.pem` and then running the ssh command again.
     - Run Jupyter Notebook on the EC2 server:
-  
+    
     ```bash
     # Type the following command on your terminal:
     jupyter notebook --ip=0.0.0.0 --no-browser
     ```
-  
+
   When you press Enter, you will get an access token, as shown in figure A.3. Copy this token value, because you will use it in the next step.
-  
-  ![image-20220128110355855](./images/image-20220128110355855.png)
-  
+
+![image-20220128110355855](./images/image-20220128110355855.png)
+
   On your browser, go to this URL: http://:8888. Note that the IPv4 public IP is the one you saved from the EC2 instance description. For example, if the public IP was 25.153.17.47, then the URL would be http:// 25.153.17.47:8888.
-  
+
   Enter the token key that you copied in step 1 into the token field, and click Log In (figure A.4).
 
 ![image-20220128110447248](./images/image-20220128110447248.png)
@@ -198,17 +187,19 @@ module load pandoc/2.5
 
 For the extra credit you can execute a Jupyter Notebook on the SCC instead of Python script. In this case you need to include the following lines into your job.qsub file:
 
-```
-'module load python3/3.7.7`
-`module load pandoc/2.5`
-`module load texlive/2018`
-`jupyter nbconvert --to notebook --execute hw5.ipynb`
-`jupyter nbconvert hw5.nbconvert.ipynb --to pdf
+```bash
+module load python3/3.7.7
+module load pandoc/2.5git
+module load texlive/2018
+jupyter nbconvert --to notebook --execute hw5.ipynb
+jupyter nbconvert hw5.nbconvert.ipynb --to pdf
+
+
+# Or if you want to save it into HTML format then:
+module load python3/3.7.7
+jupyter nbconvert --execute hw5.ipynb
 ```
 
-Or if you want to save it into HTML format then:
-`module load python3/3.7.7`
-`jupyter nbconvert --execute hw5.ipynb`
 
 
 
