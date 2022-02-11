@@ -133,16 +133,17 @@ pip freeze > requirements.txt
   module load python3/3.8.10
   module load tensorflow/2.5.0
   module load pytorch/1.9.0
-module load cuda/11.1
-  module load pandoc/2.5
-module load texlive/2018
-  # module load miniconda/4.9.2
-
-  # If you don't have miniconda, run the following code
-# curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+module load opencv/4.5.0
+  module load cuda/11.1
+module load pandoc/2.5
+  module load texlive/2018
+# module load miniconda/4.9.2
+  
+# If you don't have miniconda, run the following code
+  # curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
   # sh Miniconda3-latest-Linux-x86_64.sh
   
-  source /projectnb/dl523/students/dong760/miniconda3/bin/activate
+  source ~/miniconda3/bin/activate
   export PYTHONNOUSERSITE=true
   conda activate dl_env
   which python
