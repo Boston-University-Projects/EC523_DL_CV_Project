@@ -115,11 +115,12 @@ pip freeze > requirements.txt
         - With [X server](https://vlaams-supercomputing-centrum-vscdocumentation.readthedocs-hosted.com/en/latest/access/using_the_xming_x_server_to_display_graphical_programs.html#:~:text=Running%20Xming%3A,programs%20(such%20as%20PuTTY).)
         - Installing package with Conda, https://www.bu.edu/tech/support/research/software-and-programming/common-languages/python/anaconda/#exp2
         - [SCC Quick Start Guide](https://www.bu.edu/tech/support/research/system-usage/scc-quickstart/)
+        - Example of SCC [batch script](http://rcs.bu.edu/classes/DeepLearning/)
     - Routine setting up command:
         ```bash
         # Get a computing node
-        qrsh -P dl523 -l gpus=1 -l gpu_c=3.5
-
+    qrsh -P dl523 -l gpus=1 -l gpu_c=3.5
+    
         # Setting up deep learning env (DON't CHANGE THE ORDER)
         module load python3/3.8.10
         module load tensorflow/2.5.0
@@ -128,12 +129,12 @@ pip freeze > requirements.txt
         module load cuda/11.1
         module load pandoc/2.5
         module load texlive/2018
-        # module load miniconda/4.9.2
-
+    # module load miniconda/4.9.2
+    
         # If you don't have miniconda, run the following code
         # curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-        # sh Miniconda3-latest-Linux-x86_64.sh
-
+    # sh Miniconda3-latest-Linux-x86_64.sh
+    
         source ~/miniconda3/bin/activate
         export PYTHONNOUSERSITE=true
         conda activate dl_env
@@ -141,8 +142,8 @@ pip freeze > requirements.txt
         # conda activate tf_latest
         # module list
         # If you haven't setting up a conda env yet:
-        # conda create -n py3 python==3.8.10 numpy scipy matplotlib ipykernel
-
+    # conda create -n py3 python==3.8.10 numpy scipy matplotlib ipykernel
+    
         # Verify Pytorch and Tensorflow has CUDA support:
         $ python
         [[APython 3.8.10 (default, Jun  4 2021, 15:09:15) 
@@ -162,13 +163,13 @@ pip freeze > requirements.txt
         module load pandoc/2.5git
         module load texlive/2018
         jupyter nbconvert --to notebook --execute hw5.ipynb
-        jupyter nbconvert hw5.nbconvert.ipynb --to pdf
-
+    jupyter nbconvert hw5.nbconvert.ipynb --to pdf
+    
         # Or if you want to save it into HTML format then:
         module load python3/3.7.7
         jupyter nbconvert --execute hw5.ipynb
-        ```
-
+    ```
+  
   - Google Colab
   - AWS Tutorial, https://cs231n.github.io/aws-tutorial/
     - Basicallly, EC2 --> AMI (with  AMI ID: `ami-125b2c72`, `g2.2xlarge` instance) --> `chmod 600 PEM_FILENAME`  --> `ssh -L localhost:8888:localhost:8888 -i your_name.pem ubuntu@your_instance_DNS`
@@ -178,8 +179,8 @@ pip freeze > requirements.txt
     ```bash
     # Type the following command on your terminal:
     jupyter notebook --ip=0.0.0.0 --no-browser
-    ```
-
+  ```
+  
   When you press Enter, you will get an access token, as shown in figure A.3. Copy this token value, because you will use it in the next step.
 
 ![image-20220128110355855](./images/image-20220128110355855.png)
