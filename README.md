@@ -14,7 +14,7 @@ different types of waste materials during the waste recycling process. Automatic
 ## Implementation Plan
 __Dataset__: The dataset we are using to train and test our models is the ZeroWaste dataset proposed by Bashkirova et al. Check out their paper [here](https://arxiv.org/abs/2106.02740)  
 __Models to Implement__: 
-  - Scaled YOLOv4
+  - YOLOv4
   - Dynamic R-CNN
 
 ## Project Structure
