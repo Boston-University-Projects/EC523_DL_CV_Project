@@ -3,6 +3,7 @@
 ## Index
 - [Project Overview](#project-overview)
 - [Implementation Plan](#implementation-plan)
+- [Project Structure](#project-structure)
 - [Resources](#resources)
 - [Environment Setup](#setting-up-environment)
 
@@ -15,6 +16,33 @@ __Dataset__: The dataset we are using to train and test our models is the ZeroWa
 __Models to Implement__: 
   - Scaled YOLOv4
   - Dynamic R-CNN
+
+## Project Structure
+Our project will be structured as follows:
+```
+.
+├── Archives
+├── images
+├── Papers
+├── License
+├── src/
+│   ├── cfg
+│   ├── data
+│   ├── figure
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── yolov4.py
+│   │   ├── DRCNN.py
+│   │   └── ...
+│   ├── scripts
+│   ├── utils
+│   ├── requirements.txt
+│   ├── train.py
+│   ├── test.py
+│   └── README.MD
+├── README.md
+└── Resources.md
+```
 
 ## Resources
 We have put together a collection of resources for further learning and exploration in related topics in this [file](./Resources.md)
