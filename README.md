@@ -14,7 +14,7 @@ different types of waste materials during the waste recycling process. Automatic
 ## Implementation Plan
 __Dataset__: The dataset we are using to train and test our models is the ZeroWaste dataset proposed by Bashkirova et al. Check out their paper [here](https://arxiv.org/abs/2106.02740)  
 __Models to Implement__: 
-  - YOLOv4
+  - YOLOv4 (2 well-structured yolov4 implementation can be found [here](https://github.com/WongKinYiu/PyTorch_YOLOv4) and [here](https://github.com/Tianxiaomo/pytorch-YOLOv4))
   - Dynamic R-CNN
 
 ## Project Structure
@@ -26,20 +26,21 @@ Our project will be structured as follows:
 ├── Papers
 ├── License
 ├── src/
-│   ├── cfg
-│   ├── data
-│   ├── figure
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── yolov4.py
-│   │   ├── DRCNN.py
-│   │   └── ...
-│   ├── scripts
-│   ├── utils
-│   ├── requirements.txt
-│   ├── train.py
-│   ├── test.py
-│   └── README.MD
+│   ├── yolov4/   (standard file structure for yolo series)
+│   │   ├── cfg
+│   │   ├── data
+│   │   ├── figure
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   └── models.py
+│   │   ├── scripts
+│   │   ├── utils
+│   │   ├── requirements.txt
+│   │   ├── train.py
+│   │   ├── test.py
+│   │   └── README.MD
+│   └── DRCNN/
+│       └── ...
 ├── README.md
 └── Resources.md
 ```
