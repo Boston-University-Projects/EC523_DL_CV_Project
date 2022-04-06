@@ -27,7 +27,6 @@ Our project will be structured as follows:
 ├── License
 ├── src/
 │   └── notebooks/
-│       └── waste_detection_yolov4.ipynb
 ├── README.md
 └── Resources.md
 ```
