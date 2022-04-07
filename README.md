@@ -5,6 +5,7 @@
 - [Implementation Plan](#implementation-plan)
 - [Project Structure](#project-structure)
 - [Resources](#resources)
+- [Taining Instructions](#how-to-train-the-models)
 - [Environment Setup](#setting-up-environment)
 
 ## Project Overview
@@ -12,9 +13,13 @@ In recent years, environmental management problems has received increasing atten
 different types of waste materials during the waste recycling process. Automatic waste detection becomes a necessity when tons of waste materials have to be processed at the waste recycle center every day. Our project aims to utilize deep learning and computer vision techniques to efficiently and accurately detect different waste materials.
 
 ## Implementation Plan
+In the first half of our project, we try to test out different one-stage detection models and two-stage detection models. We will then focus on one or two best performing models and further customize/optimize these models in the purpose of achieving better performance.  
+
 __Dataset__: The dataset we are using to train and test our models is the ZeroWaste dataset proposed by Bashkirova et al. Check out their paper [here](https://arxiv.org/abs/2106.02740)  
-__Models to Implement__: 
+__Models to Compare__: 
   - YOLOv4 
+  - Scaled YOLOv4
+  - YOLOR
   - Dynamic R-CNN
 
 ## Project Structure
@@ -33,6 +38,10 @@ Our project will be structured as follows:
 
 ## Resources
 We have put together a collection of resources for further learning and exploration in related topics in this [file](./Resources.md)
+
+## How to Train the Models
+Before learning how to train the models, please check out the [Environment Setup](#setting-up-environment) section below on how to use BU SCC.  
+We have written some notebooks on how to train the selected YOLO, YOLOR, and Dynamic R-CNN models. These notebooks contain detailed instructions on how to train the above models on the ZeroWaste dataset. The notebooks can be found in the `src/notebooks` directory. 
 
 ## Setting up Environment:
 
