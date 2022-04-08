@@ -13,14 +13,14 @@ In recent years, environmental management problems has received increasing atten
 different types of waste materials during the waste recycling process. Automatic waste detection becomes a necessity when tons of waste materials have to be processed at the waste recycle center every day. Our project aims to utilize deep learning and computer vision techniques to efficiently and accurately detect different waste materials.
 
 ## Implementation Plan
-In the first half of our project, we try to test out different one-stage detection models and two-stage detection models. We will then focus on one or two best performing models and further customize/optimize these models in the purpose of achieving better performance.  
+In the first half of our project, we try to test out different one-stage detection models and two-stage detection models. For YOLOv4 and YOLOR, we made some small modifications to the original PyTorch implementations by WongkinYiu. For Dynamic R-CNN, we used the MMdetection toolbox. We will then focus on one or two best performing models and further customize/optimize these models in the purpose of achieving better performance.  
 
 __Dataset__: The dataset we are using to train and test our models is the ZeroWaste dataset proposed by Bashkirova et al. Check out their paper [here](https://arxiv.org/abs/2106.02740)  
 __Models to Compare__: 
-  - YOLOv4 
-  - Scaled YOLOv4
-  - YOLOR
-  - Dynamic R-CNN
+  - YOLOv4 (original version [here](https://github.com/WongKinYiu/PyTorch_YOLOv4), our forked version [here](https://github.com/mikethegoblin/PyTorch_YOLOv4))
+  - Scaled YOLOv4 (currently not tested due to time constraints)
+  - YOLOR (original version [here](https://github.com/WongKinYiu/yolor))
+  - Dynamic R-CNN (MMdetection implementation [here](https://github.com/open-mmlab/mmdetection))
 
 ## Project Structure
 Our project will be structured as follows:
