@@ -1,0 +1,19 @@
+<head>
+      <title>Upload a photo!</title>
+  </head>
+      <body>
+          <div class="title">
+              <h1>Upload a photo!</h1>
+          </div>
+              <form method="post" enctype="multipart/form-data" action="/upload_photos">
+                  <label for="photo">Select photo (required):</label>
+                  <input type="file" name="photo" required='true' /><br />
+                  <label for="id">Enter photo id (required):</label>
+                  <input type="text" name="id" required='true' /><br />
+                  
+                  <input type="submit" value="Upload" />
+              </form>
+      </body>
+  
+  
+  <br><a href='/'>Home
