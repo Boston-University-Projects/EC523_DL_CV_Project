@@ -1,0 +1,9 @@
+# train and val datasets (image directory or *.txt file with image paths)
+train: ./train/images
+val: ./valid/images
+
+# number of classes
+nc: 3
+
+# class names
+names: ['Platelets', 'RBC', 'WBC']

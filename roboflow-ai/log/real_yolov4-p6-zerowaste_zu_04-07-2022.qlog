@@ -1,0 +1,163 @@
+real_yolov4_p6_zerowaste_zu_2022_04_07-14_29_29
+==========================================================
+Start date : Thu Apr  7 14:29:29 EDT 2022
+Job name : real_yolov4_p6_zerowaste
+Job ID : 4024348  undefined
+==========================================================
+==========================> Loading moudule for Project Environment
+**** Missing build for a loaded module for Python version "3.9.5". 
+Directory does not exist: /share/pkg.7/tensorflow/2.5.0/install/lib/SCC/../python3.9/site-packages
+
+**** Missing build for a loaded module for Python version "3.9.5". 
+Directory does not exist: /share/pkg.7/tensorflow/2.5.0/install/lib/SCC/../python3.9/site-packages
+
+===========================> Checking OS Information
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.9.2009 (Core)
+Release:	7.9.2009
+Codename:	Core
+x86_64
+CentOS Linux release 7.9.2009 (Core)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+CentOS Linux release 7.9.2009 (Core)
+CentOS Linux release 7.9.2009 (Core)
+===========================> Checking CPU Information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    1
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Stepping:              7
+CPU MHz:               3514.355
+CPU max MHz:           3900.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+===========================> Checking GPU Configuration
+Thu Apr  7 14:29:30 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:18:00.0 Off |                    0 |
+| N/A   65C    P0   271W / 300W |  15818MiB / 16160MiB |     99%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   38C    P0    44W / 300W |      3MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   37C    P0    43W / 300W |      3MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:AF:00.0 Off |                    0 |
+| N/A   42C    P0    45W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A    131728      C   ....10/install/bin/python3.8    15815MiB |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Mon_Oct_12_20:09:46_PDT_2020
+Cuda compilation tools, release 11.1, V11.1.105
+Build cuda_11.1.TC455_06.29190527_0
+Linux scc-201 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+==========================> Checking SCC Quota Usage
+                                      quota     quota       usage     usage
+project space                          (GB)    (files)       (GB)   (files)
+-----------------------------------  ------  ---------  ---------  --------
+/projectnb/dl523                       2000   33554432    1801.04   3548110
+Home Directory Usage and Quota:
+Name           GB    quota    limit in_doubt    grace |    files    quota    limit in_doubt    grace
+dong760   8.70193     10.0     11.0      0.0     none |  145,170  200,000  200,000        0     none
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4023958 0.10020 yolov4_p6_ dong760      r     04/07/2022 13:46:32 academic-gpu@scc-204.scc.bu.ed     4        
+4024348 0.10025 real_yolov dong760      r     04/07/2022 14:29:28 academic-gpu@scc-201.scc.bu.ed     4        
+
+Currently Loaded Modules:
+  1) python3/3.8.10     3) pytorch/1.9.0   5) cuda/11.1    7) texlive/2018
+  2) tensorflow/2.5.0   4) opencv/4.5.0    6) pandoc/2.5   8) gcc/9.3.0
+
+ 
+
+==========================> Current ENV Path
+/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/share/pkg.7/gcc/9.3.0/install/bin:/share/pkg.7/texlive/2018/install/bin/x86_64-linux:/share/pkg.7/pandoc/2.5/install/bin:/share/pkg.7/cuda/11.1.1/install/nsight-systems-2020.3.4/bin:/share/pkg.7/cuda/11.1.1/install/bin:/share/pkg.7/opencv/4.5.0/install/bin:/share/pkg.7/pytorch/1.9.0/install/bin:/share/pkg.7/tensorflow/2.5.0/install/bin:/share/pkg.7/python3/3.8.10/install/bin:/scratch/4024348.1.academic-gpu:/usr4/dl523/dong760/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/bin/remote-cli:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr/java/default/jre/bin:/usr/java/default/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/dell/srvadmin/bin:/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/usr4/dl523/dong760/bin:.:/usr4/dl523/dong760/.local/lib/python3.8/site-packages
+/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages:/share/pkg.7/tensorflow/2.5.0/install/lib/SCC
+Python 3.8.10
+/usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+==========================> Start Training
+Using torch 1.9.0+cu111 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Namespace(adam=False, batch_size=16, bucket='', cache_images=False, cfg='cfg/yolov4-p6.cfg', data='zero-waste-1/data.yaml', device='0', epochs=300, evolve=False, exist_ok=False, global_rank=-1, hyp='data/hyp.scratch.yaml', image_weights=False, img_size=[640, 640], local_rank=-1, log_imgs=16, multi_scale=False, name='yolov4-p6-300-ep_', names='data/coco.names', noautoanchor=False, nosave=False, notest=False, project='runs/train', rect=False, resume=False, save_dir='runs/train/yolov4-p6-300-ep_', single_cls=False, sync_bn=False, total_batch_size=16, weights='weights/yolov4-p6.weights', workers=8, world_size=1)
+Start Tensorboard with "tensorboard --logdir runs/train", view at http://localhost:6006/
+Hyperparameters {'lr0': 0.01, 'lrf': 0.1, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.3, 'cls_pw': 1.0, 'obj': 0.6, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.9, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0}
+Traceback (most recent call last):
+  File "train.py", line 538, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "train.py", line 86, in train
+    model = Darknet(opt.cfg).to(device) # create
+  File "/projectnb2/dl523/projects/RWD/PyTorch_YOLOv4/models/models.py", line 451, in __init__
+    self.module_defs = parse_model_cfg(cfg)
+  File "/projectnb2/dl523/projects/RWD/PyTorch_YOLOv4/utils/parse_config.py", line 50, in parse_model_cfg
+    assert not any(u), "Unsupported fields %s in %s. See https://github.com/ultralytics/yolov3/issues/631" % (u, path)
+AssertionError: Unsupported fields ['objectness_smooth', 'resize', 'obj_normalizer', 'new_coords', 'max_delta'] in cfg/yolov4-p6.cfg. See https://github.com/ultralytics/yolov3/issues/631
+Using torch 1.9.0+cu111 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Namespace(augment=False, batch_size=16, cfg='cfg/yolov4-p6.cfg', conf_thres=0.001, data='zero-waste-1/data.yaml', device='0', exist_ok=False, img_size=640, iou_thres=0.65, name='exp', names='zero-waste-1/zero-waste.names', project='runs/test', save_conf=False, save_json=True, save_txt=False, single_cls=False, task='test', verbose=True, weights=['weights/best.pt'])
+Traceback (most recent call last):
+  File "test.py", line 327, in <module>
+    test(opt.data,
+  File "test.py", line 63, in test
+    model = Darknet(opt.cfg).to(device)
+  File "/projectnb2/dl523/projects/RWD/PyTorch_YOLOv4/models/models.py", line 451, in __init__
+    self.module_defs = parse_model_cfg(cfg)
+  File "/projectnb2/dl523/projects/RWD/PyTorch_YOLOv4/utils/parse_config.py", line 50, in parse_model_cfg
+    assert not any(u), "Unsupported fields %s in %s. See https://github.com/ultralytics/yolov3/issues/631" % (u, path)
+AssertionError: Unsupported fields ['objectness_smooth', 'resize', 'obj_normalizer', 'new_coords', 'max_delta'] in cfg/yolov4-p6.cfg. See https://github.com/ultralytics/yolov3/issues/631
+Thu Apr  7 14:30:30 EDT 2022
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4023958 0.10016 yolov4_p6_ dong760      r     04/07/2022 13:46:32 academic-gpu@scc-204.scc.bu.ed     4        
+4024348 0.10016 real_yolov dong760      r     04/07/2022 14:29:28 academic-gpu@scc-201.scc.bu.ed     4        
