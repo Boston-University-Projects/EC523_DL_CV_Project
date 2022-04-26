@@ -1,5 +1,5 @@
 # Run under roboflow-ai folder:
-# python yolor/test.py --conf-thres 0.5 --img 640 --batch 32 --device 0 --data zero-waste-1/data.yaml --cfg yolor/cfg/yolor_p6.cfg --weights "runs/train/yolor_p6_2022_03_26-10_44_07/weights/best_overall.pt" --task test --names yolor/data/zerowaste.names --verbose --save-json --save-conf --save-txt
+# python yolor/test.py --conf-thres 0.5 --img 448 --batch 32 --device 0 --data zero-waste-1/data.yaml --cfg yolor/cfg/yolor_p6.cfg --weights "runs/train/yolor_p6_2022_03_26-10_44_07/weights/best_overall.pt" --task test --names yolor/data/zerowaste.names --verbose --save-json --save-conf --save-txt
 
 # Run under yolor folder
 # python test.py --conf-thres 0.5 --img 640 --batch 32 --device 0 --data ../zero-waste-1/data.yaml --cfg cfg/yolor_p6.cfg --weights "../runs/train/yolor_p6_2022_03_26-10_44_07/weights/best_overall.pt" --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt

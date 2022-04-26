@@ -89,7 +89,7 @@ which python
 echo "==========================> Start Training"
 cd /projectnb/dl523/students/dong760/roboflow-ai
 
-python yolor/train.py --batch-size 32 --img 640 640 --data zero-waste-1/data.yaml --cfg yolor/cfg/yolor_p6.cfg --weights 'yolor/weights/yolor_p6.pt' --device 0 --name yolor_p6_$TIMESTAMP --hyp 'yolor/data/hyp.scratch.1280.yaml' --epochs 10
+python yolor/train.py --batch-size 32 --img 448 448 --data zero-waste-4/data.yaml --cfg yolor/cfg/yolor_p6.cfg --weights 'yolor/weights/yolor_p6.pt' --device 0 --name yolor_p6_$TIMESTAMP --hyp 'yolor/data/hyp.scratch.1280.yaml' --epochs 10
 
 
 python yolor/detect.py --weights "runs/train/yolor_p6_$TIMESTAMP/weights/best_overall.pt" --conf 0.5 --source zero-waste-1/test/images --names yolor/data/zerowaste.names --cfg yolor/cfg/yolor_p6.cfg
@@ -103,7 +103,8 @@ python yolor/test.py --conf-thres 0.5 --img 640 --batch 32 --device cpu --data z
 # WARNING: --img-size 416 must be multiple of max stride 64, updating to 448
  
 
-# python train.py --device 0 --batch-size 16 --img 640 640 --data zero-waste-1/data.yaml --cfg cfg/yolov4-csp-x-leaky.cfg --weights weights/yolov4-csp-x-leaky.weights --name yolov4-csp-x-leaky-300-ep --epochs 1
+# python train.py --device 0 --batch-size 32 --img 448 448 --data zero-waste-1/data.yaml --cfg cfg/yolov4-csp-x-leaky.cfg --weights weights/yolov4-csp-x-leaky.weights --name yolov4-csp-x-leaky-300-ep --epochs 1
+python train.py --device 0 --batch-size 32 --img 448 448 --data zero-waste-4/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolov4-csp-x-leaky.weights --name yolov4-csp-x-leaky-300-ep --epochs 1
 
 # python -m pdb yolor/detect.py --weights "runs/train/yolor_p6_2022_04_05-19_58_08/weights/best_overall.pt" --conf 0.5 --source zero-waste-1/test/images --names ./yolor/data/zerowaste.names --cfg yolor/cfg/yolor_p6.cfg --verbose
 
