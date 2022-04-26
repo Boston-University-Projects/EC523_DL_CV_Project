@@ -1,3 +1,8 @@
+# Run under roboflow-ai folder:
+# python yolor/test.py --conf-thres 0.5 --img 640 --batch 32 --device 0 --data zero-waste-1/data.yaml --cfg yolor/cfg/yolor_p6.cfg --weights "runs/train/yolor_p6_2022_03_26-10_44_07/weights/best_overall.pt" --task test --names yolor/data/zerowaste.names --verbose --save-json --save-conf --save-txt
+
+# Run under yolor folder
+# python test.py --conf-thres 0.5 --img 640 --batch 32 --device 0 --data ../zero-waste-1/data.yaml --cfg cfg/yolor_p6.cfg --weights "../runs/train/yolor_p6_2022_03_26-10_44_07/weights/best_overall.pt" --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt
 import argparse
 import glob
 import json
@@ -62,7 +67,8 @@ def test(data,
         # Load model
         model = Darknet(opt.cfg).to(device)
         try:
-            ckpt = torch.load(weights[0], map_location=device)  # load checkpoint
+            # ckpt = torch.load(weights[0], map_location=device)  # load checkpoint
+            ckpt = torch.load(weights, map_location=device)  # load checkpoint
             ckpt['model'] = {k: v for k, v in ckpt['model'].items() if model.state_dict()[k].numel() == v.numel()}
             model.load_state_dict(ckpt['model'], strict=False)
         except:
@@ -272,7 +278,7 @@ def test(data,
         # anno_json = glob.glob("/projectnb2/dl523/students/dong760/zerowaste_dataset/zerowaste-f-final/test/labels.json")[0]  # finding the annotations json 
         # anno_json = str(Path(data.get('path', '../coco')) / 'annotations/instances_val2017.json')  # annotations json
         pred_json = str(save_dir / f"{w}_predictions.json")  # predictions json
-        anno_json = glob.glob("/projectnb/dl523/students/dong760/roboflow-ai/test/_annotations.coco.json")[0]   # ==> Ground truth annotation file, which will be used for correction
+        anno_json = glob.glob("test/_annotations.coco.json")[0]   # ==> Ground truth annotation file, which will be used for correction
 
         # Correcting the image_id ==》 Now we have image_id as non-numeric value, e.g., "image_id": "04_frame_033200_PNG.rf.7ede2973b58601b4062872550edf0253" ==> Ans, we want to find it's correct corresponding image_id from _annotation.coco.json file.. ==> So, we need to create a function to do that!!
         f_obj = open(anno_json)

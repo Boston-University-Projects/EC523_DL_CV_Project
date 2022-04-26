@@ -1,7 +1,0 @@
-names: ['cardboard', 'metal', 'rigid_plastic', 'soft_plastic']
-nc: 4
-train: /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/train/images
-val: /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/valid/images
-test: /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/test/images
-# test: zero-waste-1/test/images
-

@@ -2,6 +2,8 @@ roboflow-ai/yolor/runs/
 roboflow-ai/yolor/weights/
 roboflow-ai/runs/
 roboflow-ai/weights/
+roboflow-ai/wandb
+roboflow-ai/yolor/wandb
 # System files
 *.DS_Store
 
