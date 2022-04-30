@@ -1,3 +1,5 @@
+# Run under yolor folder
+# python test.py --conf-thres 0.0 --img 640 --batch 32 --device 0 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights runs/train/yolor_p6_2022_03_26-10_44_07/weights/best_overall.pt --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt
 import argparse
 import glob
 import json
@@ -185,7 +187,7 @@ def test(data,
                 box[:, :2] -= box[:, 2:] / 2  # xy center to top-left corner
                 for p, b in zip(pred.tolist(), box.tolist()):
                     jdict.append({'image_id': image_id,
-                                  'category_id': coco91class[int(p[5])] if is_coco else int(p[5]),
+                                  'category_id': coco91class[int(p[5])]+1 if is_coco else int(p[5])+1,
                                   'bbox': [round(x, 3) for x in b],
                                   'score': round(p[4], 5)})
 
@@ -235,6 +237,7 @@ def test(data,
 
     # Compute statistics
     stats = [np.concatenate(x, 0) for x in zip(*stats)]  # to numpy
+    # np.save('prediction_stats.npy', stats)
     if len(stats) and stats[0].any():
         p, r, ap, f1, ap_class = ap_per_class(*stats, plot=plots, fname=save_dir / 'precision-recall_curve.png')
         p, r, ap50, ap = p[:, 0], r[:, 0], ap[:, 0], ap.mean(1)  # [P, R, AP@0.5, AP@0.5:0.95]
@@ -272,7 +275,7 @@ def test(data,
         # anno_json = glob.glob("/projectnb2/dl523/students/dong760/zerowaste_dataset/zerowaste-f-final/test/labels.json")[0]  # finding the annotations json 
         # anno_json = str(Path(data.get('path', '../coco')) / 'annotations/instances_val2017.json')  # annotations json
         pred_json = str(save_dir / f"{w}_predictions.json")  # predictions json
-        anno_json = glob.glob("/projectnb/dl523/students/dong760/roboflow-ai/test/_annotations.coco.json")[0]   # ==> Ground truth annotation file, which will be used for correction
+        anno_json = glob.glob("../zero-waste-10/test/_annotations.coco.json")[0]   # ==> Ground truth annotation file, which will be used for correction
 
         # Correcting the image_id ==》 Now we have image_id as non-numeric value, e.g., "image_id": "04_frame_033200_PNG.rf.7ede2973b58601b4062872550edf0253" ==> Ans, we want to find it's correct corresponding image_id from _annotation.coco.json file.. ==> So, we need to create a function to do that!!
         f_obj = open(anno_json)
@@ -288,6 +291,7 @@ def test(data,
                 if flag and image_id == item["file_name"]:
                     # print(f"jdict[i]['image_id']: {jdict[i]['image_id']}, item['id']: {item['id']}")
                     jdict[i]['image_id'] = int(item['id'])
+        f_obj.close()
 
         print('\nEvaluating pycocotools mAP... saving %s...' % pred_json)
         with open(pred_json, 'w') as f:
