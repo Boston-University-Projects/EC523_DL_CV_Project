@@ -94,14 +94,14 @@ cd /projectnb/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor
 
 python train.py --batch-size 16 --img 640 640 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --device 0 --yolor_p6_$TIMESTAMP --hyp data/hyp.scratch.1280.yaml --epochs 300 --augment True
 
-python test.py --conf-thres 0.0 --img 640 --batch 32 --device 0 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights runs/train/yolor_p6_$TIMESTAMP/weights/best_overall.pt --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt
+python test.py --conf-thres 0.0 --img 640 --batch 16 --device 0 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights runs/train/yolor_p6_$TIMESTAMP/weights/best_overall.pt --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt
 
 
 # If you are running under roboflow-ai folder
 # cd /projectnb/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai
 
-# python yolor/train.py --batch-size 32 --img 640 640 --data zero-waste-1/data.yaml --cfg yolor/cfg/yolor_p6.cfg --weights 'yolor/weights/yolor_p6.pt' --device 0 --name yolor_p6_$TIMESTAMP --hyp 'yolor/data/hyp.scratch.1280.yaml' --epochs 10
-
+# If you are running under roboflow folder
+# python ./yolor/train.py --batch-size 16 --img 640 640 --data zero-waste-10/data.yaml --cfg ./yolor/cfg/yolor_p6.cfg --weights './yolor/weights/yolor_p6.pt' --device 0 --name yolor_p6_0427 --hyp './yolor/data/hyp.scratch.1280.yaml' --epochs 50 
 
 # python yolor/detect.py --weights "runs/train/yolor_p6_$TIMESTAMP/weights/best_overall.pt" --conf 0.0 --source zero-waste-1/test/images --names yolor/data/zerowaste.names --cfg yolor/cfg/yolor_p6.cfg
 
@@ -111,10 +111,19 @@ python test.py --conf-thres 0.0 --img 640 --batch 32 --device 0 --data ../zero-w
 
 # python yolor/test.py --conf-thres 0.5 --img 640 --batch 32 --device cpu --data zero-waste-1/data.yaml --cfg yolor/cfg/yolor_p6.cfg --weights "runs/train/yolor_p6_2022_04_05-19_58_08/weights/best_overall.pt" --task test --names yolor/data/zerowaste.names --verbose --save-json --save-conf --save-txt
 
+# Run under yolor folder
+# cd /projectnb/dl523/students/dong760/roboflow-ai/yolor
+# python test.py --conf-thres 0.5 --img 640 --batch 32 --device 0 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights ../runs/train/yolor_p6_2022_03_26-10_44_07/weights/best_overall.pt --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt
+
+# python train.py --batch-size 32 --img 640 640 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --device 0 --name yolor_p6_0427 --hyp data/hyp.scratch.1280.yaml --epochs 5
+
+
+
 # WARNING: --img-size 416 must be multiple of max stride 64, updating to 448
  
 
-# python train.py --device 0 --batch-size 16 --img 640 640 --data zero-waste-1/data.yaml --cfg cfg/yolov4-csp-x-leaky.cfg --weights weights/yolov4-csp-x-leaky.weights --name yolov4-csp-x-leaky-300-ep --epochs 1
+# python train.py --device 0 --batch-size 32 --img 448 448 --data zero-waste-1/data.yaml --cfg cfg/yolov4-csp-x-leaky.cfg --weights weights/yolov4-csp-x-leaky.weights --name yolov4-csp-x-leaky-300-ep --epochs 1
+python train.py --device 0 --batch-size 32 --img 448 448 --data zero-waste-4/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolov4-csp-x-leaky.weights --name yolov4-csp-x-leaky-300-ep --epochs 1
 
 # python -m pdb yolor/detect.py --weights "runs/train/yolor_p6_2022_04_05-19_58_08/weights/best_overall.pt" --conf 0.5 --source zero-waste-1/test/images --names ./yolor/data/zerowaste.names --cfg yolor/cfg/yolor_p6.cfg --verbose
 

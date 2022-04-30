@@ -1,10 +1,11 @@
 roboflow-ai/yolor/runs/
 roboflow-ai/yolor/weights/
+roboflow-ai/yolor/wandb/
 roboflow-ai/runs/
 roboflow-ai/weights/
-roboflow-ai/wanbd/
-roboflow-ai/yolor/wanbd/
+roboflow-ai/wandb/
 
+.vscode/
 roboflow-ai/cocoapi/
 roboflow-ai/pycocotools/
 roboflow-ai/yolor/coco/
