@@ -1,0 +1,43 @@
+{
+    "os": "Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.2.5",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-04-29T02:45:41.716644",
+    "startedAt": "2022-04-29T02:45:32.740194",
+    "docker": null,
+    "gpu": "Tesla V100-SXM2-16GB",
+    "gpu_count": 4,
+    "cpu_count": 32,
+    "cuda": null,
+    "args": [
+        "--img-size",
+        "640",
+        "--batch",
+        "32",
+        "--device",
+        "0",
+        "--data",
+        "../zero-waste-10/data.yaml",
+        "--cfg",
+        "cfg/yolor_p6.cfg",
+        "--weights",
+        "runs/train/yolor_p6_2022_03_26-10_44_07/weights/best_overall.pt",
+        "--task",
+        "test",
+        "--names",
+        "data/zerowaste.names",
+        "--verbose",
+        "--save-json"
+    ],
+    "state": "running",
+    "program": "test.py",
+    "codePath": "roboflow-ai/yolor/test.py",
+    "git": {
+        "remote": "https://github.com/Boston-University-Projects/EC523_DL_CV_Project.git",
+        "commit": "e01c314ef6611e3527e867eb22d3556fba2b4a25"
+    },
+    "email": null,
+    "root": "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project",
+    "host": "scc-204",
+    "username": "zgu",
+    "executable": "/share/pkg.7/python3/3.8.10/install/bin/python3"
+}

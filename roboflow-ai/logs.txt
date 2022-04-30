@@ -1,0 +1,96 @@
+Lecture 16 (Access Passcode: ia066!5Y
+
+
+### Q&A:
+# Where is the default package location, with 'import' command in python? ==> # >>> site.USER_SITE # '/usr4/dl523/dong760/.local/lib/python3.8/site-packages' ==>, https://docs.python.org/3/library/site.html#:~:text=Default%20value%20is%20~%2F.,%5Csite%2Dpackages%20on%20Windows.
+
+# Where is the default local location for pip install? ==> https://unix.stackexchange.com/questions/240037/why-did-pip-install-a-package-into-local-bin#:~:text=The%20short%20answer%20is%20that,performs%20a%20user%2Dlocal%20installation.
+
+
+# How to resursively copy all files and folder to a new location?
+# cp -R Pictures Pictures_backup
+
+(dl_env)dong760@scc2:~$ python
+Python 3.8.10 (default, May  3 2021, 17:15:02) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-44)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from pycocotools import mask as maskUtils
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'pycocotools'
+>>> from torchvision.utils import save_image
+>>> exit()
+(dl_env)dong760@scc2:~$ which python
+/share/pkg.7/python3/3.8.10/install/bin/python
+
+/share/pkg.7/python3/3.8.10/install/lib/python3.8/site-packages
+>>> import site
+>>> site.USER_SITE
+'/usr4/dl523/dong760/.local/lib/python3.8/site-packages'
+
+pip install --no-cache-dir --upgrade --force-reinstall --ignore-installed --prefix=/usr4/dl523/dong760/.local/lib/python3.8/site-packages pycocotools
+pip install --no-cache-dir --prefix=/share/pkg.7/python3/3.8.10/install/lib/python3.8/site-packages pycocotools
+pip install --no-cache-dir --upgrade --force-reinstall --ignore-installed --user pycocotools
+export PYTHONPATH=/projectnb/dl523/projects/RWD/pythonlibs/lib/python3.8/site-packages/:$PYTHONPATH
+export PATH=/projectnb/dl523/projects/RWD/pythonlibs/bin:$PATH
+ 
+
+export PYTHONPATH=/usr4/dl523/dong760/.local/lib/python3.8/site-packages/bin:$PYTHONPATH
+export PATH=/usr4/dl523/dong760/.local/bin:$PATH
+export PATH=/usr4/dl523/dong760/.local/lib/python3.8/site-packages/bin:$PATH
+python -m site --user-base
+
+# Download package and extract source from developer
+scc1$  wget https://third.party.dev/packages/source/module.tar.gz
+scc1$  tar xf module.tar.gz
+scc1$  cd module/
+scc1$  ls
+setup.py   otherfiles
+
+# Choose an install location, set PYTHONPATH and create the directories
+export PACKAGEINSTALLDIR=/projectnb/dl523/projects/RWD/pythonlibs
+export PYTHONPATH=$PACKAGEINSTALLDIR/lib/python3.8/site-packages:$PYTHONPATH
+mkdir -p $PACKAGEINSTALLDIR/lib/python3.8/site-packages
+
+# Install
+python setup.py install --prefix=$PACKAGEINSTALLDIR
+
+########### Environment Creation and Activation
+# Load the python module for the python version you wish to use.
+module load python3/3.8.10
+
+# Create a virtual environment in your /projectnb/ space.
+virtualenv /projectnb/dl523/projects/RWD/venvs/dl523_env 
+
+# Activate it
+source /projectnb/dl523/projects/RWD/venvs/dl523_env/bin/activate
+(dl523_env) scc1$   
+
+# Install packages into this virtualenv (e.g. "htseq")
+(dl523_env) scc1$ pip install htseq
+Collecting htseq
+Collecting numpy
+Collecting pysam
+Installing collected packages: numpy, pysam, htseq
+Successfully installed htseq-0.12.4 numpy-1.19.1 pysam-0.16.0.1
+
+# Make sure it works
+(dl523_env) scc1$ which python
+/projectnb/yourprojectname/venvs/dl523_env/bin/python
+
+(dl523_env) scc1$ python
+Python 3.7.7 (default, May 21 2020, 14:57:43) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-39)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>> import HTSeq
+>>  
+>> exit()
+
+(dl523_env) scc1$ which htseq-count 
+/projectnb/yourprojectname/venvs/dl523_env/bin/htseq-count
+
+# Exit/Deactivate the virtual environment
+(dl523_env) scc1$ deactivate
+scc1$  
+
+pip list --local
