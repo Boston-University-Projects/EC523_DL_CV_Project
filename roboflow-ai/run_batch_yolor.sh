@@ -2,7 +2,7 @@
 
 LOGFILE="./log"
 TIMESTAMP=`date "+%Y_%m_%d-%H_%M_%S"`
-PROJECT_NAME="yolor_p6_zerowaste"
+PROJECT_NAME="yolor_p6_zerowaste_new_300"
 SCC_GROUP='dl523'
 echo $PROJECT_NAME\_$TIMESTAMP
 
@@ -15,13 +15,13 @@ echo $PROJECT_NAME\_$TIMESTAMP
 #$ -l h_rt=24:00:00
 
 # Request 4 CPUs
-#$ -pe omp 4
+#$ -pe omp 2
 
 # Request 1 GPU 
-#$ -l gpus=1
+#$ -l gpus=2
 
 # Specify the minimum GPU compute capability 
-#$ -l gpu_c=3.5
+#$ -l gpu_c=7
 
 # specify gpu type
 #$ -l gpu_type=V100
@@ -36,7 +36,7 @@ echo $PROJECT_NAME\_$TIMESTAMP
 #$ -j y
 
 # Specify the output file name
-#$ -o /projectnb/dl523/students/dong760/roboflow-ai/log/yolor_p6_zerowaste_04-30-2022.qlog
+#$ -o /projectnb/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/log/yolor_p6_zerowaste_new_300_04-30-2022.qlog
 
 # Keep track of information related to the current job
 echo "=========================================================="
@@ -57,7 +57,8 @@ module load cuda/11.3
 # module load texlive/2018
 # module load miniconda/4.9.2
 # module load gcc/9.3.0
-export PATH=$PATH:/usr4/dl523/dong760/.local/lib/python3.8/site-packages
+export PATH=/usr4/dl523/dong760/.local/lib/python3.8/site-packages:$PATH
+export PATH=/usr4/dl523/dong760/.conda/envs/dl_env/bin:$PATH
 source /projectnb/dl523/students/dong760/miniconda3/bin/activate
 export PYTHONNOUSERSITE=true
 conda activate dl_env
@@ -84,6 +85,7 @@ module list
 
 echo "==========================> Current ENV Path"
 echo $PATH
+echo ""
 echo $PYTHONPATH
 python -V
 which python
@@ -92,9 +94,9 @@ which python
 echo "==========================> Start Training"
 cd /projectnb/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor
 
-python train.py --batch-size 16 --img 640 640 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --device 0 --yolor_p6_$TIMESTAMP --hyp data/hyp.scratch.1280.yaml --epochs 300 --augment True
+python train.py --batch-size 16 --img 640 640 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --device 3 --name yolor_p6_$TIMESTAMP --hyp data/hyp.scratch.1280.yaml --epochs 300 --augment True
 
-python test.py --conf-thres 0.0 --img 640 --batch 16 --device 0 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights runs/train/yolor_p6_$TIMESTAMP/weights/best_overall.pt --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt
+python test.py --conf-thres 0.0 --img 640 --batch 16 --device 3 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights runs/train/yolor_p6_$TIMESTAMP/weights/best_overall.pt --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt
 
 
 # If you are running under roboflow-ai folder
@@ -123,7 +125,7 @@ python test.py --conf-thres 0.0 --img 640 --batch 16 --device 0 --data ../zero-w
  
 
 # python train.py --device 0 --batch-size 32 --img 448 448 --data zero-waste-1/data.yaml --cfg cfg/yolov4-csp-x-leaky.cfg --weights weights/yolov4-csp-x-leaky.weights --name yolov4-csp-x-leaky-300-ep --epochs 1
-python train.py --device 0 --batch-size 32 --img 448 448 --data zero-waste-4/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolov4-csp-x-leaky.weights --name yolov4-csp-x-leaky-300-ep --epochs 1
+# python train.py --device 0 --batch-size 32 --img 448 448 --data zero-waste-4/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolov4-csp-x-leaky.weights --name yolov4-csp-x-leaky-300-ep --epochs 1
 
 # python -m pdb yolor/detect.py --weights "runs/train/yolor_p6_2022_04_05-19_58_08/weights/best_overall.pt" --conf 0.5 --source zero-waste-1/test/images --names ./yolor/data/zerowaste.names --cfg yolor/cfg/yolor_p6.cfg --verbose
 
