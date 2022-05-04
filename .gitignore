@@ -1,3 +1,16 @@
+roboflow-ai/yolor/runs/
+roboflow-ai/yolor/weights/
+roboflow-ai/yolor/wandb/
+roboflow-ai/runs/
+roboflow-ai/weights/
+roboflow-ai/wandb/
+
+.vscode/
+roboflow-ai/cocoapi/
+roboflow-ai/pycocotools/
+roboflow-ai/yolor/coco/
+roboflow-ai/zero-waste*/
+roboflow-ai/zero-waste-10/
 # System files
 *.DS_Store
 

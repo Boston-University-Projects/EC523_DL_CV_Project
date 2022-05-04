@@ -1,0 +1,6 @@
+CREATE DATABASE IF NOT EXISTS cs523;
+USE cs523;
+CREATE TABLE Photos(
+ photo_id INTEGER ,
+ data LONGBLOB,
+ PRIMARY KEY (photo_id));

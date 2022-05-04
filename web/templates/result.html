@@ -1,0 +1,16 @@
+<head>
+      <title>Here is the Result</title>
+</head>
+  
+<ul>
+{% for photo in photos %}
+          
+    <h2>This is the Photo: </h2>  
+    <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}'width="200" height="121"/>
+                 
+{% endfor %}
+</ul>
+<h3>Here is the Result: </h3>
+
+<br><a href='/'>Home
+  
