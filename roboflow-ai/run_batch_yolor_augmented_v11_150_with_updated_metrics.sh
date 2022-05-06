@@ -92,11 +92,12 @@ which python
 
 
 echo "==========================> Start Training"
+DATASET_DIR='../zero-waste-11'
 cd /projectnb/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor
 
-python train.py --batch-size 16 --img 640 640 --data ../zero-waste-11/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --device 3 --name yolor_p6_$TIMESTAMP --hyp data/hyp.scratch.1280.yaml --epochs 150 --augment True
+python train.py --batch-size 16 --img 640 640 --data $DATASET_DIR/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --device 3 --name yolor_p6_$TIMESTAMP --hyp data/hyp.scratch.1280.yaml --epochs 150 --augment True
 
-python test.py --conf-thres 0.0 --img 640 --batch 16 --device 3 --data ../zero-waste-10/data.yaml --cfg cfg/yolor_p6.cfg --weights runs/train/yolor_p6_$TIMESTAMP/weights/best_overall.pt --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt --gt_json_dir ../zero-waste-11/test/_annotations.coco.json
+python test.py --conf-thres 0.0 --img 640 --batch 16 --device 3 --data $DATASET_DIR/data.yaml --cfg cfg/yolor_p6.cfg --weights runs/train/yolor_p6_$TIMESTAMP/weights/best_overall.pt --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt --gt_json_dir $DATASET_DIR/test/_annotations.coco.json
 
 
 # If you are running under roboflow-ai folder

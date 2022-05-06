@@ -45,7 +45,9 @@ def test(data,
          save_txt=False,  # for auto-labelling
          save_conf=False,
          plots=True,
-         log_imgs=0):  # number of logged images
+         log_imgs=0,
+         gt_json_dir=None
+         ):  # number of logged images
 
     # Initialize/load model and set device
     training = model is not None
@@ -269,14 +271,15 @@ def test(data,
 
     # Save JSON
     if save_json and len(jdict):
-        gt_json_dir = opt.gt_json_dir   # e.g., "../zero-waste-10/test/_annotations.coco.json"
+        # gt_json_dir = opt.gt_json_dir   # e.g., "../zero-waste-10/test/_annotations.coco.json"
         w = Path(weights[0] if isinstance(weights, list) else weights).stem if weights is not None else ''  # weights
         # coco_dir = "./yolor/coco/annotations/instances_val*.json"
         # anno_json = glob.glob("./yolor/coco/annotations/instances_val*.json")[0]  # finding the annotations json 
         # anno_json = glob.glob("/projectnb2/dl523/students/dong760/zerowaste_dataset/zerowaste-f-final/test/labels.json")[0]  # finding the annotations json 
         # anno_json = str(Path(data.get('path', '../coco')) / 'annotations/instances_val2017.json')  # annotations json
         pred_json = str(save_dir / f"{w}_predictions.json")  # predictions json
-        anno_json = glob.glob(gt_json_dir)[0]   # ==> Ground truth annotation file, which will be used for correction
+        print(f"opt.gt_json_dir: {opt.gt_json_dir}\n")
+        anno_json = opt.gt_json_dir   # ==> Ground truth annotation file, which will be used for correction
 
         # Correcting the image_id ==》 Now we have image_id as non-numeric value, e.g., "image_id": "04_frame_033200_PNG.rf.7ede2973b58601b4062872550edf0253" ==> Ans, we want to find it's correct corresponding image_id from _annotation.coco.json file.. ==> So, we need to create a function to do that!!
         f_obj = open(anno_json)
@@ -366,6 +369,7 @@ if __name__ == '__main__':
              opt.single_cls,
              opt.augment,
              opt.verbose,
+             gt_json_dir=opt.gt_json_dir,
              save_txt=opt.save_txt,
              save_conf=opt.save_conf,
              )

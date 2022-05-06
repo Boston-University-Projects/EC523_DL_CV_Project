@@ -10,7 +10,7 @@ roboflow-ai/cocoapi/
 roboflow-ai/pycocotools/
 roboflow-ai/yolor/coco/
 roboflow-ai/zero-waste*/
-roboflow-ai/zero-waste-10/
+roboflow-ai/ScaledYOLOv4/
 # System files
 *.DS_Store
 
