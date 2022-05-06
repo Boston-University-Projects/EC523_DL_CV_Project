@@ -213,6 +213,9 @@ Batch script template for running in SCC:
 # specify gpu type
 #$ -l gpu_type=V100
 
+# specify minimum gpu memory
+#$ -l gpu_memory=16G
+
 # Send an email when the job finishes or if it is aborted (by default no email is sent), or begin
 #$ -m eab
 
@@ -225,13 +228,14 @@ Batch script template for running in SCC:
 # Specify the output file name
 #$ -o /projectnb/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/log/scaled_yolov4_p7_zerowaste_v16_640x640_300_05-05-2022.qlog
 
+# ==========> Read more about batch script files arguments, https://www.bu.edu/tech/support/research/system-usage/running-jobs/submitting-jobs/
+
 # Keep track of information related to the current job
 echo "=========================================================="
 echo "Start date : $(date)"
 echo "Job name : $JOB_NAME"
 echo "Job ID : $JOB_ID  $SGE_TASK_ID"
 echo "=========================================================="
-
 echo "==========================> Loading moudule for Project Environment"
 # qrsh -P dl523 -l gpus=1 -l gpu_c=3.5
 # qsub run_batch.sh
@@ -287,7 +291,8 @@ DATASET_DIR='../zero-waste-10'
 cd /projectnb/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor
 
 # If you want to do the distributed training
-python -m torch.distributed.launch --nproc_per_node 4 train.py --batch-size 16 --img 640 640 --data $DATASET_DIR/data.yaml --cfg cfg/yolov4_p6.cfg --weights weights/yolov4_p6.weights --name yolov4_p6_$TIMESTAMP --hyp data/hyp.scratch.640.yaml --epochs 300 --augment True --sync-bn --device 0,1,2,3 
+python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.py --batch-size 16 --img 640 640 --data $DATASET_DIR/data.yaml --cfg cfg/yolov4_p7.cfg --weights '' --name yolov4_p6_$TIMESTAMP --hyp data/hyp.scratch.640.yaml --epochs 300 --augment True --sync-bn --device 0,1,2,3 --exist-ok
+# or --weights weights/yolov4_p6.weights
 
 # python train.py --batch-size 16 --img 640 640 --data $DATASET_DIR/data.yaml --cfg cfg/yolov4_p6.cfg --weights weights/yolov4_p6.weights --name yolov4_p6_$TIMESTAMP --hyp data/hyp.scratch.640.yaml --epochs 300 --augment True  --device 0
 
