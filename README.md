@@ -13,25 +13,34 @@ In recent years, environmental management problems has received increasing atten
 different types of waste materials during the waste recycling process. Automatic waste detection becomes a necessity when tons of waste materials have to be processed at the waste recycle center every day. Our project aims to utilize deep learning and computer vision techniques to efficiently and accurately detect different waste materials.
 
 ## Implementation Plan
-In the first half of our project, we try to test out different one-stage detection models and two-stage detection models. For YOLOv4 and YOLOR, we adapted the original PyTorch implementations by WongkinYiu. For Dynamic R-CNN, we used the MMdetection toolbox. We will then focus on one or two best performing models and further customize/optimize these models in the purpose of achieving better performance.  
+In the first half of our project, we tried to test out different one-stage detection models and two-stage detection models. For YOLOv4 and YOLOR, we adapted the original PyTorch implementations by WongkinYiu. For Dynamic R-CNN, we used the MMdetection toolbox. For the second half of our project, we focused on exploring different techniques that can optimize and improve the performance of the models mentioned above. We planned to implement an UI to showcase the detection capability of one of the models, but due to time constraints, we did not finish this part. If you would like to know more about our project, please check out our final report here.  
 
-__Dataset__: The dataset we are using to train and test our models is the ZeroWaste dataset proposed by Bashkirova et al. Check out their paper [here](https://arxiv.org/abs/2106.02740)  
+__Dataset__: The dataset we are using to train and test our models is the ZeroWaste dataset proposed by Bashkirova et al. Check out their paper [here](https://arxiv.org/abs/2106.02740). Since the dataset takes a lot of space, we did not include the dataset in our repo. You can download the ZeroWaste dataset [here](https://zenodo.org/record/6412647#.YnSTWhOZNhE). The YOLOv4 and YOLOR model were trained on a further processed version of the ZeroWaste dataset, so you have to run the `download_data.py` located in `roboflow-ai/` or `YOLOv4/scripts` to download the appropriate data for YOLOv4 and YOLOR.  
 __Models to Compare__: 
-  - YOLOv4 (original version [here](https://github.com/WongKinYiu/PyTorch_YOLOv4), our forked version [here](https://github.com/mikethegoblin/PyTorch_YOLOv4))
+  - YOLOv4 (original version [here](https://github.com/WongKinYiu/PyTorch_YOLOv4), our modified version is in the `YOLOv4` directory)
   - Scaled YOLOv4 (currently not tested due to time constraints)
-  - YOLOR (original version [here](https://github.com/WongKinYiu/yolor))
-  - Dynamic R-CNN (MMdetection implementation [here](https://github.com/open-mmlab/mmdetection))
+  - YOLOR (original version [here](https://github.com/WongKinYiu/yolor), our modified version is in the `roboflow-ai/yolor` directory)
+  - Dynamic R-CNN (MMdetection implementation [here](https://github.com/open-mmlab/mmdetection), our modified version is the the `mmdetection` directory)
 
 ## Project Structure
 Our project will be structured as follows:
 ```
 .
-├── Archives
-├── images
-├── Papers
-├── License
-├── src/
-│   └── notebooks/
+├── Archives/
+├── images/
+├── mmdetection/
+├── notebooks/
+│   ├── Training_YOLOR_on_a_zerowaste.ipynb
+│   ├── waste_detection_D-RCNN.ipynb
+│   └── waste_detection_yolov4.ipynb
+├── Papers/
+├── reports/
+├── roboflow-ai/
+│   ├── ...
+│   └── yolor/
+├── web/
+├── YOLOv4/
+├── LICENSE
 ├── README.md
 └── Resources.md
 ```
@@ -44,7 +53,8 @@ Before learning how to train the models, please check out the [Environment Setup
 We have written some notebooks on how to train the selected YOLO, YOLOR, and Dynamic R-CNN models. These notebooks contain detailed instructions on how to train the above models on the ZeroWaste dataset. The notebooks can be found in the `src/notebooks` directory. 
 
 ## Setting up Environment:
-
+<details open>
+<summary> expand to see how to set up environment </summary>
 - Requirement Packages:
   - numpy, Theano, Torch
 - Running in Local:
@@ -158,5 +168,21 @@ pip freeze > requirements.txt
   Enter the token key that you copied in step 1 into the token field, and click Log In (figure A.4).
 
 ![image-20220128110447248](./images/image-20220128110447248.png)
+</details>
 
+## Final Result
+Overall, we've achived really nice results in all the models we chose to compare in our project. The following table shows the best result produced by each model. The results for RetinaNet, Mask R-CNN, and TridentNet were given in the [ZeroWaste](https://arxiv.org/abs/2106.02740) paper.  
+|Models|AP|AP50|AP75|APs|APm|APl|
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|RetinaNet|21.0|33.5|22.2|4.3|9.5|22.7|
+|Mask R-CNN|22.8|34.9|24.4|4.6|10.6|25.8|
+|TridentNet|24.2|36.3|26.6|4.8|10.7|26.1|
+|Dynamic R-CNN|30.8|42.6|33.5|4.9|14.6|33.7|
+|YOLOv4|39.1|52.9|43.2|12.9|25.5|46.7|
+|YOLOR|62.1|74.2|67.7|28.4|48.0|69.9|
+
+The detections on the dataset looks like this:
+![final detection](images/final_detection.png)
+
+For more detailed results, please refer to our final report here.
 
