@@ -7,6 +7,8 @@
 - [Resources](#resources)
 - [Taining Instructions](#how-to-train-the-models)
 - [Environment Setup](#setting-up-environment)
+- [Final Result](#final-result)
+- [Appendix](#appendix-a)
 
 ## Project Overview
 In recent years, environmental management problems has received increasing attention from the public. One of the key problems people are trying to solve is the ability to efficiently identify
