@@ -18,7 +18,7 @@ In the first half of our project, we tried to test out different one-stage detec
 __Dataset__: The dataset we are using to train and test our models is the ZeroWaste dataset proposed by Bashkirova et al. Check out their paper [here](https://arxiv.org/abs/2106.02740). Since the dataset takes a lot of space, we did not include the dataset in our repo. You can download the ZeroWaste dataset [here](https://zenodo.org/record/6412647#.YnSTWhOZNhE). The YOLOv4 and YOLOR model were trained on a further processed version of the ZeroWaste dataset, so you have to run the `download_data.py` located in `roboflow-ai/` or `YOLOv4/scripts` to download the appropriate data for YOLOv4 and YOLOR.  
 __Models to Compare__: 
   - YOLOv4 (original version [here](https://github.com/WongKinYiu/PyTorch_YOLOv4), our modified version is in the `YOLOv4` directory)
-  - Scaled YOLOv4 (original version [here](https://github.com/WongKinYiu/ScaledYOLOv4), currently not tested due to time constraints)
+  - Scaled YOLOv4 (original version [here](https://github.com/WongKinYiu/ScaledYOLOv4), our modified version is in the `roboflow-ai/ScaledYOLOv4` directory, currently not tested due to some broken code and time constraints)
   - YOLOR (original version [here](https://github.com/WongKinYiu/yolor), our modified version is in the `roboflow-ai/yolor` directory)
   - Dynamic R-CNN (MMdetection implementation [here](https://github.com/open-mmlab/mmdetection), our modified version is the the `mmdetection` directory)
 
