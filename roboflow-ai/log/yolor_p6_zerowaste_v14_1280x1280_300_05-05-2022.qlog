@@ -1,0 +1,218 @@
+yolor_p6_zerowaste_v14_1280x1280_300_2022_05_05-03_43_03
+==========================================================
+Start date : Thu May  5 03:43:03 EDT 2022
+Job name : yolor_p6_zerowaste_v14_1280x1280_300
+Job ID : 4535516  undefined
+==========================================================
+==========================> Loading moudule for Project Environment
+===========================> Checking OS Information
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.9.2009 (Core)
+Release:	7.9.2009
+Codename:	Core
+x86_64
+CentOS Linux release 7.9.2009 (Core)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+CentOS Linux release 7.9.2009 (Core)
+CentOS Linux release 7.9.2009 (Core)
+===========================> Checking CPU Information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    1
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Stepping:              7
+CPU MHz:               1941.577
+CPU max MHz:           3900.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+===========================> Checking GPU Configuration
+Thu May  5 03:43:05 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:18:00.0 Off |                    0 |
+| N/A   58C    P0    82W / 300W |   4290MiB / 16160MiB |     36%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   37C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   39C    P0    59W / 300W |   1716MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:AF:00.0 Off |                    0 |
+| N/A   40C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A     41584      C   python                           4287MiB |
+|    2   N/A  N/A     18880      C   ....10/install/bin/python3.8     1713MiB |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Mon_May__3_19:15:13_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.109
+Build cuda_11.3.r11.3/compiler.29920130_0
+Linux scc-204 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+==========================> Checking SCC Quota Usage
+                                      quota     quota       usage     usage
+project space                          (GB)    (files)       (GB)   (files)
+-----------------------------------  ------  ---------  ---------  --------
+/projectnb/dl523                       2000   33554432    1761.59   4243158
+Home Directory Usage and Quota:
+Name           GB    quota    limit in_doubt    grace |    files    quota    limit in_doubt    grace
+dong760   8.73164     10.0     11.0      0.0     none |  106,226  200,000  200,000      101     none
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4535499 0.10010 yolor_p6_z dong760      r     05/05/2022 03:41:10 academic-gpu@scc-201.scc.bu.ed     2        
+4535516 0.10005 yolor_p6_z dong760      r     05/05/2022 03:43:03 academic-gpu@scc-204.scc.bu.ed     2        
+
+Currently Loaded Modules:
+  1) python3/3.8.10   2) cuda/11.3
+
+ 
+
+==========================> Current ENV Path
+/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/share/pkg.7/cuda/11.3/install/nsight-compute-2021.1.1:/share/pkg.7/cuda/11.3/install/nsight-systems-2021.1.3/bin:/share/pkg.7/cuda/11.3/install/bin:/share/pkg.7/python3/3.8.10/install/bin:/scratch/4535516.1.academic-gpu:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.local/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/usr4/dl523/dong760/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/remote-cli:/usr/java/default/jre/bin:/usr/java/default/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/dell/srvadmin/bin:/bin:/usr4/dl523/dong760/bin:.
+
+
+Python 3.8.10
+/usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+==========================> Start Training
+Using torch 1.11.0 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Namespace(adam=False, augment=True, batch_size=16, bucket='', cache_images=False, cfg='cfg/yolor_p6.cfg', data='../zero-waste-14/data.yaml', device='3', epochs=300, evolve=False, exist_ok=False, global_rank=-1, hyp='data/hyp.scratch.1280.yaml', image_weights=False, img_size=[1280, 1280], local_rank=-1, log_imgs=16, multi_scale=False, name='yolor_p6_2022_05_05-03_43_03', noautoanchor=False, nosave=False, notest=False, project='runs/train', rect=False, resume=False, save_dir='runs/train/yolor_p6_2022_05_05-03_43_03', single_cls=False, sync_bn=False, total_batch_size=16, weights='weights/yolor_p6.pt', workers=1, world_size=1)
+Start Tensorboard with "tensorboard --logdir runs/train", view at http://0.0.0.0:7777/
+Hyperparameters {'lr0': 0.01, 'lrf': 0.2, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.5, 'cls_pw': 1.0, 'obj': 1.0, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.5, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0}
+Model Summary: 665 layers, 36854616 parameters, 36854616 gradients
+Optimizer groups: 145 .bias, 145 conv.weight, 149 other
+wandb: Currently logged in as: dragogo (use `wandb login --relogin` to force relogin)
+check_file -- > file: ../zero-waste-14/data.yaml
+
+check_file -- > file: cfg/yolor_p6.cfg
+
+check_file -- > file: data/hyp.scratch.1280.yaml
+
+Transferred 850/862 items from weights/yolor_p6.pt
+wandb: wandb version 0.12.16 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.12.12
+wandb: Run data is saved locally in /projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor/wandb/run-20220505_034349-38jvcwo3
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run yolor_p6_2022_05_05-03_43_03
+wandb: ⭐️ View project at https://wandb.ai/dragogo/YOLOR
+wandb: 🚀 View run at https://wandb.ai/dragogo/YOLOR/runs/38jvcwo3
+Scanning images:   0% 0/3148 [00:00<?, ?it/s]Scanning images:   0% 4/3148 [00:00<01:26, 36.27it/s]Scanning images:   0% 8/3148 [00:00<01:27, 36.07it/s]Scanning images:   1% 20/3148 [00:00<00:46, 67.24it/s]Scanning images:   1% 36/3148 [00:00<00:31, 100.13it/s]Scanning images:   1% 47/3148 [00:00<00:31, 99.21it/s] Scanning images:   2% 58/3148 [00:00<00:35, 87.14it/s]Scanning images:   2% 75/3148 [00:00<00:27, 109.93it/s]Scanning images:   3% 87/3148 [00:00<00:33, 91.42it/s] Scanning images:   3% 97/3148 [00:01<00:33, 92.41it/s]Scanning images:   3% 107/3148 [00:01<00:32, 92.31it/s]Scanning images:   4% 122/3148 [00:01<00:29, 102.30it/s]Scanning images:   4% 136/3148 [00:01<00:27, 110.47it/s]Scanning images:   5% 148/3148 [00:01<00:33, 90.70it/s] Scanning images:   5% 158/3148 [00:01<00:37, 79.97it/s]Scanning images:   5% 167/3148 [00:01<00:40, 73.94it/s]Scanning images:   6% 180/3148 [00:02<00:35, 83.63it/s]Scanning images:   6% 189/3148 [00:02<00:36, 81.26it/s]Scanning images:   6% 198/3148 [00:02<00:39, 75.48it/s]Scanning images:   7% 207/3148 [00:02<00:38, 75.84it/s]Scanning images:   7% 215/3148 [00:02<00:42, 69.23it/s]Scanning images:   7% 224/3148 [00:02<00:45, 64.32it/s]Scanning images:   7% 235/3148 [00:02<00:39, 73.84it/s]Scanning images:   8% 245/3148 [00:02<00:36, 78.80it/s]Scanning images:   8% 256/3148 [00:03<00:33, 85.51it/s]Scanning images:   8% 267/3148 [00:03<00:31, 91.24it/s]Scanning images:   9% 278/3148 [00:03<00:29, 96.13it/s]Scanning images:   9% 288/3148 [00:03<00:33, 84.74it/s]Scanning images:   9% 297/3148 [00:03<00:36, 77.53it/s]Scanning images:  10% 306/3148 [00:03<00:37, 75.91it/s]Scanning images:  10% 314/3148 [00:03<00:38, 72.85it/s]Scanning images:  10% 327/3148 [00:03<00:34, 82.77it/s]Scanning images:  11% 336/3148 [00:04<00:38, 73.00it/s]Scanning images:  11% 345/3148 [00:04<00:37, 75.42it/s]Scanning images:  11% 353/3148 [00:04<00:38, 72.92it/s]Scanning images:  11% 361/3148 [00:04<00:41, 67.26it/s]Scanning images:  12% 374/3148 [00:04<00:33, 82.25it/s]Scanning images:  12% 383/3148 [00:04<00:35, 78.98it/s]Scanning images:  12% 392/3148 [00:04<00:35, 77.56it/s]Scanning images:  13% 406/3148 [00:04<00:30, 91.20it/s]Scanning images:  13% 416/3148 [00:05<00:30, 89.69it/s]Scanning images:  14% 426/3148 [00:05<00:30, 89.76it/s]Scanning images:  14% 437/3148 [00:05<00:29, 92.03it/s]Scanning images:  14% 455/3148 [00:05<00:23, 115.04it/s]Scanning images:  15% 472/3148 [00:05<00:21, 126.26it/s]Scanning images:  16% 492/3148 [00:05<00:19, 138.60it/s]Scanning images:  16% 506/3148 [00:05<00:19, 133.80it/s]Scanning images:  17% 520/3148 [00:05<00:19, 133.46it/s]Scanning images:  17% 536/3148 [00:05<00:18, 137.95it/s]Scanning images:  17% 550/3148 [00:06<00:21, 119.81it/s]Scanning images:  18% 563/3148 [00:06<00:28, 89.88it/s] Scanning images:  18% 574/3148 [00:06<00:29, 86.95it/s]Scanning images:  19% 584/3148 [00:06<00:31, 81.06it/s]Scanning images:  19% 593/3148 [00:06<00:30, 82.66it/s]Scanning images:  19% 602/3148 [00:06<00:31, 80.35it/s]Scanning images:  20% 616/3148 [00:06<00:28, 90.00it/s]Scanning images:  20% 627/3148 [00:07<00:27, 92.85it/s]Scanning images:  20% 637/3148 [00:07<00:27, 89.72it/s]Scanning images:  21% 647/3148 [00:07<00:32, 77.55it/s]Scanning images:  21% 659/3148 [00:07<00:28, 87.16it/s]Scanning images:  21% 669/3148 [00:07<00:28, 86.38it/s]Scanning images:  22% 684/3148 [00:07<00:24, 99.67it/s]Scanning images:  22% 697/3148 [00:07<00:23, 104.65it/s]Scanning images:  23% 714/3148 [00:07<00:20, 119.98it/s]Scanning images:  23% 727/3148 [00:08<00:23, 104.71it/s]Scanning images:  24% 744/3148 [00:08<00:20, 116.29it/s]Scanning images:  24% 763/3148 [00:08<00:18, 132.40it/s]Scanning images:  25% 777/3148 [00:08<00:20, 114.81it/s]Scanning images:  25% 791/3148 [00:08<00:19, 120.47it/s]Scanning images:  26% 804/3148 [00:08<00:19, 118.02it/s]Scanning images:  26% 817/3148 [00:08<00:19, 119.14it/s]Scanning images:  26% 834/3148 [00:08<00:17, 130.47it/s]Scanning images:  27% 848/3148 [00:09<00:19, 119.52it/s]Scanning images:  27% 861/3148 [00:09<00:18, 121.55it/s]Scanning images:  28% 874/3148 [00:09<00:20, 110.55it/s]Scanning images:  28% 886/3148 [00:09<00:22, 102.05it/s]Scanning images:  29% 900/3148 [00:09<00:20, 110.22it/s]Scanning images:  29% 912/3148 [00:09<00:20, 110.94it/s]Scanning images:  29% 924/3148 [00:09<00:21, 102.07it/s]Scanning images:  30% 936/3148 [00:09<00:20, 106.29it/s]Scanning images:  30% 950/3148 [00:09<00:19, 112.00it/s]Scanning images:  31% 962/3148 [00:10<00:20, 106.73it/s]Scanning images:  31% 974/3148 [00:10<00:19, 109.99it/s]Scanning images:  31% 986/3148 [00:10<00:24, 87.18it/s] Scanning images:  32% 996/3148 [00:10<00:25, 84.47it/s]Scanning images:  32% 1006/3148 [00:10<00:26, 80.01it/s]Scanning images:  32% 1015/3148 [00:10<00:26, 80.65it/s]Scanning images:  33% 1025/3148 [00:10<00:24, 85.03it/s]Scanning images:  33% 1034/3148 [00:11<00:27, 77.17it/s]Scanning images:  33% 1043/3148 [00:11<00:27, 76.55it/s]Scanning images:  33% 1051/3148 [00:11<00:27, 76.53it/s]Scanning images:  34% 1063/3148 [00:11<00:23, 87.29it/s]Scanning images:  34% 1073/3148 [00:11<00:22, 90.39it/s]Scanning images:  34% 1084/3148 [00:11<00:21, 95.64it/s]Scanning images:  35% 1094/3148 [00:11<00:21, 96.28it/s]Scanning images:  35% 1106/3148 [00:11<00:21, 96.48it/s]Scanning images:  36% 1121/3148 [00:11<00:18, 111.08it/s]Scanning images:  36% 1133/3148 [00:12<00:18, 107.57it/s]Scanning images:  36% 1144/3148 [00:12<00:23, 85.98it/s] Scanning images:  37% 1154/3148 [00:12<00:24, 81.13it/s]Scanning images:  37% 1169/3148 [00:12<00:20, 97.24it/s]Scanning images:  37% 1180/3148 [00:12<00:19, 99.41it/s]Scanning images:  38% 1193/3148 [00:12<00:20, 96.37it/s]Scanning images:  38% 1205/3148 [00:12<00:19, 98.33it/s]Scanning images:  39% 1218/3148 [00:12<00:18, 105.73it/s]Scanning images:  39% 1229/3148 [00:13<00:21, 87.97it/s] Scanning images:  39% 1239/3148 [00:13<00:21, 90.58it/s]Scanning images:  40% 1253/3148 [00:13<00:19, 97.84it/s]Scanning images:  40% 1267/3148 [00:13<00:17, 107.99it/s]Scanning images:  41% 1279/3148 [00:13<00:19, 97.74it/s] Scanning images:  41% 1290/3148 [00:13<00:19, 94.37it/s]Scanning images:  41% 1300/3148 [00:13<00:24, 75.82it/s]Scanning images:  42% 1310/3148 [00:14<00:22, 80.03it/s]Scanning images:  42% 1320/3148 [00:14<00:21, 84.23it/s]Scanning images:  42% 1329/3148 [00:14<00:22, 80.49it/s]Scanning images:  43% 1341/3148 [00:14<00:20, 87.11it/s]Scanning images:  43% 1351/3148 [00:14<00:25, 69.82it/s]Scanning images:  43% 1364/3148 [00:14<00:21, 82.72it/s]Scanning images:  44% 1374/3148 [00:14<00:22, 78.89it/s]Scanning images:  44% 1385/3148 [00:14<00:20, 84.86it/s]Scanning images:  44% 1395/3148 [00:15<00:19, 88.34it/s]Scanning images:  45% 1406/3148 [00:15<00:18, 93.65it/s]Scanning images:  45% 1417/3148 [00:15<00:18, 95.96it/s]Scanning images:  45% 1427/3148 [00:15<00:18, 91.51it/s]Scanning images:  46% 1440/3148 [00:15<00:16, 101.20it/s]Scanning images:  46% 1451/3148 [00:15<00:17, 97.75it/s] Scanning images:  46% 1461/3148 [00:15<00:19, 87.29it/s]Scanning images:  47% 1471/3148 [00:15<00:22, 74.76it/s]Scanning images:  47% 1479/3148 [00:16<00:23, 71.08it/s]Scanning images:  47% 1489/3148 [00:16<00:21, 77.02it/s]Scanning images:  48% 1498/3148 [00:16<00:23, 71.63it/s]Scanning images:  48% 1506/3148 [00:16<00:24, 67.76it/s]Scanning images:  48% 1513/3148 [00:16<00:24, 66.59it/s]Scanning images:  48% 1523/3148 [00:16<00:22, 72.29it/s]Scanning images:  49% 1532/3148 [00:16<00:21, 76.57it/s]Scanning images:  49% 1548/3148 [00:16<00:16, 95.14it/s]Scanning images:  49% 1558/3148 [00:16<00:16, 93.60it/s]Scanning images:  50% 1570/3148 [00:17<00:16, 93.04it/s]Scanning images:  50% 1583/3148 [00:17<00:16, 95.77it/s]Scanning images:  51% 1593/3148 [00:17<00:16, 92.36it/s]Scanning images:  51% 1603/3148 [00:17<00:16, 91.87it/s]Scanning images:  51% 1613/3148 [00:17<00:16, 93.29it/s]Scanning images:  52% 1625/3148 [00:17<00:15, 100.38it/s]Scanning images:  52% 1636/3148 [00:17<00:16, 92.01it/s] Scanning images:  52% 1646/3148 [00:17<00:16, 90.27it/s]Scanning images:  53% 1660/3148 [00:18<00:14, 100.32it/s]Scanning images:  53% 1671/3148 [00:18<00:15, 96.51it/s] Scanning images:  54% 1685/3148 [00:18<00:14, 104.23it/s]Scanning images:  54% 1696/3148 [00:18<00:13, 104.23it/s]Scanning images:  54% 1707/3148 [00:18<00:15, 95.32it/s] Scanning images:  55% 1717/3148 [00:18<00:14, 96.38it/s]Scanning images:  55% 1727/3148 [00:18<00:15, 92.09it/s]Scanning images:  55% 1737/3148 [00:18<00:17, 80.89it/s]Scanning images:  55% 1747/3148 [00:19<00:16, 85.14it/s]Scanning images:  56% 1756/3148 [00:19<00:17, 81.30it/s]Scanning images:  56% 1771/3148 [00:19<00:13, 98.36it/s]Scanning images:  57% 1785/3148 [00:19<00:13, 104.44it/s]Scanning images:  57% 1796/3148 [00:19<00:12, 105.18it/s]Scanning images:  57% 1810/3148 [00:19<00:11, 113.94it/s]Scanning images:  58% 1822/3148 [00:19<00:11, 115.63it/s]Scanning images:  58% 1834/3148 [00:19<00:11, 114.69it/s]Scanning images:  59% 1850/3148 [00:19<00:10, 126.60it/s]Scanning images:  59% 1863/3148 [00:19<00:10, 125.01it/s]Scanning images:  60% 1878/3148 [00:20<00:09, 130.15it/s]Scanning images:  60% 1897/3148 [00:20<00:08, 145.18it/s]Scanning images:  61% 1912/3148 [00:20<00:09, 133.58it/s]Scanning images:  61% 1926/3148 [00:20<00:09, 129.85it/s]Scanning images:  62% 1940/3148 [00:20<00:09, 128.57it/s]Scanning images:  62% 1953/3148 [00:20<00:10, 118.12it/s]Scanning images:  62% 1965/3148 [00:20<00:12, 93.45it/s] Scanning images:  63% 1981/3148 [00:21<00:10, 106.24it/s]Scanning images:  63% 1993/3148 [00:21<00:12, 94.04it/s] Scanning images:  64% 2004/3148 [00:21<00:14, 76.34it/s]Scanning images:  64% 2013/3148 [00:21<00:14, 78.46it/s]Scanning images:  64% 2022/3148 [00:21<00:14, 79.45it/s]Scanning images:  65% 2032/3148 [00:21<00:13, 83.32it/s]Scanning images:  65% 2042/3148 [00:21<00:13, 82.52it/s]Scanning images:  65% 2056/3148 [00:21<00:11, 96.98it/s]Scanning images:  66% 2074/3148 [00:22<00:10, 107.13it/s]Scanning images:  66% 2087/3148 [00:22<00:09, 112.64it/s]Scanning images:  67% 2103/3148 [00:22<00:08, 123.22it/s]Scanning images:  67% 2117/3148 [00:22<00:08, 123.94it/s]Scanning images:  68% 2136/3148 [00:22<00:07, 141.62it/s]Scanning images:  68% 2151/3148 [00:22<00:07, 141.57it/s]Scanning images:  69% 2174/3148 [00:22<00:06, 161.90it/s]Scanning images:  70% 2191/3148 [00:22<00:06, 137.22it/s]Scanning images:  70% 2213/3148 [00:23<00:06, 152.05it/s]Scanning images:  71% 2229/3148 [00:23<00:06, 152.44it/s]Scanning images:  72% 2258/3148 [00:23<00:04, 188.89it/s]Scanning images:  72% 2278/3148 [00:23<00:05, 156.98it/s]Scanning images:  73% 2296/3148 [00:23<00:06, 130.19it/s]Scanning images:  73% 2311/3148 [00:23<00:06, 123.56it/s]Scanning images:  74% 2325/3148 [00:23<00:06, 121.60it/s]Scanning images:  74% 2341/3148 [00:23<00:06, 127.31it/s]Scanning images:  75% 2355/3148 [00:24<00:06, 113.92it/s]Scanning images:  75% 2367/3148 [00:24<00:07, 110.09it/s]Scanning images:  76% 2384/3148 [00:24<00:06, 121.33it/s]Scanning images:  76% 2397/3148 [00:24<00:06, 114.28it/s]Scanning images:  77% 2410/3148 [00:24<00:06, 116.20it/s]Scanning images:  77% 2430/3148 [00:24<00:05, 130.54it/s]Scanning images:  78% 2444/3148 [00:24<00:06, 103.18it/s]Scanning images:  78% 2456/3148 [00:25<00:07, 93.81it/s] Scanning images:  78% 2467/3148 [00:25<00:07, 88.02it/s]Scanning images:  79% 2483/3148 [00:25<00:06, 100.77it/s]Scanning images:  79% 2497/3148 [00:25<00:05, 109.20it/s]Scanning images:  80% 2509/3148 [00:25<00:06, 96.34it/s] Scanning images:  80% 2520/3148 [00:25<00:07, 85.23it/s]Scanning images:  80% 2534/3148 [00:25<00:06, 95.86it/s]Scanning images:  81% 2547/3148 [00:26<00:05, 100.77it/s]Scanning images:  81% 2560/3148 [00:26<00:06, 90.62it/s] Scanning images:  82% 2570/3148 [00:26<00:06, 87.58it/s]Scanning images:  82% 2580/3148 [00:26<00:06, 81.59it/s]Scanning images:  82% 2596/3148 [00:26<00:05, 98.33it/s]Scanning images:  83% 2607/3148 [00:26<00:05, 95.65it/s]Scanning images:  83% 2621/3148 [00:26<00:04, 106.48it/s]Scanning images:  84% 2633/3148 [00:26<00:05, 93.54it/s] Scanning images:  84% 2643/3148 [00:27<00:05, 91.35it/s]Scanning images:  84% 2654/3148 [00:27<00:05, 95.25it/s]Scanning images:  85% 2665/3148 [00:27<00:05, 91.36it/s]Scanning images:  85% 2675/3148 [00:27<00:05, 93.29it/s]Scanning images:  86% 2693/3148 [00:27<00:04, 113.04it/s]Scanning images:  86% 2705/3148 [00:27<00:05, 86.28it/s] Scanning images:  86% 2716/3148 [00:27<00:04, 91.53it/s]Scanning images:  87% 2727/3148 [00:27<00:04, 88.29it/s]Scanning images:  87% 2737/3148 [00:28<00:04, 88.51it/s]Scanning images:  87% 2747/3148 [00:28<00:04, 83.65it/s]Scanning images:  88% 2756/3148 [00:28<00:04, 80.28it/s]Scanning images:  88% 2772/3148 [00:28<00:03, 99.72it/s]Scanning images:  89% 2786/3148 [00:28<00:03, 109.75it/s]Scanning images:  89% 2805/3148 [00:28<00:02, 127.32it/s]Scanning images:  90% 2819/3148 [00:28<00:02, 124.13it/s]Scanning images:  90% 2832/3148 [00:28<00:02, 122.22it/s]Scanning images:  91% 2850/3148 [00:29<00:02, 122.87it/s]Scanning images:  91% 2868/3148 [00:29<00:02, 132.72it/s]Scanning images:  92% 2884/3148 [00:29<00:01, 139.20it/s]Scanning images:  92% 2904/3148 [00:29<00:01, 136.54it/s]Scanning images:  93% 2919/3148 [00:29<00:01, 139.73it/s]Scanning images:  93% 2934/3148 [00:29<00:01, 126.52it/s]Scanning images:  94% 2947/3148 [00:29<00:01, 126.28it/s]Scanning images:  94% 2960/3148 [00:30<00:02, 92.85it/s] Scanning images:  94% 2972/3148 [00:30<00:01, 98.44it/s]Scanning images:  95% 2985/3148 [00:30<00:01, 105.81it/s]Scanning images:  95% 3000/3148 [00:30<00:01, 116.88it/s]Scanning images:  96% 3020/3148 [00:30<00:00, 134.12it/s]Scanning images:  96% 3035/3148 [00:30<00:00, 136.51it/s]Scanning images:  97% 3050/3148 [00:30<00:00, 123.08it/s]Scanning images:  97% 3063/3148 [00:30<00:00, 123.12it/s]Scanning images:  98% 3076/3148 [00:30<00:00, 120.79it/s]Scanning images:  98% 3089/3148 [00:31<00:00, 105.04it/s]Scanning images:  99% 3107/3148 [00:31<00:00, 121.06it/s]Scanning images:  99% 3120/3148 [00:31<00:00, 109.33it/s]Scanning images:  99% 3132/3148 [00:31<00:00, 92.03it/s] Scanning images: 100% 3142/3148 [00:31<00:00, 93.21it/s]Scanning images: 100% 3148/3148 [00:31<00:00, 99.37it/s]
+0it [00:00, ?it/s]Scanning labels ../zero-waste-14/train/labels.cache3 (1801 found, 0 missing, 14 empty, 1 duplicate, for 3148 images): 1815it [00:00, 18146.25it/s]Scanning labels ../zero-waste-14/train/labels.cache3 (3092 found, 0 missing, 56 empty, 1 duplicate, for 3148 images): 3148it [00:00, 18415.44it/s]
+Scanning images:   0% 0/900 [00:00<?, ?it/s]Scanning images:   1% 6/900 [00:00<00:21, 40.77it/s]Scanning images:   1% 11/900 [00:00<00:22, 39.80it/s]Scanning images:   2% 20/900 [00:00<00:15, 55.55it/s]Scanning images:   4% 35/900 [00:00<00:09, 87.16it/s]Scanning images:   5% 47/900 [00:00<00:09, 93.93it/s]Scanning images:   7% 59/900 [00:00<00:08, 100.25it/s]Scanning images:   8% 74/900 [00:00<00:07, 109.18it/s]Scanning images:  10% 86/900 [00:00<00:08, 98.73it/s] Scanning images:  11% 97/900 [00:01<00:08, 98.61it/s]Scanning images:  12% 110/900 [00:01<00:07, 104.37it/s]Scanning images:  14% 122/900 [00:01<00:07, 104.93it/s]Scanning images:  15% 133/900 [00:01<00:08, 92.28it/s] Scanning images:  16% 146/900 [00:01<00:07, 101.12it/s]Scanning images:  18% 166/900 [00:01<00:06, 121.45it/s]Scanning images:  20% 179/900 [00:01<00:06, 114.51it/s]Scanning images:  21% 193/900 [00:01<00:05, 120.47it/s]Scanning images:  23% 208/900 [00:02<00:05, 128.06it/s]Scanning images:  26% 232/900 [00:02<00:04, 144.46it/s]Scanning images:  27% 247/900 [00:02<00:04, 138.72it/s]Scanning images:  29% 261/900 [00:02<00:04, 138.66it/s]Scanning images:  31% 275/900 [00:02<00:04, 137.61it/s]Scanning images:  32% 289/900 [00:02<00:05, 118.01it/s]Scanning images:  34% 302/900 [00:02<00:04, 120.71it/s]Scanning images:  35% 315/900 [00:02<00:05, 109.23it/s]Scanning images:  36% 327/900 [00:03<00:05, 102.28it/s]Scanning images:  38% 338/900 [00:03<00:05, 93.97it/s] Scanning images:  39% 348/900 [00:03<00:05, 93.07it/s]Scanning images:  41% 365/900 [00:03<00:05, 103.89it/s]Scanning images:  42% 376/900 [00:03<00:05, 101.16it/s]Scanning images:  44% 393/900 [00:03<00:04, 115.10it/s]Scanning images:  45% 405/900 [00:03<00:04, 111.15it/s]Scanning images:  46% 417/900 [00:03<00:04, 101.90it/s]Scanning images:  48% 428/900 [00:04<00:04, 103.92it/s]Scanning images:  49% 443/900 [00:04<00:04, 108.88it/s]Scanning images:  50% 454/900 [00:04<00:04, 98.38it/s] Scanning images:  52% 465/900 [00:04<00:04, 95.55it/s]Scanning images:  53% 475/900 [00:04<00:05, 76.33it/s]Scanning images:  54% 487/900 [00:04<00:05, 82.43it/s]Scanning images:  55% 496/900 [00:04<00:05, 80.74it/s]Scanning images:  57% 512/900 [00:04<00:03, 99.33it/s]Scanning images:  58% 523/900 [00:05<00:03, 94.43it/s]Scanning images:  59% 533/900 [00:05<00:03, 92.68it/s]Scanning images:  60% 543/900 [00:05<00:03, 92.87it/s]Scanning images:  62% 557/900 [00:05<00:03, 105.39it/s]Scanning images:  63% 569/900 [00:05<00:03, 109.02it/s]Scanning images:  65% 582/900 [00:05<00:02, 113.95it/s]Scanning images:  66% 596/900 [00:05<00:02, 120.62it/s]Scanning images:  68% 609/900 [00:05<00:02, 118.51it/s]Scanning images:  70% 626/900 [00:05<00:02, 132.44it/s]Scanning images:  71% 640/900 [00:06<00:02, 94.18it/s] Scanning images:  73% 655/900 [00:06<00:02, 106.45it/s]Scanning images:  75% 675/900 [00:06<00:01, 119.76it/s]Scanning images:  77% 689/900 [00:06<00:01, 117.23it/s]Scanning images:  78% 703/900 [00:06<00:01, 122.04it/s]Scanning images:  80% 716/900 [00:06<00:01, 114.47it/s]Scanning images:  81% 728/900 [00:06<00:01, 115.64it/s]Scanning images:  82% 741/900 [00:06<00:01, 119.01it/s]Scanning images:  84% 756/900 [00:07<00:01, 126.89it/s]Scanning images:  85% 769/900 [00:07<00:01, 123.37it/s]Scanning images:  87% 782/900 [00:07<00:00, 119.96it/s]Scanning images:  89% 799/900 [00:07<00:00, 128.96it/s]Scanning images:  90% 812/900 [00:07<00:00, 124.62it/s]Scanning images:  92% 830/900 [00:07<00:00, 132.67it/s]Scanning images:  94% 844/900 [00:07<00:00, 125.46it/s]Scanning images:  96% 862/900 [00:07<00:00, 138.05it/s]Scanning images:  97% 876/900 [00:08<00:00, 127.46it/s]Scanning images:  99% 889/900 [00:08<00:00, 123.15it/s]Scanning images: 100% 900/900 [00:08<00:00, 109.27it/s]
+0it [00:00, ?it/s]Scanning labels ../zero-waste-14/valid/labels.cache3 (876 found, 0 missing, 24 empty, 0 duplicate, for 900 images): 900it [00:00, 17115.34it/s]
+Image sizes 1280 train, 1280 test
+Using 1 dataloader workers
+Logging results to runs/train/yolor_p6_2022_05_05-03_43_03
+Starting training for 300 epochs...
+
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+  0% 0/197 [00:00<?, ?it/s]  0% 0/197 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 540, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "train.py", line 289, in train
+    pred = model(imgs)  # forward
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor/models/models.py", line 543, in forward
+    return self.forward_once(x)
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor/models/models.py", line 604, in forward_once
+    x = module(x)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 168, in forward
+    return F.batch_norm(
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/functional.py", line 2421, in batch_norm
+    return torch.batch_norm(
+RuntimeError: CUDA out of memory. Tried to allocate 100.00 MiB (GPU 0; 15.78 GiB total capacity; 14.24 GiB already allocated; 72.00 MiB free; 14.48 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.528 MB of 0.528 MB uploaded (0.000 MB deduped)wandb: \ 0.528 MB of 0.528 MB uploaded (0.000 MB deduped)wandb: | 0.528 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.528 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: \ 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: | 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: \ 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: | 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: Synced yolor_p6_2022_05_05-03_43_03: https://wandb.ai/dragogo/YOLOR/runs/38jvcwo3
+wandb: Synced 6 W&B file(s), 1 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220505_034349-38jvcwo3/logs
+
+Using torch 1.11.0 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Model Summary: 665 layers, 36854616 parameters, 36854616 gradients
+check_file -- > file: ../zero-waste-14/data.yaml
+
+Namespace(augment=False, batch_size=16, cfg='cfg/yolor_p6.cfg', conf_thres=0.0, data='../zero-waste-14/data.yaml', device='3', exist_ok=False, gt_json_dir='../zero-waste-14/test/_annotations.coco.json', img_size=1280, iou_thres=0.65, name='exp', names='data/zerowaste.names', project='runs/test', save_conf=True, save_json=True, save_txt=True, single_cls=False, task='test', verbose=True, weights=['runs/train/yolor_p6_2022_05_05-03_43_03/weights/best_overall.pt'])
+Traceback (most recent call last):
+  File "test.py", line 69, in test
+    ckpt = torch.load(weights[0], map_location=device)  # load checkpoint
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolor_p6_2022_05_05-03_43_03/weights/best_overall.pt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "test.py", line 361, in <module>
+    test(opt.data,
+  File "test.py", line 73, in test
+    load_darknet_weights(model, weights[0])
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor/models/models.py", line 663, in load_darknet_weights
+    with open(weights, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolor_p6_2022_05_05-03_43_03/weights/best_overall.pt'
+Thu May  5 03:45:16 EDT 2022
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4535516 0.10010 yolor_p6_z dong760      r     05/05/2022 03:43:03 academic-gpu@scc-204.scc.bu.ed     2        
