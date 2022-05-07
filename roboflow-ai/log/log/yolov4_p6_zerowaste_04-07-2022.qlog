@@ -1,0 +1,664 @@
+yolov4_p6_zerowaste_2022_04_07-02_29_36
+==========================================================
+Start date : Thu Apr  7 02:29:36 EDT 2022
+Job name : yolov4_p6_zerowaste
+Job ID : 4012451  undefined
+==========================================================
+==========================> Loading moudule for Project Environment
+**** Missing build for a loaded module for Python version "3.9.5". 
+Directory does not exist: /share/pkg.7/tensorflow/2.5.0/install/lib/SCC/../python3.9/site-packages
+
+**** Missing build for a loaded module for Python version "3.9.5". 
+Directory does not exist: /share/pkg.7/tensorflow/2.5.0/install/lib/SCC/../python3.9/site-packages
+
+===========================> Checking OS Information
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.9.2009 (Core)
+Release:	7.9.2009
+Codename:	Core
+x86_64
+CentOS Linux release 7.9.2009 (Core)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+CentOS Linux release 7.9.2009 (Core)
+CentOS Linux release 7.9.2009 (Core)
+===========================> Checking CPU Information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    1
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Stepping:              7
+CPU MHz:               3447.021
+CPU max MHz:           3900.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+===========================> Checking GPU Configuration
+Thu Apr  7 02:29:37 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:18:00.0 Off |                    0 |
+| N/A   41C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   37C    P0    46W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   38C    P0    42W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:AF:00.0 Off |                    0 |
+| N/A   52C    P0    77W / 300W |   7628MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    3   N/A  N/A    228034      C   ...8.6/install/bin/python3.8     7625MiB |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Mon_Oct_12_20:09:46_PDT_2020
+Cuda compilation tools, release 11.1, V11.1.105
+Build cuda_11.1.TC455_06.29190527_0
+Linux scc-203 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+==========================> Checking SCC Quota Usage
+                                      quota     quota       usage     usage
+project space                          (GB)    (files)       (GB)   (files)
+-----------------------------------  ------  ---------  ---------  --------
+/projectnb/dl523                       2000   33554432    1792.01   3551354
+Home Directory Usage and Quota:
+Name           GB    quota    limit in_doubt    grace |    files    quota    limit in_doubt    grace
+dong760   8.93606     10.0     11.0      0.0     none |  151,515  200,000  200,000       29     none
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+3999351 0.10055 QRLOGIN    dong760      r     04/06/2022 16:06:28 csgpu@scc-q25.scc.bu.edu           1        
+4012451 0.10102 yolov4_p6_ dong760      r     04/07/2022 02:29:35 academic-gpu@scc-203.scc.bu.ed     4        
+
+Currently Loaded Modules:
+  1) python3/3.8.10     3) pytorch/1.9.0   5) cuda/11.1    7) texlive/2018
+  2) tensorflow/2.5.0   4) opencv/4.5.0    6) pandoc/2.5   8) gcc/9.3.0
+
+ 
+
+==========================> Current ENV Path
+/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/share/pkg.7/gcc/9.3.0/install/bin:/share/pkg.7/texlive/2018/install/bin/x86_64-linux:/share/pkg.7/pandoc/2.5/install/bin:/share/pkg.7/cuda/11.1.1/install/nsight-systems-2020.3.4/bin:/share/pkg.7/cuda/11.1.1/install/bin:/share/pkg.7/opencv/4.5.0/install/bin:/share/pkg.7/pytorch/1.9.0/install/bin:/share/pkg.7/tensorflow/2.5.0/install/bin:/share/pkg.7/python3/3.8.10/install/bin:/scratch/4012451.1.academic-gpu:/usr4/dl523/dong760/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/bin/remote-cli:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr/java/default/jre/bin:/usr/java/default/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/dell/srvadmin/bin:/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/usr4/dl523/dong760/bin:.:/usr4/dl523/dong760/.local/lib/python3.8/site-packages
+/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages:/share/pkg.7/tensorflow/2.5.0/install/lib/SCC
+Python 3.8.10
+/usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+==========================> Start Training
+Using torch 1.9.0+cu111 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Namespace(adam=False, batch_size=32, bucket='', cache_images=False, cfg='yolor/cfg/yolov4_p6.cfg', data='zero-waste-1/data.yaml', device='0', epochs=300, evolve=False, exist_ok=False, global_rank=-1, hyp='yolor/data/hyp.scratch.1280.yaml', image_weights=False, img_size=[448, 448], local_rank=-1, log_imgs=16, multi_scale=False, name='yolov4_p6_2022_04_07-02_29_36', noautoanchor=False, nosave=False, notest=False, project='runs/train', rect=False, resume=False, save_dir='runs/train/yolov4_p6_2022_04_07-02_29_36', single_cls=False, sync_bn=False, total_batch_size=32, weights='yolor/weights/yolov4-p6.weights', workers=8, world_size=1)
+Start Tensorboard with "tensorboard --logdir runs/train", view at http://0.0.0.0:7777/
+Hyperparameters {'lr0': 0.01, 'lrf': 0.2, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.5, 'cls_pw': 1.0, 'obj': 1.0, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.5, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0}
+Model Summary: 914 layers, 127585200 parameters, 127585200 gradients
+Optimizer groups: 205 .bias, 205 conv.weight, 201 other
+wandb: Currently logged in as: dragogo (use `wandb login --relogin` to force relogin)
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+wandb: Tracking run with wandb version 0.12.12
+wandb: Run data is saved locally in /projectnb2/dl523/students/dong760/roboflow-ai/wandb/run-20220407_023044-1tdijxqu
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run yolov4_p6_2022_04_07-02_29_36
+wandb: ⭐️ View project at https://wandb.ai/dragogo/YOLOR
+wandb: 🚀 View run at https://wandb.ai/dragogo/YOLOR/runs/1tdijxqu
+0it [00:00, ?it/s]Scanning labels /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/train/labels.cache3 (1590 found, 0 missing, 14 empty, 1 duplicate, for 3148 images): 1604it [00:00, 16034.82it/s]Scanning labels /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/train/labels.cache3 (3092 found, 0 missing, 56 empty, 1 duplicate, for 3148 images): 3148it [00:00, 16334.58it/s]
+0it [00:00, ?it/s]Scanning labels /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/valid/labels.cache3 (876 found, 0 missing, 24 empty, 0 duplicate, for 900 images): 900it [00:00, 15779.86it/s]
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Image sizes 448 train, 448 test
+Using 8 dataloader workers
+Logging results to runs/train/yolov4_p6_2022_04_07-02_29_36
+Starting training for 300 epochs...
+
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+  0% 0/99 [00:00<?, ?it/s]  0% 0/99 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "yolor/train.py", line 537, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "yolor/train.py", line 287, in train
+    pred = model(imgs)  # forward
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/models/models.py", line 543, in forward
+    return self.forward_once(x)
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/models/models.py", line 604, in forward_once
+    x = module(x)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/utils/layers.py", line 14, in forward
+    return x * F.softplus(x).tanh()
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 0; 15.78 GiB total capacity; 13.22 GiB already allocated; 388.00 MiB free; 13.82 GiB reserved in total by PyTorch)
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.527 MB of 0.527 MB uploaded (0.000 MB deduped)wandb: \ 0.527 MB of 0.527 MB uploaded (0.000 MB deduped)wandb: | 0.527 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.527 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.538 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: \ 0.540 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: | 0.540 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.540 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: \ 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: | 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: \ 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: Synced yolov4_p6_2022_04_07-02_29_36: https://wandb.ai/dragogo/YOLOR/runs/1tdijxqu
+wandb: Synced 6 W&B file(s), 1 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220407_023044-1tdijxqu/logs
+
+Using torch 1.9.0+cu111 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Model Summary: 665 layers, 36854616 parameters, 36854616 gradients
+Namespace(augment=False, batch_size=32, cfg='yolor/cfg/yolor_p6.cfg', conf_thres=0.001, data='zero-waste-1/data.yaml', device='0', exist_ok=False, img_size=416, iou_thres=0.65, name='exp', names='yolor/data/zerowaste.names', project='runs/test', save_conf=True, save_json=True, save_txt=True, single_cls=False, task='test', verbose=True, weights=['runs/train/yolov4_p6_2022_04_07-02_29_36/weights/best_overall.pt'])
+Traceback (most recent call last):
+  File "yolor/test.py", line 65, in test
+    ckpt = torch.load(weights[0], map_location=device)  # load checkpoint
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolov4_p6_2022_04_07-02_29_36/weights/best_overall.pt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "yolor/test.py", line 353, in <module>
+    test(opt.data,
+  File "yolor/test.py", line 69, in test
+    load_darknet_weights(model, weights[0])
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/models/models.py", line 663, in load_darknet_weights
+    with open(weights, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolov4_p6_2022_04_07-02_29_36/weights/best_overall.pt'
+Thu Apr  7 02:31:15 EDT 2022
+yolov4_p6_zerowaste_2022_04_07-02_42_18
+==========================================================
+Start date : Thu Apr  7 02:42:18 EDT 2022
+Job name : yolov4_p6_zerowaste
+Job ID : 4012466  undefined
+==========================================================
+==========================> Loading moudule for Project Environment
+**** Missing build for a loaded module for Python version "3.9.5". 
+Directory does not exist: /share/pkg.7/tensorflow/2.5.0/install/lib/SCC/../python3.9/site-packages
+
+**** Missing build for a loaded module for Python version "3.9.5". 
+Directory does not exist: /share/pkg.7/tensorflow/2.5.0/install/lib/SCC/../python3.9/site-packages
+
+===========================> Checking OS Information
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.9.2009 (Core)
+Release:	7.9.2009
+Codename:	Core
+x86_64
+CentOS Linux release 7.9.2009 (Core)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+CentOS Linux release 7.9.2009 (Core)
+CentOS Linux release 7.9.2009 (Core)
+===========================> Checking CPU Information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    1
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Stepping:              7
+CPU MHz:               3225.195
+CPU max MHz:           3900.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+===========================> Checking GPU Configuration
+Thu Apr  7 02:42:21 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:18:00.0 Off |                    0 |
+| N/A   41C    P0    44W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   40C    P0    58W / 300W |  12896MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   37C    P0    44W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:AF:00.0 Off |                    0 |
+| N/A   40C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    1   N/A  N/A    192472      C   ...6.9/install/bin/python3.6    12893MiB |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Mon_Oct_12_20:09:46_PDT_2020
+Cuda compilation tools, release 11.1, V11.1.105
+Build cuda_11.1.TC455_06.29190527_0
+Linux scc-204 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+==========================> Checking SCC Quota Usage
+                                      quota     quota       usage     usage
+project space                          (GB)    (files)       (GB)   (files)
+-----------------------------------  ------  ---------  ---------  --------
+/projectnb/dl523                       2000   33554432    1792.68   3551385
+Home Directory Usage and Quota:
+Name           GB    quota    limit in_doubt    grace |    files    quota    limit in_doubt    grace
+dong760   8.93618     10.0     11.0      0.0     none |  151,532  200,000  200,000       76     none
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4012466 0.10022 yolov4_p6_ dong760      r     04/07/2022 02:42:18 academic-gpu@scc-204.scc.bu.ed     4        
+
+Currently Loaded Modules:
+  1) python3/3.8.10     3) pytorch/1.9.0   5) cuda/11.1    7) texlive/2018
+  2) tensorflow/2.5.0   4) opencv/4.5.0    6) pandoc/2.5   8) gcc/9.3.0
+
+ 
+
+==========================> Current ENV Path
+/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/share/pkg.7/gcc/9.3.0/install/bin:/share/pkg.7/texlive/2018/install/bin/x86_64-linux:/share/pkg.7/pandoc/2.5/install/bin:/share/pkg.7/cuda/11.1.1/install/nsight-systems-2020.3.4/bin:/share/pkg.7/cuda/11.1.1/install/bin:/share/pkg.7/opencv/4.5.0/install/bin:/share/pkg.7/pytorch/1.9.0/install/bin:/share/pkg.7/tensorflow/2.5.0/install/bin:/share/pkg.7/python3/3.8.10/install/bin:/scratch/4012466.1.academic-gpu:/usr4/dl523/dong760/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/bin/remote-cli:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr/java/default/jre/bin:/usr/java/default/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/dell/srvadmin/bin:/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/usr4/dl523/dong760/bin:.:/usr4/dl523/dong760/.local/lib/python3.8/site-packages
+/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages:/share/pkg.7/tensorflow/2.5.0/install/lib/SCC
+Python 3.8.10
+/usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+==========================> Start Training
+Using torch 1.9.0+cu111 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Namespace(adam=False, batch_size=32, bucket='', cache_images=False, cfg='yolor/cfg/yolov4_p6.cfg', data='zero-waste-1/data.yaml', device='0', epochs=300, evolve=False, exist_ok=False, global_rank=-1, hyp='yolor/data/hyp.scratch.1280.yaml', image_weights=False, img_size=[640, 640], local_rank=-1, log_imgs=16, multi_scale=False, name='yolov4_p6_2022_04_07-02_42_18', noautoanchor=False, nosave=False, notest=False, project='runs/train', rect=False, resume=False, save_dir='runs/train/yolov4_p6_2022_04_07-02_42_18', single_cls=False, sync_bn=False, total_batch_size=32, weights='yolor/weights/yolov4_p6.weights', workers=8, world_size=1)
+Start Tensorboard with "tensorboard --logdir runs/train", view at http://0.0.0.0:7777/
+Hyperparameters {'lr0': 0.01, 'lrf': 0.2, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.5, 'cls_pw': 1.0, 'obj': 1.0, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.5, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0}
+Model Summary: 914 layers, 127585200 parameters, 127585200 gradients
+Optimizer groups: 205 .bias, 205 conv.weight, 201 other
+wandb: Currently logged in as: dragogo (use `wandb login --relogin` to force relogin)
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+wandb: Tracking run with wandb version 0.12.12
+wandb: Run data is saved locally in /projectnb2/dl523/students/dong760/roboflow-ai/wandb/run-20220407_024326-33cen412
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run yolov4_p6_2022_04_07-02_42_18
+wandb: ⭐️ View project at https://wandb.ai/dragogo/YOLOR
+wandb: 🚀 View run at https://wandb.ai/dragogo/YOLOR/runs/33cen412
+0it [00:00, ?it/s]Scanning labels /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/train/labels.cache3 (1687 found, 0 missing, 14 empty, 1 duplicate, for 3148 images): 1701it [00:00, 17004.06it/s]Scanning labels /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/train/labels.cache3 (3092 found, 0 missing, 56 empty, 1 duplicate, for 3148 images): 3148it [00:00, 17483.19it/s]
+0it [00:00, ?it/s]Scanning labels /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/valid/labels.cache3 (876 found, 0 missing, 24 empty, 0 duplicate, for 900 images): 900it [00:00, 16320.95it/s]
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Image sizes 640 train, 640 test
+Using 8 dataloader workers
+Logging results to runs/train/yolov4_p6_2022_04_07-02_42_18
+Starting training for 300 epochs...
+
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+  0% 0/99 [00:00<?, ?it/s]  0% 0/99 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "yolor/train.py", line 537, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "yolor/train.py", line 287, in train
+    pred = model(imgs)  # forward
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/models/models.py", line 543, in forward
+    return self.forward_once(x)
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/models/models.py", line 604, in forward_once
+    x = module(x)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/utils/layers.py", line 14, in forward
+    return x * F.softplus(x).tanh()
+RuntimeError: CUDA out of memory. Tried to allocate 800.00 MiB (GPU 0; 15.78 GiB total capacity; 12.90 GiB already allocated; 310.00 MiB free; 13.90 GiB reserved in total by PyTorch)
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.527 MB of 0.527 MB uploaded (0.000 MB deduped)wandb: \ 0.527 MB of 0.527 MB uploaded (0.000 MB deduped)wandb: | 0.527 MB of 0.527 MB uploaded (0.000 MB deduped)wandb: / 0.527 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.527 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: \ 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: | 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: \ 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: | 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: Synced yolov4_p6_2022_04_07-02_42_18: https://wandb.ai/dragogo/YOLOR/runs/33cen412
+wandb: Synced 6 W&B file(s), 1 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220407_024326-33cen412/logs
+
+Using torch 1.9.0+cu111 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Model Summary: 914 layers, 127585200 parameters, 127585200 gradients
+Namespace(augment=False, batch_size=32, cfg='yolor/cfg/yolov4_p6.cfg', conf_thres=0.001, data='zero-waste-1/data.yaml', device='0', exist_ok=False, img_size=640, iou_thres=0.65, name='exp', names='yolor/data/zerowaste.names', project='runs/test', save_conf=True, save_json=True, save_txt=True, single_cls=False, task='test', verbose=True, weights=['runs/train/yolov4_p6_2022_04_07-02_42_18/weights/best_overall.pt'])
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+Traceback (most recent call last):
+  File "yolor/test.py", line 65, in test
+    ckpt = torch.load(weights[0], map_location=device)  # load checkpoint
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolov4_p6_2022_04_07-02_42_18/weights/best_overall.pt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "yolor/test.py", line 353, in <module>
+    test(opt.data,
+  File "yolor/test.py", line 69, in test
+    load_darknet_weights(model, weights[0])
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/models/models.py", line 663, in load_darknet_weights
+    with open(weights, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolov4_p6_2022_04_07-02_42_18/weights/best_overall.pt'
+Thu Apr  7 02:43:57 EDT 2022
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4012466 0.10019 yolov4_p6_ dong760      r     04/07/2022 02:42:18 academic-gpu@scc-204.scc.bu.ed     4        
+4012470 0.00000 yolov4_csp dong760      qw    04/07/2022 02:43:05                                    4        
+yolov4_p6_zerowaste_2022_04_07-02_56_58
+==========================================================
+Start date : Thu Apr  7 02:56:58 EDT 2022
+Job name : yolov4_p6_zerowaste
+Job ID : 4012481  undefined
+==========================================================
+==========================> Loading moudule for Project Environment
+**** Missing build for a loaded module for Python version "3.9.5". 
+Directory does not exist: /share/pkg.7/tensorflow/2.5.0/install/lib/SCC/../python3.9/site-packages
+
+**** Missing build for a loaded module for Python version "3.9.5". 
+Directory does not exist: /share/pkg.7/tensorflow/2.5.0/install/lib/SCC/../python3.9/site-packages
+
+===========================> Checking OS Information
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.9.2009 (Core)
+Release:	7.9.2009
+Codename:	Core
+x86_64
+CentOS Linux release 7.9.2009 (Core)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+CentOS Linux release 7.9.2009 (Core)
+CentOS Linux release 7.9.2009 (Core)
+===========================> Checking CPU Information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    1
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Stepping:              7
+CPU MHz:               3595.361
+CPU max MHz:           3900.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+===========================> Checking GPU Configuration
+Thu Apr  7 02:56:59 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:18:00.0 Off |                    0 |
+| N/A   40C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   37C    P0    46W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   37C    P0    42W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:AF:00.0 Off |                    0 |
+| N/A   55C    P0   277W / 300W |   7628MiB / 16160MiB |     14%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    3   N/A  N/A    228034      C   ...8.6/install/bin/python3.8     7625MiB |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2020 NVIDIA Corporation
+Built on Mon_Oct_12_20:09:46_PDT_2020
+Cuda compilation tools, release 11.1, V11.1.105
+Build cuda_11.1.TC455_06.29190527_0
+Linux scc-203 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+==========================> Checking SCC Quota Usage
+                                      quota     quota       usage     usage
+project space                          (GB)    (files)       (GB)   (files)
+-----------------------------------  ------  ---------  ---------  --------
+/projectnb/dl523                       2000   33554432    1793.16   3551418
+Home Directory Usage and Quota:
+Name           GB    quota    limit in_doubt    grace |    files    quota    limit in_doubt    grace
+dong760   8.93626     10.0     11.0      0.1     none |  151,540  200,000  200,000       79     none
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4012481 0.10026 yolov4_p6_ dong760      r     04/07/2022 02:56:58 academic-gpu@scc-203.scc.bu.ed     4        
+
+Currently Loaded Modules:
+  1) python3/3.8.10     3) pytorch/1.9.0   5) cuda/11.1    7) texlive/2018
+  2) tensorflow/2.5.0   4) opencv/4.5.0    6) pandoc/2.5   8) gcc/9.3.0
+
+ 
+
+==========================> Current ENV Path
+/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/share/pkg.7/gcc/9.3.0/install/bin:/share/pkg.7/texlive/2018/install/bin/x86_64-linux:/share/pkg.7/pandoc/2.5/install/bin:/share/pkg.7/cuda/11.1.1/install/nsight-systems-2020.3.4/bin:/share/pkg.7/cuda/11.1.1/install/bin:/share/pkg.7/opencv/4.5.0/install/bin:/share/pkg.7/pytorch/1.9.0/install/bin:/share/pkg.7/tensorflow/2.5.0/install/bin:/share/pkg.7/python3/3.8.10/install/bin:/scratch/4012481.1.academic-gpu:/usr4/dl523/dong760/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/bin/remote-cli:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr/java/default/jre/bin:/usr/java/default/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/dell/srvadmin/bin:/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/usr4/dl523/dong760/bin:.:/usr4/dl523/dong760/.local/lib/python3.8/site-packages
+/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages:/share/pkg.7/tensorflow/2.5.0/install/lib/SCC
+Python 3.8.10
+/usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+==========================> Start Training
+Using torch 1.9.0+cu111 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Namespace(adam=False, batch_size=32, bucket='', cache_images=False, cfg='yolor/cfg/yolov4_p6.cfg', data='zero-waste-1/data.yaml', device='0', epochs=300, evolve=False, exist_ok=False, global_rank=-1, hyp='yolor/data/hyp.scratch.1280.yaml', image_weights=False, img_size=[640, 640], local_rank=-1, log_imgs=16, multi_scale=False, name='yolov4_p6_2022_04_07-02_56_58', noautoanchor=False, nosave=False, notest=False, project='runs/train', rect=False, resume=False, save_dir='runs/train/yolov4_p6_2022_04_07-02_56_58', single_cls=False, sync_bn=False, total_batch_size=32, weights='yolor/weights/yolov4_p6.weights', workers=8, world_size=1)
+Start Tensorboard with "tensorboard --logdir runs/train", view at http://0.0.0.0:7777/
+Hyperparameters {'lr0': 0.01, 'lrf': 0.2, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.5, 'cls_pw': 1.0, 'obj': 1.0, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.5, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0}
+Model Summary: 914 layers, 127585200 parameters, 127585200 gradients
+Optimizer groups: 205 .bias, 205 conv.weight, 201 other
+wandb: Currently logged in as: dragogo (use `wandb login --relogin` to force relogin)
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+wandb: Tracking run with wandb version 0.12.12
+wandb: Run data is saved locally in /projectnb2/dl523/students/dong760/roboflow-ai/wandb/run-20220407_025719-1532xf9n
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run yolov4_p6_2022_04_07-02_56_58
+wandb: ⭐️ View project at https://wandb.ai/dragogo/YOLOR
+wandb: 🚀 View run at https://wandb.ai/dragogo/YOLOR/runs/1532xf9n
+0it [00:00, ?it/s]Scanning labels /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/train/labels.cache3 (1652 found, 0 missing, 14 empty, 1 duplicate, for 3148 images): 1666it [00:00, 16652.59it/s]Scanning labels /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/train/labels.cache3 (3092 found, 0 missing, 56 empty, 1 duplicate, for 3148 images): 3148it [00:00, 17084.96it/s]
+0it [00:00, ?it/s]Scanning labels /projectnb2/dl523/students/dong760/roboflow-ai/zero-waste-1/valid/labels.cache3 (876 found, 0 missing, 24 empty, 0 duplicate, for 900 images): 900it [00:00, 16283.08it/s]
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Image sizes 640 train, 640 test
+Using 8 dataloader workers
+Logging results to runs/train/yolov4_p6_2022_04_07-02_56_58
+Starting training for 300 epochs...
+
+     Epoch   gpu_mem       box       obj       cls     total   targets  img_size
+  0% 0/99 [00:00<?, ?it/s]  0% 0/99 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "yolor/train.py", line 537, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "yolor/train.py", line 287, in train
+    pred = model(imgs)  # forward
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/models/models.py", line 543, in forward
+    return self.forward_once(x)
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/models/models.py", line 604, in forward_once
+    x = module(x)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/utils/layers.py", line 14, in forward
+    return x * F.softplus(x).tanh()
+RuntimeError: CUDA out of memory. Tried to allocate 800.00 MiB (GPU 0; 15.78 GiB total capacity; 12.90 GiB already allocated; 310.00 MiB free; 13.90 GiB reserved in total by PyTorch)
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.527 MB of 0.527 MB uploaded (0.000 MB deduped)wandb: \ 0.527 MB of 0.527 MB uploaded (0.000 MB deduped)wandb: | 0.527 MB of 0.527 MB uploaded (0.000 MB deduped)wandb: / 0.527 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.527 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: \ 0.541 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: | 0.541 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: \ 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: | 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: / 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb: - 0.543 MB of 0.543 MB uploaded (0.000 MB deduped)wandb:                                                                                
+wandb: Synced yolov4_p6_2022_04_07-02_56_58: https://wandb.ai/dragogo/YOLOR/runs/1532xf9n
+wandb: Synced 6 W&B file(s), 1 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220407_025719-1532xf9n/logs
+
+Using torch 1.9.0+cu111 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Model Summary: 914 layers, 127585200 parameters, 127585200 gradients
+Namespace(augment=False, batch_size=32, cfg='yolor/cfg/yolov4_p6.cfg', conf_thres=0.001, data='zero-waste-1/data.yaml', device='0', exist_ok=False, img_size=640, iou_thres=0.65, name='exp', names='yolor/data/zerowaste.names', project='runs/test', save_conf=True, save_json=True, save_txt=True, single_cls=False, task='test', verbose=True, weights=['runs/train/yolov4_p6_2022_04_07-02_56_58/weights/best_overall.pt'])
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+Traceback (most recent call last):
+  File "yolor/test.py", line 65, in test
+    ckpt = torch.load(weights[0], map_location=device)  # load checkpoint
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/share/pkg.7/pytorch/1.9.0/install/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolov4_p6_2022_04_07-02_56_58/weights/best_overall.pt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "yolor/test.py", line 353, in <module>
+    test(opt.data,
+  File "yolor/test.py", line 69, in test
+    load_darknet_weights(model, weights[0])
+  File "/projectnb2/dl523/students/dong760/roboflow-ai/yolor/models/models.py", line 663, in load_darknet_weights
+    with open(weights, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolov4_p6_2022_04_07-02_56_58/weights/best_overall.pt'
+Thu Apr  7 02:57:51 EDT 2022
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4012481 0.10022 yolov4_p6_ dong760      r     04/07/2022 02:56:58 academic-gpu@scc-203.scc.bu.ed     4        
