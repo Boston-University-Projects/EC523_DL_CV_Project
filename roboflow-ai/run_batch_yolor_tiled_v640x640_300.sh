@@ -95,7 +95,8 @@ echo "==========================> Start Training"
 DATASET_DIR='../zero-waste-16'
 cd /projectnb/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor
 
-python train.py --batch-size 16 --img 640 640 --data $DATASET_DIR/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --device 3 --name yolor_p6_$TIMESTAMP --hyp data/hyp.scratch.1280.yaml --epochs 300 --augment True
+# python train.py --batch-size 16 --img 640 640 --data $DATASET_DIR/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --device 3 --name yolor_p6_$TIMESTAMP --hyp data/hyp.scratch.1280.yaml --epochs 300 --augment True
+python -m torch.distributed.launch --nproc_per_node 4 python train.py --batch-size 16 --img 640 640 --data $DATASET_DIR/data.yaml --cfg cfg/yolor_p6.cfg --weights weights/yolor_p6.pt --name yolor_p6_$TIMESTAMP --hyp data/hyp.scratch.1280.yaml --epochs 300 --augment True --sync-bn --device 0,1,2,3
 
 python test.py --conf-thres 0.0 --img 640 --batch 16 --device 3 --data $DATASET_DIR/data.yaml --cfg cfg/yolor_p6.cfg --weights runs/train/yolor_p6_$TIMESTAMP/weights/best_overall.pt --task test --names data/zerowaste.names --verbose --save-json --save-conf --save-txt --gt_json_dir $DATASET_DIR/test/_annotations.coco.json
 

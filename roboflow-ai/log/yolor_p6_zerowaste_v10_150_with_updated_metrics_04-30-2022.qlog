@@ -1,0 +1,192 @@
+yolor_p6_zerowaste_v10_150_with_updated_metrics_2022_05_06-00_23_19
+==========================================================
+Start date : Fri May  6 00:23:19 EDT 2022
+Job name : yolor_p6_zerowaste_v10_150_with_updated_metrics
+Job ID : 4553691  undefined
+==========================================================
+==========================> Loading moudule for Project Environment
+===========================> Checking OS Information
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.9.2009 (Core)
+Release:	7.9.2009
+Codename:	Core
+x86_64
+CentOS Linux release 7.9.2009 (Core)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+CentOS Linux release 7.9.2009 (Core)
+CentOS Linux release 7.9.2009 (Core)
+===========================> Checking CPU Information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    1
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Stepping:              7
+CPU MHz:               1200.048
+CPU max MHz:           3900.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+===========================> Checking GPU Configuration
+Fri May  6 00:23:32 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:18:00.0 Off |                    0 |
+| N/A   44C    P0    60W / 300W |  15496MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   37C    P0    45W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   37C    P0    42W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:AF:00.0 Off |                    0 |
+| N/A   40C    P0    45W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A    189086      C   ...9.9/install/bin/python3.9    15493MiB |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Mon_May__3_19:15:13_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.109
+Build cuda_11.3.r11.3/compiler.29920130_0
+Linux scc-203 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+==========================> Checking SCC Quota Usage
+                                      quota     quota       usage     usage
+project space                          (GB)    (files)       (GB)   (files)
+-----------------------------------  ------  ---------  ---------  --------
+/projectnb/dl523                       2000   33554432    1603.13   4057867
+Home Directory Usage and Quota:
+Name           GB    quota    limit in_doubt    grace |    files    quota    limit in_doubt    grace
+dong760  10.22954     10.0     11.0      0.0   7 days |  132,649  200,000  200,000       40     none
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4549155 0.10118 ood-deskto dong760      r     05/05/2022 22:57:41 academic-gpu@scc-204.scc.bu.ed     2        
+4553691 0.10005 yolor_p6_z dong760      r     05/06/2022 00:23:16 academic-gpu@scc-203.scc.bu.ed     2        
+
+Currently Loaded Modules:
+  1) python3/3.8.10   2) cuda/11.3
+
+ 
+
+==========================> Current ENV Path
+/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/share/pkg.7/cuda/11.3/install/nsight-compute-2021.1.1:/share/pkg.7/cuda/11.3/install/nsight-systems-2021.1.3/bin:/share/pkg.7/cuda/11.3/install/bin:/share/pkg.7/python3/3.8.10/install/bin:/scratch/4553691.1.academic-gpu:/share/pkg.7/gcc/7.4.0/install/bin:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.local/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/usr4/dl523/dong760/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/remote-cli:/usr/java/default/jre/bin:/usr/java/default/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/dell/srvadmin/bin:/bin:/usr4/dl523/dong760/bin:.
+
+
+Python 3.8.10
+/usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+==========================> Start Training
+Using torch 1.11.0 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Namespace(adam=False, augment=True, batch_size=16, bucket='', cache_images=False, cfg='cfg/yolor_p6.cfg', data='../zero-waste-16/data.yaml', device='0', epochs=3, evolve=False, exist_ok=False, global_rank=-1, hyp='data/hyp.scratch.1280.yaml', image_weights=False, img_size=[640, 640], local_rank=-1, log_imgs=16, multi_scale=False, name='yolor_p6_2022_05_06-00_23_19', noautoanchor=False, nosave=False, notest=False, project='runs/train', rect=False, resume=False, save_dir='runs/train/yolor_p6_2022_05_06-00_23_19', single_cls=False, sync_bn=False, total_batch_size=16, weights='weights/yolor_p6.pt', workers=1, world_size=1)
+Start Tensorboard with "tensorboard --logdir runs/train", view at http://0.0.0.0:7777/
+Hyperparameters {'lr0': 0.01, 'lrf': 0.2, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.5, 'cls_pw': 1.0, 'obj': 1.0, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.5, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0}
+check_file -- > file: ../zero-waste-16/data.yaml
+
+check_file -- > file: cfg/yolor_p6.cfg
+
+check_file -- > file: data/hyp.scratch.1280.yaml
+
+Traceback (most recent call last):
+  File "train.py", line 540, in <module>
+    train(hyp, opt, device, tb_writer, wandb)
+  File "train.py", line 81, in train
+    ckpt = torch.load(weights, map_location=device)  # load checkpoint
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 712, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 1046, in _load
+    result = unpickler.load()
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 1016, in persistent_load
+    load_tensor(dtype, nbytes, key, _maybe_decode_ascii(location))
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 1001, in load_tensor
+    wrap_storage=restore_location(storage, location),
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 973, in restore_location
+    return default_restore_location(storage, str(map_location))
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 176, in default_restore_location
+    result = fn(storage, location)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 158, in _cuda_deserialize
+    return obj.cuda(device)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/_utils.py", line 79, in _cuda
+    return new_type(self.size()).copy_(self, non_blocking)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/cuda/__init__.py", line 661, in _lazy_new
+    return super(_CudaBase, cls).__new__(cls, *args, **kwargs)
+RuntimeError: CUDA error: all CUDA-capable devices are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Using torch 1.11.0 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Model Summary: 665 layers, 36854616 parameters, 36854616 gradients
+check_file -- > file: ../zero-waste-16/data.yaml
+
+Namespace(augment=False, batch_size=16, cfg='cfg/yolor_p6.cfg', conf_thres=0.0, data='../zero-waste-16/data.yaml', device='0', exist_ok=False, gt_json_dir='../zero-waste-16/test/_annotations.coco.json', img_size=640, iou_thres=0.65, name='exp', names='data/zerowaste.names', project='runs/test', save_conf=True, save_json=True, save_txt=True, single_cls=False, task='test', verbose=True, weights=['runs/train/yolor_p6_2022_05_06-00_23_19/weights/best_overall.pt'])
+Traceback (most recent call last):
+  File "test.py", line 362, in <module>
+    test(opt.data,
+  File "test.py", line 67, in test
+    model = Darknet(opt.cfg).to(device)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 907, in to
+    return self._apply(convert)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 578, in _apply
+    module._apply(fn)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 578, in _apply
+    module._apply(fn)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 578, in _apply
+    module._apply(fn)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 601, in _apply
+    param_applied = fn(param)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 905, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA error: all CUDA-capable devices are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Fri May  6 00:26:34 EDT 2022
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4549155 0.10116 ood-deskto dong760      r     05/05/2022 22:57:41 academic-gpu@scc-204.scc.bu.ed     2        
+4553691 0.10005 yolor_p6_z dong760      r     05/06/2022 00:23:16 academic-gpu@scc-203.scc.bu.ed     2        

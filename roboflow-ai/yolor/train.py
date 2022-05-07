@@ -17,8 +17,8 @@ import torch.utils.data
 import yaml
 from torch.cuda import amp
 from torch.nn.parallel import DistributedDataParallel as DDP
-# from torch.utils.tensorboard import SummaryWriter
-from tensorboardX import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter
+# from tensorboardX import SummaryWriter
 from tqdm import tqdm
 
 import test  # import test.py to get mAP after each epoch
@@ -122,11 +122,12 @@ def train(hyp, opt, device, tb_writer=None, wandb=None):
 
     # Logging
     if wandb and wandb.run is None:
-        opt.hyp = hyp  # add hyperparameters
-        wandb_run = wandb.init(config=opt, resume="allow",
-                               project='YOLOR' if opt.project == 'runs/train' else Path(opt.project).stem,
-                               name=save_dir.stem,
-                               id=ckpt.get('wandb_id') if 'ckpt' in locals() else None)
+        if rank in [-1, 0]:
+            opt.hyp = hyp  # add hyperparameters
+            wandb_run = wandb.init(config=opt, resume="allow",
+                                project='YOLOR' if opt.project == 'runs/train' else Path(opt.project).stem,
+                                name=save_dir.stem,
+                                id=ckpt.get('wandb_id') if 'ckpt' in locals() else None)
 
     # Resume
     start_epoch, best_fitness = 0, 0.0

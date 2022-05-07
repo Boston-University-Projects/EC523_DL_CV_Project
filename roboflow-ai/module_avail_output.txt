@@ -1,0 +1,357 @@
+(dl_env)dong760@scc2:/projectnb/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/ScaledYOLOv4/mish-cuda$ module avail
+
+------------------------------------------------------------------------------- /share/module.7/bioinformatics -------------------------------------------------------------------------------
+   2brad_denovo/2019-01-22_giteec5016        eagle/2.4                                     ltr_retriever/2.8                      repeatmodeler/1.0.11
+   2brad_gatk/2019-01-22_git1fcc9e8          eems/2020-01-27_git42bc6c7                    lumpy-sv/0.3.0                         repeatmodeler/2.0.1                  (D)
+   admixture/1.3.0                           eigensoft/7.2.1                               macs/3.0.0a6                           repeatscout/1.0.6
+   agat/0.7.0                                emboss/6.6.0                                  macs2/2.1.2.1                          rfmix/1.5.4
+   angsd/0.923                               emmax/2012-02-10                              macs2/2.2.7.1                   (D)    rfmix/2                              (D)
+   angsd/0.935                        (D)    entrez-direct/10.6.20181210                   mafft/7.305                            rg4-seeker/2021-03-04_git493ec2b
+   annovar/2018apr                           epacts/3.3.0                                  magma-bio/1.07b                        rmats/4.1.1
+   annovar/2019oct24                  (D)    epacts/3.3.2                                  magma-bio/1.08                  (D)    rmblast/2.9.0-p2
+   anvio/6.1                                 epacts/3.4.2-pr                               manta/1.6.0                            rnaframework/2021-03-02_git13e3dd8
+   anvio/7.0                                 epacts/2020-01-21_gitfc9c3a4           (D)    maps/1.1.0                             rnaframework/2021-05-25_git9c731ea   (D)
+   anvio/7.1                          (D)    exonerate/2.2.0                               maxbin/2.2.7                           rnastructure/6.3
+   aracne-ap/2018_github30967ea              fastani/1.32                                  maxquant/1.6.14                        rsem/1.3.1
+   artemis/18.0.3                            fastme/2.1.6.1                                maxquant/1.6.17.0               (D)    rseqc/3.0.0
+   atacgraph/2021-04-15_gitf5dc970           fastortho/2019_git80c4fa1                     megahit/1.2.9                          ruth/git778d784
+lines 1-16...skipping...
+
+------------------------------------------------------------------------------- /share/module.7/bioinformatics -------------------------------------------------------------------------------
+   2brad_denovo/2019-01-22_giteec5016        eagle/2.4                                     ltr_retriever/2.8                      repeatmodeler/1.0.11
+   2brad_gatk/2019-01-22_git1fcc9e8          eems/2020-01-27_git42bc6c7                    lumpy-sv/0.3.0                         repeatmodeler/2.0.1                  (D)
+   admixture/1.3.0                           eigensoft/7.2.1                               macs/3.0.0a6                           repeatscout/1.0.6
+   agat/0.7.0                                emboss/6.6.0                                  macs2/2.1.2.1                          rfmix/1.5.4
+   angsd/0.923                               emmax/2012-02-10                              macs2/2.2.7.1                   (D)    rfmix/2                              (D)
+   angsd/0.935                        (D)    entrez-direct/10.6.20181210                   mafft/7.305                            rg4-seeker/2021-03-04_git493ec2b
+   annovar/2018apr                           epacts/3.3.0                                  magma-bio/1.07b                        rmats/4.1.1
+   annovar/2019oct24                  (D)    epacts/3.3.2                                  magma-bio/1.08                  (D)    rmblast/2.9.0-p2
+   anvio/6.1                                 epacts/3.4.2-pr                               manta/1.6.0                            rnaframework/2021-03-02_git13e3dd8
+   anvio/7.0                                 epacts/2020-01-21_gitfc9c3a4           (D)    maps/1.1.0                             rnaframework/2021-05-25_git9c731ea   (D)
+   anvio/7.1                          (D)    exonerate/2.2.0                               maxbin/2.2.7                           rnastructure/6.3
+   aracne-ap/2018_github30967ea              fastani/1.32                                  maxquant/1.6.14                        rsem/1.3.1
+   artemis/18.0.3                            fastme/2.1.6.1                                maxquant/1.6.17.0               (D)    rseqc/3.0.0
+   atacgraph/2021-04-15_gitf5dc970           fastortho/2019_git80c4fa1                     megahit/1.2.9                          ruth/git778d784
+   augustus/3.3.2                            fastp/0.20.0                                  melt/2.1.5                             rvtests/2.1.0
+   bamtools/2.5.1                            fastp/0.20.1                           (D)    meme/5.3.0                             saige/0.35.8.8
+   bamutil/1.0.14                            fastq_screen/0.14.0                           meme/5.3.3                      (D)    saige/0.36.6
+   basemount/0.15.103.3011                   fastqc/0.11.7                                 memeris/3.5.1                          saige/0.39                           (D)
+   basespace-cli/0.8.12.590                  fastqtl/2.184                                 memote/0.13.0                          salmon/0.12.0
+   basespace-cli/0.10.8               (D)    faststructure/1.0                             meshclust/1.0.0                        salmon/1.1.0                         (D)
+   basespace-cli/1.2.0                       fasttree/2.1.11                               meshclust2/2.1.0                       salmonte/0.4
+   bayescan/2.1                              fastx-toolkit/0.0.14                          metabat/2.15                           sambamba/0.6.7
+   bbmap/38.16                               fhs/latest                                    metal/2010-02-08                       samblaster/0.1.24
+   bcftools/1.8                              fhspl/0.3.05                                  metal/2011-03-25                       samblaster/0.1.26                    (D)
+   bcftools/1.9                              fhspl/0.3.08                                  metal/2020-10-06_gite2253cc     (D)    samtools/0.1.7
+   bcftools/1.10.2                    (D)    fhspl/0.3.15                           (D)    metalge/2010-02-08                     samtools/0.1.19
+   bcftools/1.12                             finemap/1.4.1                                 metaphlan/3.0                          samtools/1.8
+   bcftools/1.13                             fineradstructure/2019-02-11_gitd8fb782        metasoft/2.0.1                         samtools/1.9
+   bcftools/2019-08-30_git63f4b93            flashpca/2.0                                  methylqa/0.1.9                         samtools/1.10                        (D)
+   bcl2fastq/2.20                            flexbar/3.5.0                                 minimac2/2014-09-15                    samtools/1.12
+   beagle/5.1                                forestpmplot/1.0.1                            minimac3/2.0.1                         samtools/1.14
+   bedops/2.4.35                             fqtrim/0.9.7                                  minimac4/1.0.0                         seqprep/1.2
+   bedtobigbed/2.6                           freebayes/1.3.5                               minimac4/1.0.2                  (D)    seqsimla/2.9.1
+   bedtools/2.17.0                           fusera/1.0                                    minimap2/2.17                          seqtk/1.2-r101c
+   bedtools/2.27.1                           g4rna_screener/0.3                            mirdeep2/0.1.0                         seqtk/1.3                            (D)
+   bedtools/2.30.0                    (D)    gatk/3.5                                      mixcr/3.0.3                            shapeit/v2-r904
+   bfast/0.7.0a                              gatk/3.7                                      mixcr/3.0.13                    (D)    shapeit/4.1.3                        (D)
+   bgen/1.1.6                                gatk/3.8-1                                    mmap/2018-04-07                        shapemapper2/2.1.5
+   bgionline/3.0.0.1                         gatk/4.0.11.0                                 morgan/3.2                             sicer/1.1
+   binsanity/0.5.4                           gatk/4.0.12.0                                 morgan/3.4                      (D)    sickle/1.33
+   biobakery_workflows/3.0.0-alpha.7         gatk/4.1.2.0                                  mosdepth/0.2.6                         sirius/4.0.1
+   biograph/7.1.1                            gatk/4.1.3.0                                  mosdepth/0.3.1                  (D)    smoove/0.2.6
+   bioperl/1.7.2                             gatk/4.1.4.1                                  mothur/1.35.0                          smrtsv2/2.0.2
+   bismark/0.20.1                            gatk/4.1.7.0                                  mr-mega/0.1.5                          snp-sites/2021-08-02_git52c98cb
+   bismark/0.23.0                     (D)    gatk/4.1.9.0                                  mtoolbox/1.2.1                         snpeff/4.3q
+   blasr/5.3.2                               gatk/4.2.0.0                                  multiqc/1.6                            snphylo/2016-02-04
+   blast+/2.7.1                              gatk/4.2.1.0                                  multiqc/1.10.1                  (D)    solar-eclipse/8.4.2
+   blast+/2.12.0                      (D)    gatk/4.2.2.0                                  mummer/3.23                            solar/7.6.4
+   blast/2.2.26                              gatk/4.2.3.0                                  muscle/3.8.31                          sourmash/3.5.0
+   blat/36x2                                 gatk/4.2.4.0                                  mutserve/1.2                           spaceranger/1.2.2
+   bowtie/1.0.0                              gatk/4.2.6.1                           (D)    mutserve/2.0.0-rc12             (D)    spaceranger/1.3.1                    (D)
+   bowtie/1.2.2                       (D)    gcta/1.26.0                                   nest/2.20.0                            spades/3.6.1
+   bowtie2/2.3.2                             gcta/1.93.2beta                        (D)    new_fugue/2010-06-02                   spades/3.13.1                        (D)
+   bowtie2/2.3.4.1                           gdc-client/1.6.0                              nextstrain/1.16.2                      squid/1.9g
+   bowtie2/2.4.2                      (D)    gdc-client/1.6.1                       (D)    ngsadmix/32                            sratoolkit/2.9.2
+   boxshade/3.2.3                            gem/1.4                                       ngsld/2019-01-22_git5708758            sratoolkit/2.10.5
+   bu16s/1.0                                 genometools/1.5.9                             ngspopgen/2019-01-22_git9ee3a6d        sratoolkit/2.11.1                    (D)
+   busco/3.0.2                               genowap/1.0.1                                 ngsrelate/1.0                          srna-workbench/4.5
+   bwa/0.7.12                                genrich/0.6                                   ngsrelate/2_git71e2e61          (D)    st/1.1.4
+   bwa/0.7.15                                gigi/1.06.1                                   novoalign/3.02.07                      stacks/2.2
+   bwa/0.7.17                         (D)    glimpse/1.1.1                                 oases/0.2.09                           stacks/2.41                          (D)
+   cactus/2.0.5                              glow/0.5.0                                    oases/0.2.09-149.omp.l.b        (D)    star/2.6.0c
+   carveme/1.5.1                             gmap-gsnap/2019-09-12                         oncotator/1.9.8.0                      star/2.6.1d
+   cas-offinder/2.4                          gsort/0.1.0                                   oncotator/1.9.9.0               (D)    star/2.7.1a
+   cdhit/4.6.8                               gtool/0.7.5                                   onetool/2.0                            star/2.7.2b
+   cellgpu/0.8                               hail/0.2.19                                   paintor/3.1                            star/2.7.9a                          (D)
+   cellranger/3.0.1                          hail/0.2.33                                   paml/4.9i                              strelka/2.9.10
+   cellranger/3.0.2                          hail/0.2.46                                   paragraph/2.4a                         stringtie/1.3.3
+   cellranger/3.1.0                          hail/0.2.57                                   parasail/2.0.4                         structurefold2/2021-03-04_git79cd348
+   cellranger/4.0.0                          hail/0.2.70                                   patric/1.035                           structurefold3/2021-05-24_git303ddb1
+   cellranger/6.0.1                          hail/0.2.93                            (D)    pear/0.9.11                            subread/1.6.2
+   cellranger/6.1.2                   (D)    haplocheck/1.3.3                              peddy/0.4.3                            svtools/0.5.1
+   circcode/2022-02-23_gitd73e8c2            haplogrep/2.1.13                              pfamscan/1.6                           svtyper/2020-12-04_git3c5218a
+   circexplorer2/2.3.6                       haplogrep/2.2.9                        (D)    pgdspider/2.1.1.2                      tabixpp/1.1.0
+   cite-seq-count/1.4.4                      hicexplorer/2.1.4                             phylip/3.697                           telebuilder/2020-07-31_git2473c02
+   clam/1.1.3                                hicexplorer/3.6                        (D)    phylosnp/2018-12-21                    telescope/1.0.3
+   clam/1.2                           (D)    hisat2/2.1.0                                  picard/2.18.11                         telocal/1.1.1
+   clark/1.2.6.1                             hisat2/2.2.0                           (D)    picard/2.25.2                   (D)    telseq/0.0.2
+   clustalomega/1.2.1                        hmmer/3.2.1                                   picrust2/2.4.1                         tepeaks/0.1
+   clustalw/2.1                              hmmer/3.3.2                            (D)    piranha/1.2.1                          tesmall/0.4.0
+   cnvnator/0.4                              homer/4.10                                    plink/1.07                      (D)    tetoolkit/2.0.3
+   cobratoolbox/809fa7367e                   hp/2021-01-20_gitf0b8744                      plink/1.90b6.4                         tetoolkit/2.2.1                      (D)
+   comb-p/0.50.2                             hp/2021-06-21_git3d66e76               (D)    plink/1.90b6.21                        tetranscripts/2.1.4
+   comb-p/2020-07-22_gite7e3185       (D)    htseq/0.11.0                                  plink/2.00a1LM                         tophat/2.1.1
+   concoct/1.1.0                             htslib/1.8                                    plink/2.00a2.3                         transdecoder/3.0.0
+   controlfreec/11.0                         htslib/1.9                                    plink/2.00a2021-10-11                  transrate/1.0.3
+   ctffind4/4.1.13                           htslib/1.12                                   plink/2.0                              trf/4.0.9
+   cufflinks/2.2.1                           htslib/1.13                            (D)    plinkseq/0.10                          trimgalore/0.4.4
+   cutadapt/1.18                             humann/3.0                                    postgap/2020-05-11-git0453c91          trimgalore/0.5.0                     (D)
+   cutadapt/3.4                       (D)    igv/2.4.16                                    pplacer/1.1.alpha17                    trimmomatic/0.36
+   das_tool/1.1.3                            igv/2.9.2                              (D)    preseq/2.0                             trimmomatic/0.39                     (D)
+   ddocent/2.7.8                             impute/2.3.2                                  primer3/2.5.0                          trinity/2.8.4
+   deeptools/3.1.3                           impute/4.r265                          (D)    prodigal/2.6.3                         trinity/2.13.2                       (D)
+   deeptools/3.3.0                           jellyfish/2.2.10                              prokka/1.14.5                          trust/3.0
+   deeptools/3.5.1                    (D)    juicer/1.6-gpu                         (D)    prsice/2.1.4                           trust/3.0.3                          (D)
+   deepvariant/0.8                           juicer/1.6                                    pygenometracks/2.1                     ucscutils/2018-11-27
+   delly/0.7.9                               juicer/2021-02-21_git2afef51                  pygenometracks/3.6              (D)    umitools/1.0.0
+   dendropy/4.5.2                            kalign/3.2.3                                  pymol/2.2.0                            usearch/8.1.1756
+   denovogear/1.1.1                          kalign/3.3.1                           (D)    qctool/1.4                             varscan/2.3.9
+   dfam-tetools/1.1                          kallisto/0.43.0                               qctool/2.0.1                    (D)    vcflib/1.0.1
+   diamond/0.9.24                            komics/2020-04-16_git82df818                  qiime/1.9.1                            vcflib/1.0.2                         (D)
+   diamond/0.9.32                            lassosum/0.4.3                                qiime2/2018.4                          vcftools/0.1.11
+   diamond/2.0.11                     (D)    ldpred-funct/2019-03-21_git39e59ea            qiime2/2020.2                          vcftools/0.1.16                      (D)
+   diffreps/1.55.6                           ldpred/0.9.09                                 qiime2/2021.8                   (D)    velvet/1.2.10
+   dnanexus-dx/0.269.2                       ldpred/1.0.6-py2                              randfold/2.0.1                         velvet/1.2.10-149.omp.l.b            (D)
+   dnanexus-ua/1.5.25                        ldpred/1.0.6                                  raremetal/4.13.7                       vep/94.5
+   dnanexus-ua/1.5.30                 (D)    ldpred/1.0.10                                 raremetal2/2018-12-11                  verifybamid/1.1.2
+   dosageconverter/1.0.4                     ldpred/1.0.11                          (D)    raxml/8.2.9                            verifybamid/2.0.1                    (D)
+   dropest/0.8.6                             ldsc/2020-05-05_github3d0c446                 recon/1.08                             viennarna/2.4.10
+   duphold/0.1.4                             ldstore/2.0-py                                refgenie/0.12.1                        viennarna/2.4.18                     (D)
+   duphold/0.2.1                             ldstore/2.0                            (D)    repeatmasker/4.0.7                     vsearch/2.8.1
+   duphold/0.2.3                      (D)    liftover/2018-12-05                           repeatmasker/4.0.9-p2                  vt/2019-04-19_gitf6d2b5d
+   ea-utils/1.04.807                         locuszoom/1.4                                 repeatmasker/4.1.0              (D)    wiggletools/v1.2.2
+
+--------------------------------------------------------------------------------- /share/module.7/chemistry ----------------------------------------------------------------------------------
+   abinit/9.2.1               dirac/18.0                  gromacs/2018.3                      ocean/2.9.6                             quantumespresso/6.7
+   amber/16                   dssp/2.2.1                  gromacs/2019.1_openmpi_3.1.4        openbabel-python/3.1.1                  quantumespresso/6.8 (D)
+   apbs/1.5                   elk/8.3.15                  gromacs/2019.1                      openbabel/2.4.1                         rdkit/2020_03_3
+   ase/3.17.0                 espresso/4.1.4              gromacs/2020.1                      openbabel/3.1.1                  (D)    relion/3.0.7-gpu
+   ase/3.18.1                 firefly/8.2.0               gromacs/2021.3                      openmm/7.2.2                            relion/3.0.7
+   ase/3.20.1          (D)    fpocket/3.0.4               gromacs/2021.5               (D)    openmm/7.3.1                            relion/3.1.0-gpu
+   autodock-vina/1.1.2        galamost/18Mar2019          gromos/1.5.0                        openmm/7.4.1                            relion/3.1.0
+   autodock/4.2.6             gamess/2018-09-30-r3        hoomd/2.4.1                         openmm/7.5.1                     (D)    relion/3.1.1
+   avogadro/1.2.0             gamess/2019-09-30-r2 (D)    lammps/3Mar2020                     orca/4.0.1                              relion/4.0          (D)
+   bagel/1.2.2                gaussian/0.9D               lammps/5Jun2019_intel-2019          orca/5.0.1                       (D)    resmap/1.1.4
+   berkeleygw/2.1             gaussian/16.A.03            lammps/12Dec2018_intel-2019         phenix/1.17                             rosetta/3.11
+   charmm/32b1                gaussian/16.B.01     (D)    lammps/29Sep2021             (D)    plumed/2.4.3                            rosetta/3.13        (D)
+   charmm/41.0         (D)    gaussian/16.C.01            libxc/4.2.3                         plumed/2.5.3                            tinker/7.1.2
+   chimera/1.13.1             gpaw/1.5.1                  mdanalysis/0.18.0                   plumed/2.7.4                            tinker/8.7          (D)
+   chimera/1.15        (D)    gpaw/1.5.2                  namd/2.13_intel_openmpi             plumed/2.8.0-conda               (D)    vmd/1.9.1
+   chimerax/2021-05-23        gpaw/19.8.1                 namd/2.13_mc_cuda                   quantumespresso/6.3.1                   vmd/1.9.3           (D)
+   cp2k/8.1                   gpaw/20.1.0                 namd/2.13_openmpi            (D)    quantumespresso/6.4.1-elpa-intel        xcrysden/1.5.60
+   crest/2.10.2               gpaw/20.10.0         (D)    namd/2.13                           quantumespresso/6.4.1-elpa-omp          yambo/3.4.1
+   csds/2019.2                gpaw/22.1.0                 namd/3.0a9-gpu                      quantumespresso/6.4.1-elpa
+   desmond/2019.2             gromacs/4.6.7               nwchem/6.8.1                        quantumespresso/6.4.1
+   dftbplus/20.2.1            gromacs/2016.3              nwchem/7.0.2                 (D)    quantumespresso/6.5
+
+------------------------------------------------------------------------------------ /share/module.7/gis -------------------------------------------------------------------------------------
+   acolite/20210114.0        envi/5.5.2                    (D)    gdal/3.1.2      (D)    hdfeos5/1.16             libspatialite/4.3.0a        palm/21.10      (D)    qgis/3.10.8        (D)
+   cfitsio/3.48              espa-l2qa-tools/1.7.1                gdal/3.4.1             lasrc/1.4.1              libspatialite/5.0.1  (D)    palm/2019-02-13        qgis/3.16.15
+   cfitsio/3.450             espa-product-formatter/1.16.0        geopandas/0.4.0        laszip/3.4.3             mrsid/9.5                   panoply/4.11.6         sdp_toolkit/5.2.20
+   cfitsio/4.0.0      (D)    esri-filegdb-gdal/2.3.2              geos/3.7.0             ldope/1.7                ncl/6.5.0                   pdal/2.1.0             seadas/7.5.3
+   delft3d/7545              freexl/1.0.5                         geos/3.8.1             ledaps/3.3.0      (D)    nco/4.7.8                   postgis/2.5.1          spicetoolkit/N0066
+   delft3d/65936      (D)    freexl/1.0.6                  (D)    geos/3.10.2     (D)    ledaps/2012-09-25        ncview/2.1.4                postgis/3.0.0   (D)    sumo/1.7.0
+   eccodes/2.12.0            gams/27.2.0                          gmt/5.4.5              libgeotiff/1.4.2         ncview/2.1.7         (D)    proj/6.3.2             tiledb/2.0.6
+   ecw/5.4.0                 gcam/5.1.3                           grass/7.4.3            libgeotiff/1.6.0  (D)    orfeo_toolbox/6.6.1         proj/8.2.1      (D)    timesat/3.3
+   ecw/5.5.0.1640     (D)    gcam/5.3                      (D)    grass/7.8.3     (D)    liblas/1.8.1             orfeo_toolbox/7.0.0  (D)    proj4/5.1.0            xbeach/5670
+   envi/5.5.1                gdal/2.3.2                           hdfeos2/20v1.00        librttopo/1.1.0          ossim/2018-12-11            qgis/3.4.2             xerces-c/3.2.2
+
+---------------------------------------------------------------------------------- /share/module.7/imaging -----------------------------------------------------------------------------------
+   afni/19.1.00-omp                  connectomewb/1.3.2            fmriprep/v21.0.1                 imagemagick/7.0.9-8_gcc_8.3.0        opencv/4.5.0
+   afni/19.1.00                      connectomewb/1.4.2            fmristat/28                      imagemagick/7.0.9-8           (D)    opencv/4.5.5         (D)
+   afni/21.0.4-omp            (D)    connectomewb/1.5.0     (D)    freesurfer/5.3.0-hcp             itk-snap/3.2.0                       pysurfer/0.1.0
+   afni/21.0.4                       convert3d/1.0.0               freesurfer/5.3.0                 itk/4.11.0                           qupath/0.1.2
+   afni/2011_12_21.1014-xorg7        dcm2niix/v1.0.20190902        freesurfer/6.0            (D)    mango/v4.1                           qupath/0.2.2
+   afni/2011-12-21.1014-xorg         dcm2niix/1.0.20210317  (D)    freesurfer/7.1.0                 marsbar/0.44                         qupath/0.3.0         (D)
+   afni/2011-12-21.1014              dcmtk/3.6.4                   freesurfer/7.2.0                 minc/1.0.09                          qwt/6.1.3
+   ants/1.9                          ds9/7.6                       freesurfer/2019-08-12_dev        mindboggle/1.3.5                     slicer/4.11
+   ants/1.9.2                        dsi_studio/1.0.1rc            freesurfer/2020-05-18_dev        mne/2.7.3                            slicer/4.13          (D)
+   ants/2.1.0                        dtiprep/1.2.8                 fsl/5.0                          mricrogl/2017-07-14                  spm/5
+   ants/2.2.0                        elastix/5.0.1                 fsl/5.0.9                        mricrogl/2020-11-02           (D)    spm/8
+   ants/2.3.1                        eman2/2.3                     fsl/5.0.10-patched               mricron/2013-6                       spm/12b
+   ants/2.3.3                        epsilon/0.9.2                 fsl/5.0.10                       mriqc/0.10.2                         spm/12               (D)
+   ants/2.3.5                 (D)    fiji/dc                       fsl/5.0.11                       mriqc/0.16.1                  (D)    surfice/v2.1.45-1
+   ashs/2017-02-23                   fiji/2015-12-22               fsl/6.0                          mrsid_dsdk/9.1.0.4045                thevirtualbrain/2.3
+   astra/1.8                         fiji/2019-10-01               fsl/6.0.1                        mrtool/v1.4.3                        unpack2proj/1.0
+   cellprofiler/4.0.6                fiji/2020-09-22               fsl/6.0.2                        mrtrix/3.0                           unpack4scc/0.1
+   chronux/2.12v03                   fiji/2021-10-15        (D)    fsl/6.0.4                 (D)    msm_hocr/3.0-hcp                     voxbo/1.8.5
+   conn/17.f                         fix/1.06.15                   gradunwarp/1.1.0-hcp             neuron/7.6.7                         webp/1.0.0
+   conn/18.b                         fix/1.066              (D)    hcppipelines/4.1.3               neuron/8.0.0                  (D)    webp/1.1.0           (D)
+   conn/21.a                  (D)    fmriprep/v1.1.2               hcppipelines/4.3.0        (D)    nibetaseries/v0.4.0                  xnat2proj/v2.0
+   connectomewb/1.0                  fmriprep/v1.4.1               ica-aroma/0.4.4-beta             opencv/3.2.0                         yaxil/0.4.2
+   connectomewb/1.2.3                fmriprep/v20.2.5       (D)    ilastik/1.3.3                    opencv/4.0.1                         yaxil/0.6.5_dwi_beta (D)
+
+--------------------------------------------------------------------------------- /share/module.7/libraries ----------------------------------------------------------------------------------
+   armadillo/9.200.5                          hdf/4.2.14_no_netcdf          libsbml/5.10.2                         netcdf/4.6.1_intel-2018         quantlib/1.16
+   armadillo/10.8.0                    (D)    hdf/4.2.15_no_netcdf   (D)    libsbml/5.19.0                  (D)    netcdf/4.6.1_intel-2019         raptor/2.0.15
+   arpack-ng/3.7.0                            hdf5/1.6.10                   libsodium/1.0.18                       netcdf/4.6.1                    rasqal/0.9.33
+   arrow_cpp/0.17.0                           hdf5/1.8.21            (D)    libspatialindex/1.8.5                  netcdf/4.7.4                    redland/1.0.17
+   arrow_cpp/3.0.0_gcc_8.3.0           (D)    hdf5/1.10.4_intel-2018        libspatialindex/1.9.3           (D)    netcdf/4.8.1             (D)    rocksdb/6.2.2
+   blis/0.6.0                                 hdf5/1.10.4                   libsupermesh/1.0.1                     openjpeg/2.1.2                  scalapack/2.0.2_gcc-8.1_openmpi-3.1.4
+   blis/0.6.1                                 hdf5/1.10.5_intel-2018        libsvm/3.25                            openmpi/2.0.2                   seal/3.6.2
+   blis/0.7.0                                 hdf5/1.10.5_intel-2019        libxml2/2.9.8                          openmpi/3.1.1_intel-2018        slepc/3.11.2
+   blis/0.8.0                                 hdf5/1.12.0                   libzip/1.8.0                           openmpi/3.1.1                   soslib/1.9.0
+   blis/0.8.1                          (D)    hdf5/1.12.1                   lmdb/0.9.22                            openmpi/3.1.4_gnu-7.4.0         spdlog/1.8.5
+   cairo/1.16.0                               igraph/0.8.0                  matio/1.5.15                           openmpi/3.1.4_gnu-8.1           sqlite3/3.25.3
+   chaste/2018.1                              jbig/2.1                      mcr/7.16_2011b                         openmpi/3.1.4_gnu-9.3.0         sqlite3/3.31.1
+   cudnn/8.1.1                                jemalloc/5.2.1                mcr/8.3_2014a                          openmpi/3.1.4_gnu-10.2.0        sqlite3/3.37.2                        (D)
+   dotnet/2.2.101                             jpeg/9b                       mcr/8.4_2014b                          openmpi/3.1.4_intel-2019        suitesparse/5.4.0
+   dotnet/3.1.402                      (D)    json-c/0.13.1                 mcr/9.0.1_2016a                        openmpi/3.1.4_intel-2021        suitesparse/5.7.1                     (D)
+   eigen/2.0.17                               jsoncpp/1.8.4                 mcr/9.3_2017b                          openmpi/3.1.4_pgi-19.4          superlu/5.2.2
+   eigen/3.3.5                                lapack/3.8.0                  mcr/9.5_2018b                          openmpi/3.1.4            (D)    systemc/2.3.3
+   eigen/3.3.7                         (D)    lapack/3.9.1           (D)    mcr/9.8_2020a                   (D)    openmpi/4.0.1_intel-2019        tiff/4.0.6
+   exiv2/0.27.3                               lemon/1.3.1                   mct/2.6.0                              openmpi/4.1.1                   tiff/4.0.9                            (D)
+   ffmpeg/4.0.3                               libbigwig/0.4.2               mdbtools/0.7.1                         openslide/3.4.1                 tinyxml/2.6.2
+   ffmpeg/4.2.1                        (D)    libcurl/7.62.0                memkind/1.6.0                          petsc/3.11.3-py2                ucx/1.11.2
+   fftw/2.1.5_intel-2018_openmpi-3.1.1        libcurl/7.81.0         (D)    minizip/2.10.0                         petsc/3.11.3-py3                udunits/2.2.26
+   fftw/3.3.4                                 libdap/3.18.1                 minizip/3.0.4                   (D)    petsc/3.11.3                    wxwidgets/3.0.4
+   fftw/3.3.8                          (D)    libdc1394/2.2.0               mpc/1.1.0                              petsc/3.12.4             (D)    wxwidgets/3.1.6                       (D)
+   flite/2.2                                  libdc1394/2.2.6        (D)    mpfr/4.0.1                             pixman/0.34.0                   zlib/1.2.11
+   fltk/1.3.4-2                               libgta/1.0.9                  mumps/5.2.1.2                          poppler/21.03.0                 zstandard/1.4.5
+   freetype/2.9.1                             libgta/1.2.1           (D)    mvapich/2.3.3                          pypar/2.0                       zstandard/1.5.1                       (D)
+   glib/2.46.2                                libjpeg-turbo/2.0.4           netcdf-cxx/4.2                         qt/5.11.2                       zstandard/2019-04-18
+   gsl/2.5                                    libjq/1.6                     netcdf-fortran/4.4.4_gnu-8.1.0         qt/5.12.8                (D)
+   gstreamer/0.10.36                          libkml/1.3                    netcdf-fortran/4.4.4_intel-2018        qt/5.15.2
+   hdf/4.2.14_intel-2018_no-netcdf            liblbfgs/1.10                 netcdf-fortran/4.4.4_intel-2019        qt4/4.8.4
+   hdf/4.2.14_intel-2019_no-netcdf            libsbml/3.4.1                 netcdf-fortran/4.4.4            (D)    qt4/4.8.7                (D)
+
+------------------------------------------------------------------------------ /share/module.7/machine-learning ------------------------------------------------------------------------------
+   apex/0.1                     instagram-api/5.0.0        mrbayes/3.2.7     pytorch/1.3      pytorch/1.9.0                 tensorflow/1.15.0    tensorflow/2.7.0          vame/1.0
+   cdeep3m/1.6.3                jax/0.1.49                 mxnet/1.7.0       pytorch/1.5      pytorch/1.10.2                tensorflow/2.0.0     tensorflow/2.8.0   (D)
+   darknet/436                  jax/0.2.19          (D)    netket/1.0.4      pytorch/1.5.1    pytorch/1.11.0         (D)    tensorflow/2.1.0     tesseract/4.1.3
+   deepinterpolation/28d6540    kaolin/0.10.0              openpose/1.7.0    pytorch/1.6.0    stable-baseline3/1.3.0        tensorflow/2.3.1     theano/1.0.2
+   faceswap/2.0.0               leptonica/1.82.0           pytorch/1.0       pytorch/1.7.0    tensorflow/1.12               tensorflow/2.4.1     torch/2.1
+   grobid/0.5.6                 libicu/71.1                pytorch/1.1       pytorch/1.8.1    tensorflow/1.13.1             tensorflow/2.5.0     transformers/4.5.0
+
+---------------------------------------------------------------------------------- /share/module.7/math-eng ----------------------------------------------------------------------------------
+   3d-ice/2.2.6                      cryodrgn/0.3.4                     geant4/10.3.3              maple/16.0                opencascade/7.4.0               sagemath/9.3    (D)
+   alphafold/2.0.0                   cvxpy/1.0.25                       geant4/10.6.2       (D)    maple/2018         (D)    openfoam/v2012                  sdpb/1.0
+   alphafold/2.1.1            (D)    deeplabcut/2.1.4                   gem5/19.0.0.0              mathematica/9.0           openfoam/v2112                  snaphu/2.0.4
+   alphafold_db/2.0.0                deeplabcut/2.1.8.2_py3             genesis/2.4                mathematica/10.4.1        openfoam/6.0                    sniper/7.2
+   alphafold_db/2.1.1         (D)    deeplabcut/2.1.8.2          (D)    gmsh/4.0.7                 mathematica/11.3.0        openfoam/9               (D)    sst-macro/9.1.0
+   amgx/2019-12-13_gitb3101ff        elpa/2018.11.001_intel-2018        gmsh/4.6.0                 mathematica/12.0.0 (D)    openroad/2021-03-09             sundials/2.4.0
+   amst/pre_align_workflow           energyplus/8.9.0                   gmsh/4.7.1          (D)    mathematica/13.0.0        openroad_flow/2021-03-09        sundials/5.8.0  (D)
+   amst/2021-11-18_gitfe2b394 (D)    esa-snap/7.0.0                     gurobi/8.0.0               mcx/2019.4                postview/1.10.2                 telemac/v8p2r0
+   basilisk/2020-04-28               esa-snap/8.0.0              (D)    gurobi/9.0.0        (D)    meshlab/2020.12           praat/6.0.43                    topaz/0.2.5
+   bgw/2.0.0_intel-2018              febio/3.4                          gurobi/9.1.1               metis/5.1.0               pymatgen/2020.3.13              verilator/4.108
+   caiman/1.8.1                      febio_studio/1.5                   hypre/2.21.0               mir/170227                pyspice/1.3.2                   xfoil/6.99
+   casa/5.3.0                        fenics/deprecated                  libmesh/1.6.2              mmg/5.5.2                 quartus_pro/18.1                xyce/6.12
+   cgal/4.9.1                        fenics/2019.1.0_OLD                lookahead/0.0.1            motioncor2/1.3.0          quartus_pro/19.4         (D)    xyce/7.4        (D)
+   cgal/4.14.1                (D)    fenics/2019.1.0             (D)    macaulay2/1.14.0.1         mpb/1.5_intel-2018        quartus_pro/20.3
+   civet/2.1.1                       firedrake/1-7-2020                 magic/8.3.188              muparser/2.2.5            quspin/0.3.3
+   clhep/2.4.1.3                     foam-extend/4.1                    magma_usyd/v2.23-11        netgen/1.5.196            quspin/0.3.4             (D)
+   cnmf-e/1.1.2                      gauss/13.1.1                       magma_usyd/2.26-9          ngspice/3.1               sagemath/9.0
+   code_saturne/6.0.6                gdspy/1.4                          magma_usyd/2.26-10  (D)    ngspice/3.2        (D)    sagemath/9.2
+
+-------------------------------------------------------------------------------- /share/module.7/programming ---------------------------------------------------------------------------------
+   anaconda2/5.2.0           dynare/4.4.3           java/11.0.4         matlab/2019b                          openspeedshop/2.2.3               python3/3.9.4
+   anaconda3/5.2.0           dynare/4.5.6    (D)    java/12.0.1         matlab/2020a                          perl/5.28.1              (D)      python3/3.9.9
+   boost/1.57                dynare/4.6.4           java/16.0.2  (D)    matlab/2020b                          perl/5.30.1                       readline/7.0
+   boost/1.66.0_gcc5+        expat/2.2.6            jcuda/0.8.0         matlab/2021a                          perl/5.34.0                       redland_binding/1.0.17.1
+   boost/1.69.0       (D)    gcc/5.5.0              jcuda/10.1.0 (D)    matlab/2021b                   (D)    pgi/16.5                          root/5.34.36
+   boost/1.76.0              gcc/7.4.0       (L)    julia/0.6.4         matlab/2022a                          pgi/18.4                          root/6.16.00
+   boost/1.66.0_gcc5+        expat/2.2.6            jcuda/0.8.0         matlab/2021a                          perl/5.34.0                       redland_binding/1.0.17.1
+   boost/1.69.0       (D)    gcc/5.5.0              jcuda/10.1.0 (D)    matlab/2021b                   (D)    pgi/16.5                          root/5.34.36
+   boost/1.76.0              gcc/7.4.0       (L)    julia/0.6.4         matlab/2022a                          pgi/18.4                          root/6.16.00
+   boost/1.79.0_gcc5+        gcc/8.1.0              julia/0.7.0         micromamba/0.19.1                     pgi/18.10                         root/6.22.00             (D)
+   boost/1.79.0              gcc/8.3.0       (D)    julia/1.0.2         miniconda/4.5.12                      pgi/19.4                 (D)      root/6.24.00
+   cgdb/v0.7.0               gcc/9.3.0              julia/1.3.0         miniconda/4.7.5                       postgresql/11.1                   rpy2/2.9.2
+   cmake/3.10.0              gcc/10.2.0             julia/1.4.2         miniconda/4.9.2                       postgresql/12.3                   ruby/2.7.2
+   cmake/3.12.0              gcc/11.2.0             julia/1.5.0  (D)    miniconda/4.11.0               (D)    postgresql/14.1          (D)      rust/1.32.0
+
+-------------------------------------------------------------------------------- /share/module.7/programming ---------------------------------------------------------------------------------
+   anaconda2/5.2.0           dynare/4.4.3           java/11.0.4         matlab/2019b                          openspeedshop/2.2.3               python3/3.9.4
+   anaconda2/5.2.0           dynare/4.4.3           java/11.0.4         matlab/2019b                          openspeedshop/2.2.3               python3/3.9.4
+   anaconda3/5.2.0           dynare/4.5.6    (D)    java/12.0.1         matlab/2020a                          perl/5.28.1              (D)      python3/3.9.9
+   boost/1.57                dynare/4.6.4           java/16.0.2  (D)    matlab/2020b                          perl/5.30.1                       readline/7.0
+
+
+-------------------------------------------------------------------------------- /share/module.7/programming ---------------------------------------------------------------------------------
+   anaconda2/5.2.0           dynare/4.4.3           java/11.0.4         matlab/2019b                          openspeedshop/2.2.3               python3/3.9.4
+   anaconda3/5.2.0           dynare/4.5.6    (D)    java/12.0.1         matlab/2020a                          perl/5.28.1              (D)      python3/3.9.9
+
+-------------------------------------------------------------------------------- /share/module.7/programming ---------------------------------------------------------------------------------
+   anaconda2/5.2.0           dynare/4.4.3           java/11.0.4         matlab/2019b                          openspeedshop/2.2.3               python3/3.9.4
+   anaconda3/5.2.0           dynare/4.5.6    (D)    java/12.0.1         matlab/2020a                          perl/5.28.1              (D)      python3/3.9.9
+   boost/1.57                dynare/4.6.4           java/16.0.2  (D)    matlab/2020b                          perl/5.30.1                       readline/7.0
+   boost/1.66.0_gcc5+        expat/2.2.6            jcuda/0.8.0         matlab/2021a                          perl/5.34.0                       redland_binding/1.0.17.1
+   boost/1.69.0       (D)    gcc/5.5.0              jcuda/10.1.0 (D)    matlab/2021b                   (D)    pgi/16.5                          root/5.34.36
+   boost/1.76.0              gcc/7.4.0       (L)    julia/0.6.4         matlab/2022a                          pgi/18.4                          root/6.16.00
+   boost/1.79.0_gcc5+        gcc/8.1.0              julia/0.7.0         micromamba/0.19.1                     pgi/18.10                         root/6.22.00             (D)
+   boost/1.79.0              gcc/8.3.0       (D)    julia/1.0.2         miniconda/4.5.12                      pgi/19.4                 (D)      root/6.24.00
+   cgdb/v0.7.0               gcc/9.3.0              julia/1.3.0         miniconda/4.7.5                       postgresql/11.1                   rpy2/2.9.2
+   cmake/3.10.0              gcc/10.2.0             julia/1.4.2         miniconda/4.9.2                       postgresql/12.3                   ruby/2.7.2
+   cmake/3.12.0              gcc/11.2.0             julia/1.5.0  (D)    miniconda/4.11.0               (D)    postgresql/14.1          (D)      rust/1.32.0
+   cmake/3.14.5              gitkraken/5.0.2        julia/1.6.3         mono/5.0.1                            pycuda/2019.1                     sbt/0.13.12
+   cmake/3.19.4              gitkraken/6.0.1 (D)    llvm/3.9.1          mono/5.18.0.225                       python2-intel/2019.4.088          scala/2.12.0
+   cmake/3.22.2       (D)    go/1.10.3              llvm/6.0.1          mono/6.10.0                    (D)    python2-intel/2019.5.098 (D)      scala/2.13.2             (D)
+   cplex/12.7.1              go/1.12.7       (D)    llvm/7.0.1          nextflow/18.10.1                      python2/2.7.13                    scons/2.5.1
+   cplex/12.8_ac      (D)    gradle/5.6.4           llvm/9.0.1          nextflow/19.10.0                      python2/2.7.15                    scons/4.3.0              (D)
+   cromwell/41               gradle/6.9.1           llvm/12.0.1  (D)    nextflow/21.04.2                      python2/2.7.16           (D)      spark/2.3.0
+   cromwell/53.1      (D)    gradle/7.2      (D)    make/4.3            nextflow/21.10.6               (D)    python3-intel/2021.1.1            spark/2.4.3
+   cuda/7.5.18               haskell/8.6.3          malt/1.2.1          nextflow/2021-11-04_git0f12956        python3/3.6.5                     spark/3.1.1
+   cuda/8.0                  idl/8.6.0              matlab/2011b        nodejs/8.2.1                          python3/3.6.9                     spark/3.1.2              (D)
+   cuda/9.0                  idl/8.7.1              matlab/2013a        nodejs/12.16.1                        python3/3.6.10                    star-ccm/13.06.012
+   cuda/9.2                  idl/8.7.2       (D)    matlab/2013b        nodejs/14.16.1                 (D)    python3/3.6.12                    star-ccm/2019.1          (D)
+   cuda/10.0                 intel/2016             matlab/2014a        ocaml/4.02.2                          python3/3.7.3                     svn/1.11.0
+   cuda/10.1                 intel/2016.5           matlab/2014b        octave/4.4.1                          python3/3.7.5                     swig/3.0.12
+   cuda/10.2                 intel/2018             matlab/2016a        openblas/0.2.20                       python3/3.7.7                     swig/4.0.2               (D)
+   cuda/11.0.3               intel/2019             matlab/2017a        openblas/0.3.7                        python3/3.7.9                     tau/2.30.1
+   cuda/11.1                 intel/2019.5           matlab/2017b        openblas/0.3.13                       python3/3.7.10                    totalview/2017.0         (D)
+   cuda/11.2          (D)    intel/2021.1    (D)    matlab/2018a        openblas/0.3.17                (D)    python3/3.8.3                     totalview/2019.3
+   cuda/11.3          (L)    java/1.8.0_181         matlab/2018b        openjdk/11.0.2                 (D)    python3/3.8.6                     uprof/3.4.475
+   ddd/3.3.12                java/10.0.2            matlab/2019a        openjdk/16.0.2_7                      python3/3.8.10           (L,D)
+
+--------------------------------------------------------------------------------- /share/module.7/statistics ---------------------------------------------------------------------------------
+   R/3.0.0               R/3.6.2    R/4.1.1                   jags/4.3.0                     (D)    rstudio/1.1.463         sas/9.4     (D)    stata-se/16        stata/17 (D)
+   R/3.5.1               R/4.0.0    R/4.1.2_intel-2021        mscaviar/2021-07-21_git3255374        rstudio/1.2.1335        stata-mp/15        stata-se/17 (D)
+   R/3.6.0_intel-2018    R/4.0.2    R/4.1.2            (D)    openbugs/3.2.3                        rstudio/1.3.959         stata-mp/16        stata/12
+   R/3.6.0               R/4.0.3    cmdstan/2.29.2            pymultinest/3.10                      rstudio/1.4.1717 (D)    stata-mp/17 (D)    stata/15
+   R/3.6.1_intel-2019    R/4.0.5    jags/4.3.0_gcc_8          rstan/2.18.2                          sas/9.3                 stata-se/15        stata/16
+
+--------------------------------------------------------------------------------- /share/module.7/utilities ----------------------------------------------------------------------------------
+   aria2/1.34.0              csvtk/0.20.0                    gsutil/4.35                     ncftp/3.2.5                php/7.1                     szip/2.1.1
+   aspera-cli/3.9.6          dbeaver/6.1.0                   gsutil/4.46              (D)    neo4j/4.0.8                pigz/2.3.4                  terraform/1.1.8
+   atom/1.33.1               drive/0.3.9                     gtk-doc/1.3                     neovim/0.3.2               plotly-orca/1.3.1           texlive/2018
+   autogen/5.18.16           dtc/1.5.1                       gtk-doc/1.29             (D)    newpkg/0.1.4               protobuf/2.6.1              texlive/2021                        (D)
+   automake/1.16             eclipse/neon                    hdf5storage/0.1.15              newpkg/0.1.5               protobuf/3.6.1              texworks/0.6.1
+   awscli/1.16.77            eclipse/2019-06          (D)    hdfview/3.1.1                   newpkg/0.1.6        (D)    protobuf/3.20.0      (D)    tmux/2.8
+   awscli/2.0.4       (D)    emacs/26.3                      htop/2.0.2                      ninja/1.8.2                rclone/1.50.2               tsylb2/1.1
+   azure-cli/2.30.0          epstopdf/2.28                   htop/3.0.2               (D)    ninja/1.10.2        (D)    rclone/1.55.0               twitterscraper/2020-06-01_gitdb44c0
+   bazel/0.21.0              filezilla/3.48.0                jq/1.5                          npm/6.9.0                  rclone/1.57.0        (D)    txt2tags/2.6
+   bazel/0.25.0              firefox/60.1.0                  jq/1.6                          oniguruma/6.9.1            rdfind/1.5.0                unison/2.51.2
+   bazel/0.26.1              fxz/5.2.4                       jq/2019-03-20_git3ea0199 (D)    ood_error/test             redhat-oc/4.9.13            unixodbc/2.3.7
+   bazel/0.27.1              gap/4.11.0                      knime/3.7.0                     opera/12.16-1860           remarkable/1.87             upx/3.96
+   bazel/0.29.1              gargs/0.3.9                     libreoffice/6.1.3.2             orange3/3.24.1             remora/1.8.5                vim/8.1
+   bazel/2.0.0        (D)    gate/8.6.1                      maven/3.6.0                     pandoc/2.2.1               ruse/2.0                    vim/8.1.1592                        (D)
+   bazel/2.2.0               gifsicle/1.92                   mawk/1.3.4                      pandoc/2.5          (D)    snakeviz/2.0.1              vscode/1.52.1
+   bazel/4.1.0               git/2.18.0               (D)    mercurial/5.1.1                 parallel/2019-02-22        snzip/1.0.4                 vscode/1.60.0                       (D)
+   berkeleydb/18.1.32        git/2.31.1                      meson/0.59.1                    patchelf/0.10              sqldeveloper/19.1.0         wkhtmltopdf/0.12.5
+   bless/0.6.3               google-cloud-sdk/273.0.0        miriad/2014.7                   patchelf/0.14.3     (D)    sqlitebrowser/3.10.1        xthi/1.0
+   btop/1.0.11               google-cloud-sdk/351.0.0 (D)    msodbcsql/17.6.1.1              pcre/8.37                  sublime/3134                yasm/1.3.0
+   composer/1.8.4            gperftools/2.9.1                mssql-tools/17.6.1.1            pdfcrop/1.38               sublime/4113         (D)    zstd/1.5.0
+
+------------------------------------------------------------------------------- /share/module.7/visualization --------------------------------------------------------------------------------
+   circos/0.67-7               gnuplot/5.0.3   (D)    h5utils/1.13.1         klayout/0.26.8            opengl_mathematics/0.9.9.3        paraview/5.8.1         vlc/3.0.8
+   cytoscape/3.5.1             gnuplot/5.2.7          icy/2.0.3.0            klayout/0.27.7     (D)    openscenegraph/3.2.1              paraview/5.9.1  (D)    vtk/6.1.0
+   cytoscape/3.8.0             grace/5.1.25           imagemagick/7.0.3-5    mgltools/1.5.7rc1         openscenegraph/3.6.3       (D)    povray/3.7             vtk/7.1.0
+   cytoscape/3.8.2      (D)    gst-libav/1.0.6        jasper/2.0.14          opengl_glew/1.13.0        p4vasp/0.3.30                     quickplot/1.0.1        vtk/9.0.1 (D)
+   fox/1.6.57_gcc_5.5.0        gv/3.5.8               klayout/0.25.7         opengl_glew/2.1.0  (D)    paraview/5.2                      vesta/3.4.6
+
+  Where:
+   L:  Module is loaded
+   D:  Default Module
+
+Use "module spider" to find all possible modules.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".

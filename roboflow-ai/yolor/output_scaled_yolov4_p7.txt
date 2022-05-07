@@ -1,0 +1,44 @@
+check_file -- > file: ../zero-waste-10/data.yaml
+
+check_file -- > file: ../zero-waste-10/data.yaml
+check_file -- > file: ../zero-waste-10/data.yaml
+
+
+check_file -- > file: cfg/yolov4_p7.cfg
+
+check_file -- > file: cfg/yolov4_p7.cfg
+
+check_file -- > file: cfg/yolov4_p7.cfg
+
+check_file -- > file: data/hyp.scratch.640.yaml
+
+check_file -- > file: data/hyp.scratch.640.yaml
+check_file -- > file: data/hyp.scratch.640.yaml
+
+
+check_file -- > file: ../zero-waste-10/data.yaml
+
+check_file -- > file: cfg/yolov4_p7.cfg
+
+check_file -- > file: data/hyp.scratch.640.yaml
+
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.

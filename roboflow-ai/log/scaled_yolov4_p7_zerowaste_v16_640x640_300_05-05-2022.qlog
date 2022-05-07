@@ -1,0 +1,690 @@
+scaled_yolov4_p7_zerowaste_v16_640x640_300_2022_05_06-00_42_08
+==========================================================
+Start date : Fri May  6 00:42:08 EDT 2022
+Job name : scaled_yolov4_p7_zerowaste_v16_640x640_300
+Job ID : 4553731  undefined
+==========================================================
+==========================> Loading moudule for Project Environment
+===========================> Checking OS Information
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.9.2009 (Core)
+Release:	7.9.2009
+Codename:	Core
+x86_64
+CentOS Linux release 7.9.2009 (Core)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+CentOS Linux release 7.9.2009 (Core)
+CentOS Linux release 7.9.2009 (Core)
+===========================> Checking CPU Information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    1
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Stepping:              7
+CPU MHz:               3600.146
+CPU max MHz:           3900.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+===========================> Checking GPU Configuration
+Fri May  6 00:42:45 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:18:00.0 Off |                    0 |
+| N/A   40C    P0    43W / 300W |      3MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   37C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   37C    P0    44W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:AF:00.0 Off |                    0 |
+| N/A   39C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Mon_May__3_19:15:13_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.109
+Build cuda_11.3.r11.3/compiler.29920130_0
+Linux scc-204 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+==========================> Checking SCC Quota Usage
+                                      quota     quota       usage     usage
+project space                          (GB)    (files)       (GB)   (files)
+-----------------------------------  ------  ---------  ---------  --------
+/projectnb/dl523                       2000   33554432    1603.17   4057913
+Home Directory Usage and Quota:
+Name           GB    quota    limit in_doubt    grace |    files    quota    limit in_doubt    grace
+dong760  10.24070     10.0     11.0      0.0   7 days |  132,688  200,000  200,000      144     none
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4549155 0.10115 ood-deskto dong760      r     05/05/2022 22:57:41 academic-gpu@scc-204.scc.bu.ed     2        
+4553731 0.10005 scaled_yol dong760      r     05/06/2022 00:42:05 academic-gpu@scc-204.scc.bu.ed     2        
+
+Currently Loaded Modules:
+  1) python3/3.8.10   2) cuda/11.3
+
+ 
+
+==========================> Current ENV Path
+/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/share/pkg.7/cuda/11.3/install/nsight-compute-2021.1.1:/share/pkg.7/cuda/11.3/install/nsight-systems-2021.1.3/bin:/share/pkg.7/cuda/11.3/install/bin:/share/pkg.7/python3/3.8.10/install/bin:/scratch/4553731.1.academic-gpu:/share/pkg.7/gcc/7.4.0/install/bin:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.local/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/usr4/dl523/dong760/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/remote-cli:/usr/java/default/jre/bin:/usr/java/default/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/dell/srvadmin/bin:/bin:/usr4/dl523/dong760/bin:.
+
+
+Python 3.8.10
+/usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+==========================> Start Training
+Using CUDA device0 _CudaDeviceProperties(name='Tesla V100-SXM2-16GB', total_memory=16160MB)
+
+Namespace(adam=False, batch_size=16, bucket='', cache_images=False, cfg='models/yolov4-p7.yaml', data='../zero-waste-11/data.yaml', device='0', epochs=300, evolve=False, global_rank=-1, hyp='data/hyp.finetune.yaml', img_size=[640, 640], local_rank=-1, logdir='runs/', multi_scale=False, name='yolov4_p7_2022_05_06-00_42_08', noautoanchor=False, nosave=False, notest=False, rect=False, resume=False, single_cls=False, sync_bn=False, total_batch_size=16, weights='weights/yolov4-p7.pt', world_size=1)
+Start Tensorboard with "tensorboard --logdir runs/", view at http://localhost:6006/
+Hyperparameters {'lr0': 0.01, 'momentum': 0.937, 'weight_decay': 0.0005, 'giou': 0.05, 'cls': 0.5, 'cls_pw': 1.0, 'obj': 1.0, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.5, 'scale': 0.8, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mixup': 0.2}
+Overriding models/yolov4-p7.yaml nc=80 with nc=4
+
+                 from  n    params  module                                  arguments                     
+  0                -1  1      1160  models.common.Conv                      [3, 40, 3, 1]                 
+  1                -1  1     28960  models.common.Conv                      [40, 80, 3, 2]                
+  2                -1  1     30960  models.common.BottleneckCSP             [80, 80, 1]                   
+  3                -1  1    115520  models.common.Conv                      [80, 160, 3, 2]               
+  4                -1  1    251360  models.common.BottleneckCSP             [160, 160, 3]                 
+  5                -1  1    461440  models.common.Conv                      [160, 320, 3, 2]              
+  6                -1  1   4081600  models.common.BottleneckCSP             [320, 320, 15]                
+  7                -1  1   1844480  models.common.Conv                      [320, 640, 3, 2]              
+  8                -1  1  16304000  models.common.BottleneckCSP             [640, 640, 15]                
+  9                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 2]             
+ 10                -1  1  32382720  models.common.BottleneckCSP             [1280, 1280, 7]               
+ 11                -1  1  14748160  models.common.Conv                      [1280, 1280, 3, 2]            
+ 12                -1  1  32382720  models.common.BottleneckCSP             [1280, 1280, 7]               
+ 13                -1  1  14748160  models.common.Conv                      [1280, 1280, 3, 2]            
+ 14                -1  1  32382720  models.common.BottleneckCSP             [1280, 1280, 7]               
+ 15                -1  1  11888640  models.common.SPPCSP                    [1280, 640, 1]                
+ 16                -1  1    410880  models.common.Conv                      [640, 640, 1, 1]              
+ 17                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 18                -6  1    820480  models.common.Conv                      [1280, 640, 1, 1]             
+ 19          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 20                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 21                -1  1    410880  models.common.Conv                      [640, 640, 1, 1]              
+ 22                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 23               -13  1    820480  models.common.Conv                      [1280, 640, 1, 1]             
+ 24          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 25                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 26                -1  1    205440  models.common.Conv                      [640, 320, 1, 1]              
+ 27                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 28               -20  1    205440  models.common.Conv                      [640, 320, 1, 1]              
+ 29          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 30                -1  1   3590400  models.common.BottleneckCSP2            [640, 320, 3]                 
+ 31                -1  1     51520  models.common.Conv                      [320, 160, 1, 1]              
+ 32                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 33               -27  1     51520  models.common.Conv                      [320, 160, 1, 1]              
+ 34          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 35                -1  1    899200  models.common.BottleneckCSP2            [320, 160, 3]                 
+ 36                -1  1    461440  models.common.Conv                      [160, 320, 3, 1]              
+ 37                -2  1    461440  models.common.Conv                      [160, 320, 3, 2]              
+ 38          [-1, 30]  1         0  models.common.Concat                    [1]                           
+ 39                -1  1   3590400  models.common.BottleneckCSP2            [640, 320, 3]                 
+ 40                -1  1   1844480  models.common.Conv                      [320, 640, 3, 1]              
+ 41                -2  1   1844480  models.common.Conv                      [320, 640, 3, 2]              
+ 42          [-1, 25]  1         0  models.common.Concat                    [1]                           
+ 43                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 44                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 1]             
+ 45                -2  1   3687680  models.common.Conv                      [640, 640, 3, 2]              
+ 46          [-1, 20]  1         0  models.common.Concat                    [1]                           
+ 47                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 48                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 1]             
+ 49                -2  1   3687680  models.common.Conv                      [640, 640, 3, 2]              
+ 50          [-1, 15]  1         0  models.common.Concat                    [1]                           
+ 51                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 52                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 1]             
+ 53[36, 40, 44, 48, 52]  1    172980  models.yolo.Detect                      [4, [[13, 17, 22, 25, 27, 66, 55, 41], [57, 88, 112, 69, 69, 177, 136, 138], [136, 138, 287, 114, 134, 275, 268, 248], [268, 248, 232, 504, 445, 416, 640, 640], [812, 393, 477, 808, 1070, 908, 1408, 1408]], [320, 640, 1280, 1280, 1280]]
+Traceback (most recent call last):
+  File "train.py", line 443, in <module>
+    train(hyp, opt, device, tb_writer)
+  File "train.py", line 65, in train
+    model = Model(opt.cfg or ckpt['model'].yaml, ch=3, nc=nc).to(device)  # create
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/ScaledYOLOv4/models/yolo.py", line 83, in __init__
+    self._initialize_biases()  # only run once
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/ScaledYOLOv4/models/yolo.py", line 141, in _initialize_biases
+    b[:, 4] += math.log(8 / (640 / s) ** 2)  # obj (8 objects per 640 image)
+RuntimeError: a view of a leaf Variable that requires grad is being used in an in-place operation.
+Namespace(augment=True, batch_size=16, conf_thres=0.0, data='../zero-waste-11/data.yaml', device='0', img_size=640, iou_thres=0.65, merge=False, save_json=False, save_txt=True, single_cls=False, task='test', verbose=True, weights=['runs/train/yolor_p6_2022_05_06-00_42_08/weights/best_overall.pt'])
+Using CUDA device0 _CudaDeviceProperties(name='Tesla V100-SXM2-16GB', total_memory=16160MB)
+
+Traceback (most recent call last):
+  File "test.py", line 269, in <module>
+    test(opt.data,
+  File "test.py", line 55, in test
+    model = attempt_load(weights, map_location=device)  # load FP32 model
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/ScaledYOLOv4/models/experimental.py", line 136, in attempt_load
+    attempt_download(w)
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/ScaledYOLOv4/utils/google_utils.py", line 33, in attempt_download
+    raise Exception(msg)
+Exception: runs/train/yolor_p6_2022_05_06-00_42_08/weights/best_overall.pt missing
+Fri May  6 00:54:03 EDT 2022
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4549155 0.10114 ood-deskto dong760      r     05/05/2022 22:57:41 academic-gpu@scc-204.scc.bu.ed     2        
+4553731 0.10005 scaled_yol dong760      r     05/06/2022 00:42:05 academic-gpu@scc-204.scc.bu.ed     2        
+scaled_yolov4_p7_zerowaste_v16_640x640_300_2022_05_06-00_58_44
+==========================================================
+Start date : Fri May  6 00:58:44 EDT 2022
+Job name : scaled_yolov4_p7_zerowaste_v16_640x640_300
+Job ID : 4553836  undefined
+==========================================================
+==========================> Loading moudule for Project Environment
+===========================> Checking OS Information
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.9.2009 (Core)
+Release:	7.9.2009
+Codename:	Core
+x86_64
+CentOS Linux release 7.9.2009 (Core)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+CentOS Linux release 7.9.2009 (Core)
+CentOS Linux release 7.9.2009 (Core)
+===========================> Checking CPU Information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    1
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Stepping:              7
+CPU MHz:               3634.838
+CPU max MHz:           3900.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+===========================> Checking GPU Configuration
+Fri May  6 00:59:17 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:18:00.0 Off |                    0 |
+| N/A   42C    P0    44W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   37C    P0    42W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   38C    P0    44W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:AF:00.0 Off |                    0 |
+| N/A   42C    P0    46W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Mon_May__3_19:15:13_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.109
+Build cuda_11.3.r11.3/compiler.29920130_0
+Linux scc-202 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+==========================> Checking SCC Quota Usage
+                                      quota     quota       usage     usage
+project space                          (GB)    (files)       (GB)   (files)
+-----------------------------------  ------  ---------  ---------  --------
+/projectnb/dl523                       2000   33554432    1603.17   4057903
+Home Directory Usage and Quota:
+Name           GB    quota    limit in_doubt    grace |    files    quota    limit in_doubt    grace
+dong760  10.24070     10.0     11.0      0.0   7 days |  132,689  200,000  200,000       40     none
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4549155 0.10114 ood-deskto dong760      r     05/05/2022 22:57:41 academic-gpu@scc-204.scc.bu.ed     2        
+4553836 0.10005 scaled_yol dong760      r     05/06/2022 00:58:36 academic-gpu@scc-202.scc.bu.ed     2        
+
+Currently Loaded Modules:
+  1) python3/3.8.10   2) cuda/11.3
+
+ 
+
+==========================> Current ENV Path
+/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/share/pkg.7/cuda/11.3/install/nsight-compute-2021.1.1:/share/pkg.7/cuda/11.3/install/nsight-systems-2021.1.3/bin:/share/pkg.7/cuda/11.3/install/bin:/share/pkg.7/python3/3.8.10/install/bin:/scratch/4553836.1.academic-gpu:/share/pkg.7/gcc/7.4.0/install/bin:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.local/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/usr4/dl523/dong760/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/remote-cli:/usr/java/default/jre/bin:/usr/java/default/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/dell/srvadmin/bin:/bin:/usr4/dl523/dong760/bin:.
+
+
+Python 3.8.10
+/usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+==========================> Start Training
+Using CUDA device0 _CudaDeviceProperties(name='Tesla V100-SXM2-16GB', total_memory=16160MB)
+
+Namespace(adam=False, batch_size=16, bucket='', cache_images=False, cfg='models/yolov4-p7.yaml', data='../zero-waste-10/data.yaml', device='0', epochs=300, evolve=False, global_rank=-1, hyp='data/hyp.finetune.yaml', img_size=[640, 640], local_rank=-1, logdir='runs/', multi_scale=False, name='yolov4_p7_2022_05_06-00_58_44', noautoanchor=False, nosave=False, notest=False, rect=False, resume=False, single_cls=False, sync_bn=False, total_batch_size=16, weights='weights/yolov4-p7.pt', world_size=1)
+Start Tensorboard with "tensorboard --logdir runs/", view at http://localhost:6006/
+Hyperparameters {'lr0': 0.01, 'momentum': 0.937, 'weight_decay': 0.0005, 'giou': 0.05, 'cls': 0.5, 'cls_pw': 1.0, 'obj': 1.0, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.5, 'scale': 0.8, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mixup': 0.2}
+Overriding models/yolov4-p7.yaml nc=80 with nc=4
+
+                 from  n    params  module                                  arguments                     
+  0                -1  1      1160  models.common.Conv                      [3, 40, 3, 1]                 
+  1                -1  1     28960  models.common.Conv                      [40, 80, 3, 2]                
+  2                -1  1     30960  models.common.BottleneckCSP             [80, 80, 1]                   
+  3                -1  1    115520  models.common.Conv                      [80, 160, 3, 2]               
+  4                -1  1    251360  models.common.BottleneckCSP             [160, 160, 3]                 
+  5                -1  1    461440  models.common.Conv                      [160, 320, 3, 2]              
+  6                -1  1   4081600  models.common.BottleneckCSP             [320, 320, 15]                
+  7                -1  1   1844480  models.common.Conv                      [320, 640, 3, 2]              
+  8                -1  1  16304000  models.common.BottleneckCSP             [640, 640, 15]                
+  9                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 2]             
+ 10                -1  1  32382720  models.common.BottleneckCSP             [1280, 1280, 7]               
+ 11                -1  1  14748160  models.common.Conv                      [1280, 1280, 3, 2]            
+ 12                -1  1  32382720  models.common.BottleneckCSP             [1280, 1280, 7]               
+ 13                -1  1  14748160  models.common.Conv                      [1280, 1280, 3, 2]            
+ 14                -1  1  32382720  models.common.BottleneckCSP             [1280, 1280, 7]               
+ 15                -1  1  11888640  models.common.SPPCSP                    [1280, 640, 1]                
+ 16                -1  1    410880  models.common.Conv                      [640, 640, 1, 1]              
+ 17                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 18                -6  1    820480  models.common.Conv                      [1280, 640, 1, 1]             
+ 19          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 20                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 21                -1  1    410880  models.common.Conv                      [640, 640, 1, 1]              
+ 22                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 23               -13  1    820480  models.common.Conv                      [1280, 640, 1, 1]             
+ 24          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 25                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 26                -1  1    205440  models.common.Conv                      [640, 320, 1, 1]              
+ 27                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 28               -20  1    205440  models.common.Conv                      [640, 320, 1, 1]              
+ 29          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 30                -1  1   3590400  models.common.BottleneckCSP2            [640, 320, 3]                 
+ 31                -1  1     51520  models.common.Conv                      [320, 160, 1, 1]              
+ 32                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 33               -27  1     51520  models.common.Conv                      [320, 160, 1, 1]              
+ 34          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 35                -1  1    899200  models.common.BottleneckCSP2            [320, 160, 3]                 
+ 36                -1  1    461440  models.common.Conv                      [160, 320, 3, 1]              
+ 37                -2  1    461440  models.common.Conv                      [160, 320, 3, 2]              
+ 38          [-1, 30]  1         0  models.common.Concat                    [1]                           
+ 39                -1  1   3590400  models.common.BottleneckCSP2            [640, 320, 3]                 
+ 40                -1  1   1844480  models.common.Conv                      [320, 640, 3, 1]              
+ 41                -2  1   1844480  models.common.Conv                      [320, 640, 3, 2]              
+ 42          [-1, 25]  1         0  models.common.Concat                    [1]                           
+ 43                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 44                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 1]             
+ 45                -2  1   3687680  models.common.Conv                      [640, 640, 3, 2]              
+ 46          [-1, 20]  1         0  models.common.Concat                    [1]                           
+ 47                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 48                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 1]             
+ 49                -2  1   3687680  models.common.Conv                      [640, 640, 3, 2]              
+ 50          [-1, 15]  1         0  models.common.Concat                    [1]                           
+ 51                -1  1  14348800  models.common.BottleneckCSP2            [1280, 640, 3]                
+ 52                -1  1   7375360  models.common.Conv                      [640, 1280, 3, 1]             
+ 53[36, 40, 44, 48, 52]  1    172980  models.yolo.Detect                      [4, [[13, 17, 22, 25, 27, 66, 55, 41], [57, 88, 112, 69, 69, 177, 136, 138], [136, 138, 287, 114, 134, 275, 268, 248], [268, 248, 232, 504, 445, 416, 640, 640], [812, 393, 477, 808, 1070, 908, 1408, 1408]], [320, 640, 1280, 1280, 1280]]
+Traceback (most recent call last):
+  File "train.py", line 443, in <module>
+    train(hyp, opt, device, tb_writer)
+  File "train.py", line 65, in train
+    model = Model(opt.cfg or ckpt['model'].yaml, ch=3, nc=nc).to(device)  # create
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/ScaledYOLOv4/models/yolo.py", line 83, in __init__
+    self._initialize_biases()  # only run once
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/ScaledYOLOv4/models/yolo.py", line 141, in _initialize_biases
+    b[:, 4] += math.log(8 / (640 / s) ** 2)  # obj (8 objects per 640 image)
+RuntimeError: a view of a leaf Variable that requires grad is being used in an in-place operation.
+Namespace(augment=True, batch_size=16, conf_thres=0.0, data='../zero-waste-10/data.yaml', device='0', img_size=640, iou_thres=0.65, merge=False, save_json=False, save_txt=True, single_cls=False, task='test', verbose=True, weights=['runs/train/yolor_p6_2022_05_06-00_58_44/weights/best_overall.pt'])
+Using CUDA device0 _CudaDeviceProperties(name='Tesla V100-SXM2-16GB', total_memory=16160MB)
+
+Traceback (most recent call last):
+  File "test.py", line 269, in <module>
+    test(opt.data,
+  File "test.py", line 55, in test
+    model = attempt_load(weights, map_location=device)  # load FP32 model
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/ScaledYOLOv4/models/experimental.py", line 136, in attempt_load
+    attempt_download(w)
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/ScaledYOLOv4/utils/google_utils.py", line 33, in attempt_download
+    raise Exception(msg)
+Exception: runs/train/yolor_p6_2022_05_06-00_58_44/weights/best_overall.pt missing
+Fri May  6 01:07:25 EDT 2022
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4549155 0.10112 ood-deskto dong760      r     05/05/2022 22:57:41 academic-gpu@scc-204.scc.bu.ed     2        
+4553836 0.10005 scaled_yol dong760      r     05/06/2022 00:58:36 academic-gpu@scc-202.scc.bu.ed     2        
+scaled_yolov4_p7_zerowaste_v16_640x640_300_2022_05_06-01_26_17
+==========================================================
+Start date : Fri May  6 01:26:17 EDT 2022
+Job name : scaled_yolov4_p7_zerowaste_v16_640x640_300
+Job ID : 4553895  undefined
+==========================================================
+==========================> Loading moudule for Project Environment
+===========================> Checking OS Information
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.9.2009 (Core)
+Release:	7.9.2009
+Codename:	Core
+x86_64
+CentOS Linux release 7.9.2009 (Core)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+
+CentOS Linux release 7.9.2009 (Core)
+CentOS Linux release 7.9.2009 (Core)
+===========================> Checking CPU Information
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                32
+On-line CPU(s) list:   0-31
+Thread(s) per core:    1
+Core(s) per socket:    16
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+Stepping:              7
+CPU MHz:               1200.048
+CPU max MHz:           3900.0000
+CPU min MHz:           1200.0000
+BogoMIPS:              5600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              22528K
+NUMA node0 CPU(s):     0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):     1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear spec_ctrl intel_stibp flush_l1d arch_capabilities
+===========================> Checking GPU Configuration
+Fri May  6 01:26:31 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:18:00.0 Off |                    0 |
+| N/A   41C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:3B:00.0 Off |                    0 |
+| N/A   37C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   37C    P0    44W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:AF:00.0 Off |                    0 |
+| N/A   40C    P0    43W / 300W |      0MiB / 16160MiB |      0%   E. Process |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Mon_May__3_19:15:13_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.109
+Build cuda_11.3.r11.3/compiler.29920130_0
+Linux scc-204 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+==========================> Checking SCC Quota Usage
+                                      quota     quota       usage     usage
+project space                          (GB)    (files)       (GB)   (files)
+-----------------------------------  ------  ---------  ---------  --------
+/projectnb/dl523                       2000   33554432    1603.16   4057937
+Home Directory Usage and Quota:
+Name           GB    quota    limit in_doubt    grace |    files    quota    limit in_doubt    grace
+dong760  10.24078     10.0     11.0      0.0   6 days |  132,719  200,000  200,000       86     none
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4549155 0.10112 ood-deskto dong760      r     05/05/2022 22:57:41 academic-gpu@scc-204.scc.bu.ed     2        
+4553895 0.10005 scaled_yol dong760      r     05/06/2022 01:26:14 academic-gpu@scc-204.scc.bu.ed     2        
+
+Currently Loaded Modules:
+  1) python3/3.8.10   2) cuda/11.3
+
+ 
+
+==========================> Current ENV Path
+/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/share/pkg.7/cuda/11.3/install/nsight-compute-2021.1.1:/share/pkg.7/cuda/11.3/install/nsight-systems-2021.1.3/bin:/share/pkg.7/cuda/11.3/install/bin:/share/pkg.7/python3/3.8.10/install/bin:/scratch/4553895.1.academic-gpu:/share/pkg.7/gcc/7.4.0/install/bin:/usr4/dl523/dong760/.conda/envs/dl_env/bin:/projectnb/dl523/students/dong760/miniconda3/condabin:/usr4/dl523/dong760/.local/bin:/usr4/dl523/dong760/.local/lib/python3.8/site-packages:/usr4/dl523/dong760/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/remote-cli:/usr/java/default/jre/bin:/usr/java/default/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/dell/srvadmin/bin:/bin:/usr4/dl523/dong760/bin:.
+
+
+Python 3.8.10
+/usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+==========================> Start Training
+check_file -- > file: ../zero-waste-10/data.yaml
+check_file -- > file: ../zero-waste-10/data.yaml
+
+
+check_file -- > file: ../zero-waste-10/data.yaml
+
+check_file -- > file: ../zero-waste-10/data.yaml
+
+check_file -- > file: cfg/yolov4_p6.cfg
+
+check_file -- > file: cfg/yolov4_p6.cfg
+
+check_file -- > file: cfg/yolov4_p6.cfg
+
+check_file -- > file: cfg/yolov4_p6.cfg
+
+check_file -- > file: data/hyp.scratch.640.yaml
+
+check_file -- > file: data/hyp.scratch.640.yaml
+
+check_file -- > file: data/hyp.scratch.640.yaml
+
+check_file -- > file: data/hyp.scratch.640.yaml
+
+Using torch 1.11.0 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+                   CUDA:1 (Tesla V100-SXM2-16GB, 16160MB)
+                   CUDA:2 (Tesla V100-SXM2-16GB, 16160MB)
+                   CUDA:3 (Tesla V100-SXM2-16GB, 16160MB)
+
+Added key: store_based_barrier_key:1 to store for rank: 0
+Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+Namespace(adam=False, augment=True, batch_size=4, bucket='', cache_images=False, cfg='cfg/yolov4_p6.cfg', data='../zero-waste-10/data.yaml', device='0,1,2,3', epochs=300, evolve=False, exist_ok=False, global_rank=0, hyp='data/hyp.scratch.640.yaml', image_weights=False, img_size=[640, 640], local_rank=0, log_imgs=16, multi_scale=False, name='yolov4_p6_2022_05_06-01_26_17', noautoanchor=False, nosave=False, notest=False, project='runs/train', rect=False, resume=False, save_dir='runs/train/yolov4_p6_2022_05_06-01_26_17', single_cls=False, sync_bn=True, total_batch_size=16, weights='weights/yolov4_p6.weights', workers=1, world_size=4)
+Start Tensorboard with "tensorboard --logdir runs/train", view at http://0.0.0.0:7777/
+Traceback (most recent call last):
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/tensorboardX/record_writer.py", line 47, in directory_check
+    factory = REGISTERED_FACTORIES[prefix]
+KeyError: 'runs/train/yolov4_p6_2022_05_06-01_26_17'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 539, in <module>
+    tb_writer = SummaryWriter(opt.save_dir)  # Tensorboard
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/tensorboardX/writer.py", line 301, in __init__
+    self._get_file_writer()
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/tensorboardX/writer.py", line 349, in _get_file_writer
+    self.file_writer = FileWriter(logdir=self.logdir,
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/tensorboardX/writer.py", line 105, in __init__
+    self.event_writer = EventFileWriter(
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/tensorboardX/event_file_writer.py", line 104, in __init__
+    directory_check(self._logdir)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/tensorboardX/record_writer.py", line 51, in directory_check
+    os.makedirs(path)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'runs/train/yolov4_p6_2022_05_06-01_26_17'
+/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/distributed/launch.py:178: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 195217 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 195218 closing signal SIGTERM
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 195219 closing signal SIGTERM
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 195216) of binary: /usr4/dl523/dong760/.conda/envs/dl_env/bin/python
+Traceback (most recent call last):
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/distributed/launch.py", line 193, in <module>
+    main()
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/distributed/launch.py", line 189, in main
+    launch(args)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/distributed/launch.py", line 174, in launch
+    run(args)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/distributed/run.py", line 715, in run
+    elastic_launch(
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 245, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2022-05-06_01:31:26
+  host      : scc-204.scc.bu.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 195216)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Using torch 1.11.0 CUDA:0 (Tesla V100-SXM2-16GB, 16160MB)
+
+Model Summary: 914 layers, 127585200 parameters, 127585200 gradients
+check_file -- > file: ../zero-waste-10/data.yaml
+
+Namespace(augment=False, batch_size=16, cfg='cfg/yolov4_p6.cfg', conf_thres=0.0, data='../zero-waste-10/data.yaml', device='0', exist_ok=False, gt_json_dir='../zero-waste-10/test/_annotations.coco.json', img_size=640, iou_thres=0.65, name='exp', names='data/zerowaste.names', project='runs/test', save_conf=True, save_json=True, save_txt=True, single_cls=False, task='test', verbose=True, weights=['runs/train/yolov4_p6_2022_05_06-01_26_17/weights/best_overall.pt'])
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+WARNING: smart bias initialization failure.
+Traceback (most recent call last):
+  File "test.py", line 69, in test
+    ckpt = torch.load(weights[0], map_location=device)  # load checkpoint
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/usr4/dl523/dong760/.conda/envs/dl_env/lib/python3.8/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolov4_p6_2022_05_06-01_26_17/weights/best_overall.pt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "test.py", line 362, in <module>
+    test(opt.data,
+  File "test.py", line 73, in test
+    load_darknet_weights(model, weights[0])
+  File "/projectnb2/dl523/projects/RWD/EC523_DL_CV_Project/roboflow-ai/yolor/models/models.py", line 663, in load_darknet_weights
+    with open(weights, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/train/yolov4_p6_2022_05_06-01_26_17/weights/best_overall.pt'
+Fri May  6 01:34:16 EDT 2022
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+4549155 0.10111 ood-deskto dong760      r     05/05/2022 22:57:41 academic-gpu@scc-204.scc.bu.ed     2        
+4553895 0.10005 scaled_yol dong760      r     05/06/2022 01:26:14 academic-gpu@scc-204.scc.bu.ed     2        
