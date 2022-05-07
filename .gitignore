@@ -12,7 +12,7 @@ roboflow-ai/yolor/coco/
 roboflow-ai/zero-waste*/
 roboflow-ai/ScaledYOLOv4/mish-cuda/
 roboflow-ai/ScaledYOLOv4/runs
-
+roboflow-ai/ScaledYOLOv4/weights
 # System files
 *.DS_Store
 
